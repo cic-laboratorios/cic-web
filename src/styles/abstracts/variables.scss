@@ -1,9 +1,12 @@
-// TODO: change sizes for CIC page
+// Mobile empieza en 320 hasta 779
+// Tablet empieza 780-1023
+// desktop 1024-1440
+
 $iphone-five: 374px;
-$x-small: 480px;
-$small: 588px;
-$medium: 768px;
-$large: 1200px;
+$x-small: 320px;
+$small: 779px;
+$medium: 780px;
+$large: 1024px;
 
 $breakpoints: (
   x-small: (
