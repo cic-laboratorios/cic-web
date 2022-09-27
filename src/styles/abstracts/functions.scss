@@ -1,0 +1,21 @@
+@function calculateRem($size, $baseSize: 20) {
+  $remSize: $size / $baseSize;
+
+  @return #{$remSize}rem;
+}
+
+@function colors($color) {
+  @if not map-has-key($colors, $color) {
+    @warn 'No color found for `#{$color}`.';
+  }
+
+  @return map-get($colors, $color);
+}
+
+@function zindex($layer) {
+  @if not map-has-key($zindex, $layer) {
+    @warn 'No z-index found for `#{$layer}`.';
+  }
+
+  @return map-get($zindex, $layer);
+}

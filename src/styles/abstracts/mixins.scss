@@ -1,0 +1,38 @@
+@mixin font($size: 14, $line: 18, $spacing: 0.1, $weight: 500) {
+  $baseFont: 20;
+  $fontSize: #{$size}px;
+  $lineHeight: #{$line}px;
+  $letterSpacing: #{$spacing}px;
+
+  font-size: $fontSize;
+  font-size: calculateRem($size, $baseFont) !important;
+  line-height: $lineHeight;
+  line-height: calculateRem($line, $baseFont) !important;
+  font-weight: $weight !important;
+  letter-spacing: $letterSpacing !important;
+}
+
+@mixin from-breakpoint($bp) {
+  @if ($bp == "x-small") {
+    @content;
+  }
+  @if ($bp == "ie-only") {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @content;
+    }
+  } @else {
+    @if map-has-key($breakpoints, $bp) {
+      $list: map-get($breakpoints, $bp);
+      $bp: nth($list, 1);
+    }
+
+    @media screen and (min-width: #{$bp}) {
+      @content;
+    }
+  }
+}
+
+@mixin square($size: 60) {
+  width: #{$size}px;
+  height: #{$size}px;
+}
