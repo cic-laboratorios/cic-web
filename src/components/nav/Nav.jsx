@@ -29,7 +29,6 @@ export default function Nav({ data, navItems }) {
           height="58">
         </Image>
       </h1>
-      {navItems}
       <nav className={styles.navbar}>
         {
           navLinks.map((navItem, index) => (
