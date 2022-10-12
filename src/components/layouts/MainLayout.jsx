@@ -11,7 +11,7 @@ export default function MainLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav></Nav>
-      <main>{children}</main>
+      <main className="mainWrapper">{children}</main>
     </div>
   );
 }

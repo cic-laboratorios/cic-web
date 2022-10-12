@@ -36,3 +36,9 @@
   width: #{$size}px;
   height: #{$size}px;
 }
+
+@mixin webFont($font-size, $lineHeight, $font-weight: 400) {
+  font-size: $font-size;
+  line-height: $lineHeight;
+  font-weight: $font-weight;
+}
