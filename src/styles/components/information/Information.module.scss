@@ -1,0 +1,52 @@
+@use '../../abstracts/index.scss' as *;
+
+.informationWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informationWrapperReverse {
+    flex-direction: row-reverse;
+}
+
+.informationTitle {
+    @include webFont(40px, 120%, 400);
+
+    color: colors('headings');
+    width: 100%;
+    max-width: 464px;
+    margin: 0;
+}
+
+.informationCopy {
+    @include webFont(24px, 120%, 400);
+
+    color: colors('copy');
+    width: 100%;
+    max-width: 464px;
+    margin: 24px 0 0;
+}
+
+.isMainInformation {
+    .informationTitle {
+        @include webFont(61px, 120%, 700);
+
+        width: 100%;
+        max-width: 381px;
+        margin: 0;
+    }
+
+    .informationCopy {
+        @include webFont(18px, 120%, 400);
+
+        width: 100%;
+        max-width: 299px;
+        margin: 24px 0 0;
+    }
+}
+
+.informationConsultNow {
+    margin: 24px 0 0;
+    display: inline-block;
+}

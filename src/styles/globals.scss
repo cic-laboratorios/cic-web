@@ -66,3 +66,24 @@ html {
     }
   }
 }
+
+.consultNow {
+  background: transparent;
+  color: colors('black');
+  padding: 12px 36px;
+  border-radius: 50px;
+}
+
+.consultNow:hover,
+.consultNow:focus,
+.consultNow:active,
+.consultNow.active {
+  background: colors('secondary');
+  color: colors('white');
+}
+
+.mainWrapper {
+  width: 100%;
+  max-width: $large;
+  margin: 0 auto;
+}
