@@ -1,0 +1,32 @@
+@use '../../abstracts/index.scss' as *;
+
+.ourServicesWrapper {
+    margin: 90px 0;
+}
+
+.ourServicesHeading {
+    @include webFont(40px, 120%, 400);
+
+    text-align: center;
+    margin: 0 0 42px;
+}
+
+.ourServicesListWrapper {
+    display: flex;
+    text-align: center;
+    gap: 33px;
+}
+
+.ourServicesListItemHeading {
+    @include webFont(24px, 123%, 400);
+
+    color: colors('headings');
+    margin: 8px auto 28px;
+    max-width: 190px;
+}
+
+.ourServicesListItemCopy {
+    @include webFont(16px, 120%, 400);
+
+    color: colors('copy');
+}

@@ -22,8 +22,8 @@ export default function Information({ data }) {
           src={data.img.src}
           alt={data.img.alt}
           width={data.img.width}
-          height={data.img.height}
-        ></Image>
+          height={data.img.height}>
+        </Image>
       </div>
     </div>
   );
