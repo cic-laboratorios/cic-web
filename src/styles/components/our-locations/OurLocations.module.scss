@@ -1,0 +1,46 @@
+@use '../../abstracts/index.scss' as *;
+
+.ourLocationsWrapper {
+    margin: 47px 0 56px;
+}
+
+.ourLocationsHeading {
+    @include webFont(40px, 120%, 400);
+
+    text-align: center;
+    margin: 0 0 42px;
+}
+
+.ourLocationsListWrapper {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    column-gap: 110px;
+    row-gap: 35px;
+    justify-content: space-between;
+    max-width: 763px;
+    margin: 0 auto;
+}
+
+.ourLocationsListItem {
+    width: 100%;
+    max-width: 181px;
+}
+
+.ourLocationsListItemHeading {
+    @include webFont(16px, 120%, 700);
+
+    color: colors('headings');
+    margin: 16px auto 28px;
+}
+
+.ourLocationsListItemCopy,
+.ourLocationsListItemPhoneNumber {
+    @include webFont(16px, 120%, 400);
+
+    color: colors('copy');
+}
+
+.ourLocationsListItemPhoneNumber {
+    margin-top: 8px;
+}

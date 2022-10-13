@@ -1,6 +1,7 @@
 import Information from "@components/information/Information";
 import MainLayout from "@components/layouts/MainLayout";
 import OurServices from "@components/our-services/OurServices";
+import OurLocations from "@components/our-locations/OurLocations";
 
 const informationData = {
   title: 'Resultados en línea',
@@ -70,6 +71,51 @@ const ourServices = [
   }
 ]
 
+const ourLocations = [
+  {
+    img: '/img/pin.png',
+    alt: '',
+    heading: 'CIC Ansermanuevo',
+    copy: 'calle 17 1-03 Esquina',
+    phoneNumber: '555 555 5555'
+  },
+  {
+    img: '/img/pin.png',
+    alt: '',
+    heading: 'CIC Ansermanuevo',
+    copy: 'calle 17 1-03 Esquina',
+    phoneNumber: '555 555 5555'
+  },
+  {
+    img: '/img/pin.png',
+    alt: '',
+    heading: 'CIC Ansermanuevo',
+    copy: 'calle 17 1-03 Esquina',
+    phoneNumber: '555 555 5555'
+  },
+  {
+    img: '/img/pin.png',
+    alt: '',
+    heading: 'CIC Ansermanuevo',
+    copy: 'calle 17 1-03 Esquina',
+    phoneNumber: '555 555 5555'
+  },
+  {
+    img: '/img/pin.png',
+    alt: '',
+    heading: 'CIC Ansermanuevo',
+    copy: 'calle 17 1-03 Esquina',
+    phoneNumber: '555 555 5555'
+  },
+  {
+    img: '/img/pin.png',
+    alt: '',
+    heading: 'CIC Ansermanuevo',
+    copy: 'calle 17 1-03 Esquina',
+    phoneNumber: '555 555 5555'
+  }
+]
+
 export default function Home() {
   return (
     <MainLayout>
@@ -77,6 +123,7 @@ export default function Home() {
       <OurServices ourServices={ourServices}></OurServices>
       <Information data={informationData2}></Information>
       <Information data={informationData3}></Information>
+      <OurLocations ourLocations={ourLocations}></OurLocations>
     </MainLayout>
   );
 }
