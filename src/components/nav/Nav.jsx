@@ -26,8 +26,8 @@ export default function Nav() {
           src="/img/logo.png"
           alt="Ciclaboratorios"
           width="256"
-          height="58"
-        ></Image>
+          height="58">
+        </Image>
       </h1>
       <nav className={styles.navbar}>
         {navLinks.map((navItem, index) => (

@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Nav from "@components/nav/Nav";
+import Footer from '@components/footer/Footer'
 
 export default function MainLayout({ children }) {
   return (
@@ -12,6 +13,7 @@ export default function MainLayout({ children }) {
       </Head>
       <Nav></Nav>
       <main className="mainWrapper">{children}</main>
+      <Footer></Footer>
     </div>
   );
 }
