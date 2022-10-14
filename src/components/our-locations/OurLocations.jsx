@@ -9,7 +9,7 @@ export default function OurLocations({ ourLocations }) {
       <div className={styles.ourLocationsListWrapper}>
         {ourLocations.map((location, index) => (
           <div className={styles.ourLocationsListItem} key={index}>
-            <div className="ourLocationsListItemIcon">
+            <div>
                 <Image
                   src={location.img}
                   alt="Location icon"
