@@ -8,8 +8,8 @@ export default function OurServices({ ourServices }) {
       <div className={styles.ourServicesHeading}>Nuestros servicios</div>
       <div className={styles.ourServicesListWrapper}>
         {ourServices.map((service, index) => (
-          <div className="ourServicesListItem" key={index}>
-            <div className="ourServicesListItemIcon">
+          <div key={index}>
+            <div>
                 <Image
                   src={service.img}
                   alt="Service icon"
