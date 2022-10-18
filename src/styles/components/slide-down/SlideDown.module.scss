@@ -1,0 +1,17 @@
+@use '../../abstracts/index.scss' as *;
+
+.slideDownWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 88px 0 90px;
+    align-items: center;
+}
+
+.slideDownCopy {
+    @include webFont(13px, 120%, 400);
+}
+
+.slideDownIcon {
+    cursor: pointer;
+}
