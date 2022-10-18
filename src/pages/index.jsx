@@ -3,6 +3,7 @@ import MainLayout from "@components/layouts/MainLayout";
 import OurServices from "@components/our-services/OurServices";
 import OurLocations from "@components/our-locations/OurLocations";
 import OurAllies from "@components/our-allies/OurAllies";
+import SlideDown from "@components/slide-down/SlideDown";
 
 const informationData = {
   title: 'Resultados en línea',
@@ -240,6 +241,7 @@ export default function Home() {
   return (
     <MainLayout>
       <Information data={informationData}></Information>
+      <SlideDown></SlideDown>
       <OurServices ourServices={ourServices}></OurServices>
       <Information data={informationData2}></Information>
       <Information data={informationData3}></Information>

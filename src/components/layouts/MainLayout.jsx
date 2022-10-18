@@ -3,6 +3,8 @@ import Head from "next/head";
 import Nav from "@components/nav/Nav";
 import Footer from '@components/footer/Footer'
 
+import styles from "@styles/layouts/MainLayout.module.scss";
+
 export default function MainLayout({ children }) {
   return (
     <div>
@@ -12,7 +14,7 @@ export default function MainLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav></Nav>
-      <main className="mainWrapper">{children}</main>
+      <main className={styles.mainWrapper}>{children}</main>
       <Footer></Footer>
     </div>
   );
