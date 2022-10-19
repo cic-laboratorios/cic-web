@@ -1,11 +1,11 @@
-@use '../abstracts/index.scss' as *;
+@use "../abstracts/index.scss" as *;
 
 .mainWrapper {
-    width: 100%;
-    max-width: $large;
-    margin: 0 auto;
-    background: url("../../../public/img/background.png");
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: 260px;
-  }
+  @include generalMaxWidth();
+
+  width: 100%;
+  background: url("../../../public/img/background.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 260px;
+}

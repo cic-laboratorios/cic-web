@@ -42,6 +42,11 @@
   border-radius: 50%;
   z-index: zindex('base');
   cursor: pointer;
+
+  &:hover {
+    background: rgba(138, 138, 138, 0.2);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .carouselLeftButton {

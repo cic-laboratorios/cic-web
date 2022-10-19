@@ -1,8 +1,11 @@
+@use "../../abstracts/index.scss" as *;
+
 .header {
+    @include generalMaxWidth();
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 32px;
 }
 
 .navbar {

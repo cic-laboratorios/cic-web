@@ -13,11 +13,9 @@ export default function MainLayout({ children }) {
         <meta name="description" content="Pagina web CIC Laboratorios" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.mainWrapper}>
-        <Nav></Nav>
-        {children}
-        <Footer></Footer>
-      </main>
+      <Nav></Nav>
+      <main className={styles.mainWrapper}>{children}</main>
+      <Footer></Footer>
     </div>
   );
 }

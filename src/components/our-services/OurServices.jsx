@@ -4,7 +4,7 @@ import styles from "@styles/components/our-services/OurServices.module.scss";
 
 export default function OurServices({ ourServices }) {
   return (
-    <div  className={styles.ourServicesWrapper}>
+    <div className={styles.ourServicesWrapper} id="our-services">
       <div className={styles.ourServicesHeading}>Nuestros servicios</div>
       <div className={styles.ourServicesListWrapper}>
         {ourServices.map((service, index) => (

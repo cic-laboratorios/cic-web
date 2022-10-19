@@ -24,9 +24,9 @@ export default function Nav() {
     <header className={styles.header}>
       <h1>
         <Image
-          src="/img/logo.png"
+          src="/img/logo-white.svg"
           alt="Ciclaboratorios"
-          width="256"
+          width="225"
           height="58">
         </Image>
       </h1>

@@ -3,10 +3,18 @@ import Image from "next/image";
 import styles from "@styles/components/slide-down/SlideDown.module.scss";
 
 export default function SlideDown() {
+  function goToOurServices() {
+    const ourServicesWrapper = document.getElementById("our-services");
+
+    if (ourServicesWrapper) {
+      ourServicesWrapper.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+  }
+
   return (
     <div className={styles.slideDownWrapper}>
       <div className={styles.slideDownCopy}>Desliza para ver más</div>
-      <div className={styles.slideDownIcon}>
+      <button onClick={goToOurServices} className={`${styles.slideDownIcon}`}>
         <Image
           src="/img/slide-down-icon.png"
           alt="slide down icon"
@@ -14,7 +22,7 @@ export default function SlideDown() {
           width="24"
           height="20"
         ></Image>
-      </div>
+      </button>
     </div>
   );
 }
