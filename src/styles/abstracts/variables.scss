@@ -7,6 +7,7 @@ $x-small: 320px;
 $small: 779px;
 $medium: 780px;
 $large: 1024px;
+$x-large: 1440px;
 
 $breakpoints: (
   x-small: (
@@ -44,7 +45,8 @@ $colors: (
   "third": #E99696,
   "headings": #1A0505,
   "copy": #483737,
-  "footer-background": #120404
+  "footer-background": #120404,
+  "footer-line": #E8E6E6
 );
 
 $zindex: (

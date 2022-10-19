@@ -7,6 +7,8 @@
 }
 
 .footerNavigationWrapper {
+    @include generalMaxWidth();
+
     display: flex;
     justify-content: space-between;
 }
@@ -21,6 +23,10 @@
     .footerNavigationByLinkNavWrapper {
         display: flex;
         gap: 50px;
+
+        a:hover {
+            color: colors('third');
+        }
     }
 }
 
@@ -28,13 +34,31 @@
     .footerNavigationBySocialMediaNavWrapper {
         display: flex;
         gap: 8px;
+
+        a {
+            display: flex;
+            width: 28px;
+            height: 28px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a:hover {
+            background: colors('white');
+            border-radius: 50%;
+
+            svg path {
+                fill: colors('black');
+            }
+        }
     }
 }
 
 .footerCopyright {
+    @include generalMaxWidth();
     @include webFont(13px, 120%, 400);
 
-    border-top: 1px solid #E8E6E6;
+    border-top: 1px solid colors('footer-line');
     text-align: center;
     padding-top: 13px;
     margin-top: 27px;

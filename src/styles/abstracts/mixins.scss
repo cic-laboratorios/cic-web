@@ -45,5 +45,11 @@
 
 @mixin carouselActive() {
   background: colors('third');
-  border: 1px solid colors('third');;
+  border: 1px solid colors('third');
+}
+
+@mixin generalMaxWidth() {
+  padding: 0 32px;
+  max-width: $large;
+  margin: 0 auto;
 }
