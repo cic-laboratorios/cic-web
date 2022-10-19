@@ -42,3 +42,8 @@
   line-height: $lineHeight;
   font-weight: $font-weight;
 }
+
+@mixin carouselActive() {
+  background: colors('third');
+  border: 1px solid colors('third');;
+}

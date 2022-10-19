@@ -68,9 +68,11 @@
   cursor: pointer;
 
   &:hover {
-    background: #E99696;
-    border: 1px solid #E99696;
+    @include carouselActive();
   }
 }
 
+.dotsItemActive {
+  @include carouselActive();
+}
 

@@ -67,7 +67,7 @@ export default function Carousel({ carouselData }) {
       <div className={styles.dotsWrapper}>
         {carouselData.map((carouselItem, index) => (
           <button
-            className={`${styles.dotsItem} ${carouselIndex == index ? "carouselActive" : ""}`}
+            className={`${styles.dotsItem} ${carouselIndex == index && styles.dotsItemActive}`}
             key={index}></button>
         ))}
       </div>
