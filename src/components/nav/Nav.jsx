@@ -15,6 +15,7 @@ const navLinks = [
   {
     link: "consultNow",
     label: "Consultar Ahora",
+    isConsultNow: true
   },
 ];
 
@@ -32,7 +33,7 @@ export default function Nav() {
       <nav className={styles.navbar}>
         {navLinks.map((navItem, index) => (
           <Link key={index} href={navItem.link}>
-            <a className="consultNow">{navItem.label}</a>
+            <a className={`consultNow ${navItem.isConsultNow ? "active" : ""}`}>{navItem.label}</a>
           </Link>
         ))}
       </nav>

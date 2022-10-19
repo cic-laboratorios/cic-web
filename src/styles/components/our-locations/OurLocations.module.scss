@@ -1,9 +1,5 @@
 @use '../../abstracts/index.scss' as *;
 
-.ourLocationsWrapper {
-    margin: 47px 0 56px;
-}
-
 .ourLocationsHeading {
     @include webFont(40px, 120%, 400);
 
