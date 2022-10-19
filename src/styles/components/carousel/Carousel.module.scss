@@ -1,0 +1,76 @@
+@use "../../abstracts/index.scss" as *;
+
+.carouselWrapper {
+  position: relative;
+  margin: 47px 0 56px;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+.carouselHeading {
+  @include webFont(40px, 120%, 400);
+
+  text-align: center;
+  margin: 0 0 42px;
+}
+
+.carousel {
+  width: 100%;
+  display: flex;
+  transition: transform .3s linear;
+  transform: translateX(0);
+}
+
+.carouselItem {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carouselAction {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  appearance: none;
+  background: #FFFFFF;
+  border: 0.5px solid rgba(138, 138, 138, 0.2);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: zindex('base');
+  cursor: pointer;
+}
+
+.carouselLeftButton {
+  left: 46px;
+}
+
+.carouselRightButton {
+  right: 46px;
+}
+
+.dotsWrapper {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  margin-top: 27px;
+}
+
+.dotsItem {
+  appearance: none;
+  width: 10px;
+  height: 14px;
+  border: 1px solid rgba(51, 51, 51, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background: #E99696;
+    border: 1px solid #E99696;
+  }
+}
+
+

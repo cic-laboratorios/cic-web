@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import Nav from "@components/nav/Nav";
-import Footer from '@components/footer/Footer'
+import Footer from "@components/footer/Footer";
 
 import styles from "@styles/layouts/MainLayout.module.scss";
 
@@ -13,9 +13,11 @@ export default function MainLayout({ children }) {
         <meta name="description" content="Pagina web CIC Laboratorios" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav></Nav>
-      <main className={styles.mainWrapper}>{children}</main>
-      <Footer></Footer>
+      <main className={styles.mainWrapper}>
+        <Nav></Nav>
+        {children}
+        <Footer></Footer>
+      </main>
     </div>
   );
 }
