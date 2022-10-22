@@ -7,7 +7,7 @@ import SlideDown from "@components/slide-down/SlideDown";
 
 export default function Home(props) {
   return (
-    <MainLayout>
+    <MainLayout navLinks={props.navLinks} mobileNavLinks={props.mobileNavLinks}>
       <Information data={props.informationData}></Information>
       <SlideDown></SlideDown>
       <OurServices ourServices={props.ourServices}></OurServices>

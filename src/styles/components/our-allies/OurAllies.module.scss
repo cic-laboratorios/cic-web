@@ -1,7 +1,7 @@
 @use '../../abstracts/index.scss' as *;
 
 .ourAlliesWrapper {
-    margin: 88px 0 48px;
+    display: none;
 }
 
 .ourAlliesHeading {
@@ -21,4 +21,11 @@
 .ourAlliesListItem {
     width: 97px;
     height: 97px;
+}
+
+@include from-breakpoint("medium") {
+    .ourAlliesWrapper {
+        margin: 88px 0 48px;
+        display: block;
+    }
 }

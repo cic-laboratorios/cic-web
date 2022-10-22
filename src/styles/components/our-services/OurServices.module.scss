@@ -15,6 +15,9 @@
     display: flex;
     text-align: center;
     gap: 33px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .ourServicesListItemHeading {
@@ -29,4 +32,17 @@
     @include webFont(16px, 120%, 400);
 
     color: colors('copy');
+}
+
+@include from-breakpoint("x-large") {
+    .navbar {
+        display: flex;
+        gap: 42px;
+    }
+
+    .ourServicesListWrapper {
+        display: flex;
+        text-align: center;
+        gap: 33px;
+    }
 }
