@@ -5,6 +5,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 32px;
+    padding: 32px 0;
+    flex-direction: column;
 }
 
 .informationWrapperReverse {
@@ -30,24 +32,69 @@
 }
 
 .isMainInformation {
-    .informationTitle {
-        @include webFont(61px, 120%, 700);
+    width: 100%;
+    max-width: 286px;
+    margin: 0 auto;
+    text-align: center;
 
-        width: 100%;
-        max-width: 381px;
-        margin: 0;
+    .informationTitle {
+        @include webFont(40px, 110%, 700);
     }
 
     .informationCopy {
         @include webFont(18px, 120%, 400);
-
-        width: 100%;
-        max-width: 299px;
-        margin: 24px 0 0;
     }
 }
 
 .informationConsultNow {
     margin: 24px 0 0;
     display: inline-block;
+    width: 100%;
+}
+
+.informationWrapperImage {
+    width: calc(100% + 32px + 32px);
+    position: relative;
+
+    span span {
+        padding-top: 0 !important;
+        line-height: 0;
+    }
+}
+
+.informationImage {
+    width: 100%;
+    position: relative !important;
+    height: 100% !important;
+}
+
+@include from-breakpoint("medium") {
+    .informationWrapper {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .informationTitle {
+        @include webFont(40px, 120%, 400);
+
+        text-align: initial;
+    }
+
+    .isMainInformation {
+        .informationTitle {
+            @include webFont(61px, 120%, 700);
+
+            width: 100%;
+            max-width: 381px;
+            margin: 0;
+        }
+
+        .informationCopy {
+            @include webFont(18px, 120%, 400);
+
+            width: 100%;
+            max-width: 299px;
+            margin: 24px 0 0;
+        }
+    }
 }
