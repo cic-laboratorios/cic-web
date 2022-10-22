@@ -1,14 +1,78 @@
 @use "../../abstracts/index.scss" as *;
 
+.logo {
+    width: 22px;
+}
+
 .header {
     @include generalMaxWidth();
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(230, 230, 230, 0.05);
+    box-shadow: 0px 3px 12px rgb(236 233 233 / 50%);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.toggleMenu {
+    appearance: none;
+    border: 0;
+    background: none;
+    color: colors('secondary');
+    padding: 0;
+}
+
+.sideNav {
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background: colors('white');
+    box-shadow: -5px -1px 12px rgb(0 0 0 / 10%);
+    z-index: zindex('menu');
+    padding: 25px 32px;
+}
+
+.sideNavCloseIcon {
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbarMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    margin: 47px 0 32px;
 }
 
 .navbar {
-    display: flex;
-    gap: 42px;
+    display: none;
+}
+
+@include from-breakpoint("medium") {
+    .logo {
+        width: 29px;
+        border-bottom: none;
+        box-shadow: none;
+    }
+}
+
+@include from-breakpoint("x-large") {
+    .navbar {
+        display: flex;
+        gap: 42px;
+    }
+
+    .logo {
+        width: 225px;
+    }
 }

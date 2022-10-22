@@ -1,19 +1,23 @@
 import {
+  carouselData,
   informationData,
   informationData2,
   informationData3,
-  ourServices,
+  mobileNavLinks,
+  navLinks,
   ourAllies,
-  carouselData,
+  ourServices,
 } from "./../../content/home-content";
 
 export default function handler(req, res) {
   res.status(200).json({
+    carouselData,
     informationData,
-    ourServices,
     informationData2,
     informationData3,
-    carouselData,
+    mobileNavLinks,
+    navLinks,
     ourAllies,
+    ourServices,
   });
 }

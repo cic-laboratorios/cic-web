@@ -1,0 +1,31 @@
+
+.navigationBySocialMediaNavWrapper {
+    display: flex;
+    gap: 8px;
+
+    a {
+        display: flex;
+        width: 28px;
+        height: 28px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a:hover {
+        background: colors('white');
+        border-radius: 50%;
+
+        svg path {
+            fill: colors('black');
+        }
+    }
+
+    &.reverseLayout {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    &.isMenu {
+        gap: 18px;
+    }
+}

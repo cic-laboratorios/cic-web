@@ -81,3 +81,13 @@ html {
   background: colors('secondary');
   color: colors('white');
 }
+
+.only-desktop {
+  display: none !important;
+}
+
+@include from-breakpoint("desktop") {
+  .only-desktop {
+      display: none !important;
+  }
+}
