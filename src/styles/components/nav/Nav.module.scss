@@ -31,7 +31,7 @@
 .sideNav {
     position: fixed;
     width: 220px;
-    height: 100vh;
+    height: 100%;
     right: 0;
     top: 0;
     background: colors('white');
@@ -64,9 +64,34 @@
         border-bottom: none;
         box-shadow: none;
     }
+
+    .header {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .sideNav {
+        width: 278px;
+    }
+
+    .toggleMenu {
+        margin-right: 11px;
+    }
+
+    .navbarMobile {
+        align-items: flex-start;
+        padding: 0 0 0 32px;
+    }
 }
 
 @include from-breakpoint("x-large") {
+    .header {
+        border-bottom: none;
+        box-shadow: none;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+
     .navbar {
         display: flex;
         gap: 42px;
@@ -74,5 +99,10 @@
 
     .logo {
         width: 225px;
+    }
+
+    .toggleMenu,
+    .sideNav {
+        display: none;
     }
 }

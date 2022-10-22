@@ -1,3 +1,4 @@
+@use "../../abstracts/index.scss" as *;
 
 .navigationBySocialMediaNavWrapper {
     display: flex;
@@ -27,5 +28,16 @@
 
     &.isMenu {
         gap: 18px;
+    }
+}
+
+@include from-breakpoint("medium") {
+    .navigationBySocialMediaNavWrapper {
+        &.isMenu {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 24px;
+            padding: 0 0 0 32px;
+        }
     }
 }
