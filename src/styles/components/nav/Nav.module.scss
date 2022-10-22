@@ -26,6 +26,7 @@
     background: none;
     color: colors('secondary');
     padding: 0;
+    @include webFont(18px, 22px, 400);
 }
 
 .sideNav {

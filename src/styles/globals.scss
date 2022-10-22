@@ -68,6 +68,8 @@ html {
 }
 
 .consultNow {
+  @include webFont(16px, 100%, 700);
+
   background: transparent;
   color: colors('black');
   padding: 12px 36px;
@@ -82,12 +84,27 @@ html {
   color: colors('white');
 }
 
-.only-desktop {
-  display: none !important;
+.only-mobile {
+  display: block;
 }
 
-@include from-breakpoint("desktop") {
+.only-desktop {
+  display: none;
+}
+
+@include from-breakpoint("x-large") {
   .only-desktop {
-      display: none !important;
+      display: block;
+  }
+
+  .only-mobile {
+    display: none;
+  }
+
+  .consultNow {
+    background: transparent;
+    color: colors('black');
+    padding: 12px 36px;
+    border-radius: 50px;
   }
 }
