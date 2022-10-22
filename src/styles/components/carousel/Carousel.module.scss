@@ -32,21 +32,7 @@
 }
 
 .carouselAction {
-  position: absolute;
-  width: 37px;
-  height: 37px;
-  appearance: none;
-  background: #FFFFFF;
-  border: 0.5px solid rgba(138, 138, 138, 0.2);
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  z-index: zindex('base');
-  cursor: pointer;
-
-  &:hover {
-    background: rgba(138, 138, 138, 0.2);
-    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
-  }
+  display: none;
 }
 
 .carouselLeftButton {
@@ -81,3 +67,23 @@
   @include carouselActive();
 }
 
+@include from-breakpoint("medium") {
+  .carouselAction {
+    display: block;
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    appearance: none;
+    background: #FFFFFF;
+    border: 0.5px solid rgba(138, 138, 138, 0.2);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: zindex('base');
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(138, 138, 138, 0.2);
+      box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

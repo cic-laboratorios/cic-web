@@ -1,7 +1,7 @@
 @use '../../abstracts/index.scss' as *;
 
 .ourServicesWrapper {
-    margin: 90px 0;
+    margin: 50px 0;
 }
 
 .ourServicesHeading {
@@ -35,6 +35,10 @@
 }
 
 @include from-breakpoint("x-large") {
+    .ourServicesWrapper {
+        margin: 90px 0;
+    }
+
     .navbar {
         display: flex;
         gap: 42px;

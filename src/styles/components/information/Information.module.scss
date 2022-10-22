@@ -9,10 +9,6 @@
     flex-direction: column;
 }
 
-.informationWrapperReverse {
-    flex-direction: row-reverse;
-}
-
 .informationTitle {
     @include webFont(40px, 120%, 400);
 
@@ -72,6 +68,10 @@
     .informationWrapper {
         flex-direction: row;
         padding: 0;
+    }
+
+    .informationWrapperReverse {
+        flex-direction: row-reverse;
     }
 
     .informationTitle {
