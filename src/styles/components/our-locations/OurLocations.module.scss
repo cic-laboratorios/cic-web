@@ -20,7 +20,6 @@
 
 .ourLocationsListItem {
     width: 100%;
-    max-width: 181px;
 }
 
 .ourLocationsListItemHeading {
@@ -39,4 +38,10 @@
 
 .ourLocationsListItemPhoneNumber {
     margin-top: 8px;
+}
+
+@include from-breakpoint("medium") {
+    .ourLocationsListItem {
+        width: 100%;
+    }
 }

@@ -8,12 +8,14 @@ export default function Footer() {
   return (
     <footer className={styles.footerWrapper}>
       <div className={styles.footerNavigationWrapper}>
-        <Image
-          src="/img/logo/logo-footer.png"
-          alt="Ciclaboratorios"
-          width="225"
-          height="58"
-        ></Image>
+        <div className={styles.footerNavigationLogoWrapper}>
+          <Image
+            src="/img/logo/logo-footer.png"
+            alt="Ciclaboratorios"
+            width="225"
+            height="58"
+          ></Image>
+        </div>
         <div className={styles.footerNavigation}>
           <div className={styles.footerNavigationByLink}>
             <nav className={styles.footerNavigationByLinkNavWrapper}>

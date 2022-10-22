@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin: 88px 0 90px;
+    margin: 24px 0 15px;
     align-items: center;
 }
 
@@ -31,5 +31,11 @@
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@include from-breakpoint("medium") {
+    .slideDownWrapper {
+        margin: 88px 0 90px;
     }
 }

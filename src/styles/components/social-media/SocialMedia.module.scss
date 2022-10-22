@@ -2,7 +2,7 @@
 
 .navigationBySocialMediaNavWrapper {
     display: flex;
-    gap: 8px;
+    gap: 4px;
 
     a {
         display: flex;
@@ -33,6 +33,8 @@
 
 @include from-breakpoint("medium") {
     .navigationBySocialMediaNavWrapper {
+        gap: 8px;
+
         &.isMenu {
             flex-direction: row;
             justify-content: flex-start;

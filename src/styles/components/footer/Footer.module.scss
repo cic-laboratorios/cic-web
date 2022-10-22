@@ -3,20 +3,25 @@
 .footerWrapper {
     background: colors('footer-background');
     color: colors('white');
-    padding: 32px 32px 49px;
+    padding: 16px 16px 22px;
 }
 
 .footerNavigationWrapper {
-    @include generalMaxWidth();
-
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 31px;
+}
+
+.footerNavigationLogoWrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .footerNavigation {
     display: flex;
-    align-items: flex-end;
-    gap: 100px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footerNavigationByLink {
@@ -38,4 +43,23 @@
     text-align: center;
     padding-top: 13px;
     margin-top: 27px;
+}
+
+@include from-breakpoint("medium") {
+    .footerWrapper {
+        padding: 32px 32px 49px;
+    }
+
+    .footerNavigationWrapper {
+        @include generalMaxWidth();
+
+        flex-direction: row;
+        gap: unset;
+    }
+
+    .footerNavigation {
+        display: flex;
+        align-items: flex-end;
+        gap: 100px;
+    }
 }
