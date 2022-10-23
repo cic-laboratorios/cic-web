@@ -6,8 +6,33 @@ import OurLocations from "@components/our-locations/OurLocations";
 
 export default function Carousel({ carouselData }) {
   const [carouselIndex, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const minSwipeDistance = 50;
 
-  function previous() {
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      next();
+    }
+
+    if (isRightSwipe) {
+      previous();
+    }
+  };
+
+  const previous = () => {
     setIndex((currentIndex) => {
       if (currentIndex > 0) {
         return currentIndex - 1;
@@ -17,7 +42,7 @@ export default function Carousel({ carouselData }) {
     });
   }
 
-  function next() {
+  const next = () => {
     setIndex((currentIndex) => {
       if (currentIndex < carouselData.length - 1) {
         return currentIndex + 1;
@@ -28,7 +53,7 @@ export default function Carousel({ carouselData }) {
   }
 
   return (
-    <div className={styles.carouselWrapper}>
+    <div className={styles.carouselWrapper} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
       <div className={styles.carouselHeading}>Nuestros Sedes</div>
       <div className={styles.carouselContainer}>
         <button
@@ -67,8 +92,11 @@ export default function Carousel({ carouselData }) {
       <div className={styles.dotsWrapper}>
         {carouselData.map((carouselItem, index) => (
           <button
-            className={`${styles.dotsItem} ${carouselIndex == index && styles.dotsItemActive}`}
-            key={index}></button>
+            className={`${styles.dotsItem} ${
+              carouselIndex == index && styles.dotsItemActive
+            }`}
+            key={index}
+          ></button>
         ))}
       </div>
     </div>
