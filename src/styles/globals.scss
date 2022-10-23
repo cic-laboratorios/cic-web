@@ -86,10 +86,22 @@ html {
 
 .only-mobile {
   display: block;
+  width: 100%;
 }
 
-.only-desktop {
+.only-desktop,
+.only-from-tablet {
   display: none;
+}
+
+@include from-breakpoint("medium") {
+  .only-from-tablet {
+      display: block;
+  }
+
+  .only-mobile {
+    display: none;
+  }
 }
 
 @include from-breakpoint("x-large") {
