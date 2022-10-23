@@ -10,7 +10,7 @@ export default function Information({ data }) {
         data.layout == "reverse" && styles.informationWrapperReverse
       }`}
     >
-      <div className={`${data.isMainInformation && styles.isMainInformation}`}>
+      <div className={`${styles.informationCopyWrapper} ${data.isMainInformation && styles.isMainInformation}`}>
         <h2 className={styles.informationTitle}>{data.title}</h2>
         <p className={styles.informationCopy}>{data.copy}</p>
         {data.link && (

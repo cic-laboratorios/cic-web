@@ -1,109 +1,109 @@
 @use "../../abstracts/index.scss" as *;
 
-.logo {
-    width: 22px;
+.header {
+  @include generalMaxWidth();
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(230, 230, 230, 0.05);
+  box-shadow: 0px 3px 12px rgb(236 233 233 / 50%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  h1 {
+    margin: 0;
+  }
 }
 
-.header {
-    @include generalMaxWidth();
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(230, 230, 230, 0.05);
-    box-shadow: 0px 3px 12px rgb(236 233 233 / 50%);
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    h1 {
-        margin: 0;
-    }
+.logo {
+  width: 22px;
 }
 
 .toggleMenu {
-    appearance: none;
-    border: 0;
-    background: none;
-    color: colors('secondary');
-    padding: 0;
-    @include webFont(18px, 22px, 400);
+  appearance: none;
+  border: 0;
+  background: none;
+  color: colors("secondary");
+  padding: 0;
+  @include webFont(18px, 22px, 400);
 }
 
 .sideNav {
-    position: fixed;
-    width: 220px;
-    height: 100%;
-    right: 0;
-    top: 0;
-    background: colors('white');
-    box-shadow: -5px -1px 12px rgb(0 0 0 / 10%);
-    z-index: zindex('menu');
-    padding: 25px 32px;
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: colors("white");
+  box-shadow: -5px -1px 12px rgb(0 0 0 / 10%);
+  z-index: zindex("menu");
+  padding: 25px 32px;
 }
 
 .sideNavCloseIcon {
-    display: block;
-    display: flex;
-    justify-content: flex-end;
+  display: block;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navbarMobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 56px;
-    margin: 47px 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  margin: 47px 0 32px;
 }
 
 .navbar {
-    display: none;
+  display: none;
 }
 
 @include from-breakpoint("medium") {
-    .logo {
-        width: 29px;
-        border-bottom: none;
-        box-shadow: none;
-    }
+  .logo {
+    width: 29px;
+    border-bottom: none;
+    box-shadow: none;
+  }
 
-    .header {
-        padding-top: 14px;
-        padding-bottom: 14px;
-    }
+  .header {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
 
-    .sideNav {
-        width: 278px;
-    }
+  .sideNav {
+    width: 278px;
+  }
 
-    .toggleMenu {
-        margin-right: 11px;
-    }
+  .toggleMenu {
+    margin-right: 11px;
+  }
 
-    .navbarMobile {
-        align-items: flex-start;
-        padding: 0 0 0 32px;
-    }
+  .navbarMobile {
+    align-items: flex-start;
+    padding: 0 0 0 32px;
+  }
 }
 
 @include from-breakpoint("x-large") {
-    .header {
-        border-bottom: none;
-        box-shadow: none;
-        padding-top: 11px;
-        padding-bottom: 11px;
-    }
+  .header {
+    border-bottom: none;
+    box-shadow: none;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
 
-    .navbar {
-        display: flex;
-        gap: 42px;
-    }
+  .navbar {
+    display: flex;
+    gap: 42px;
+  }
 
-    .logo {
-        width: 225px;
-    }
+  .logo {
+    width: 225px;
+  }
 
-    .toggleMenu,
-    .sideNav {
-        display: none;
-    }
+  .toggleMenu,
+  .sideNav {
+    display: none;
+  }
 }

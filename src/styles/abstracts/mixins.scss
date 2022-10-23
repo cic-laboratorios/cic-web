@@ -48,8 +48,12 @@
   border: 1px solid colors('third');
 }
 
-@mixin generalMaxWidth() {
-  padding: 0 32px;
+@mixin generalMaxWidth($customPadding: 0 16px) {
+  padding: $customPadding;
   max-width: $large;
   margin: 0 auto;
+
+  @include from-breakpoint("medium") {
+    padding: 0 32px;
+  }
 }
