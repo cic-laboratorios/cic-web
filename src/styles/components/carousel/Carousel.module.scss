@@ -52,10 +52,11 @@
 
 .dotsItem {
   appearance: none;
-  width: 10px;
+  width: 14px;
   height: 14px;
   border: 1px solid rgba(51, 51, 51, 0.4);
   border-radius: 50%;
+  padding: 0;
   cursor: pointer;
 
   &:hover {
