@@ -1,9 +1,12 @@
 @use '../../abstracts/index.scss' as *;
 
 .footerWrapper {
+    @include generalMaxWidth();
+
     background: colors('footer-background');
     color: colors('white');
-    padding: 16px 16px 22px;
+    padding-top: 16px;
+    padding-bottom: 22px;
 }
 
 .footerNavigationWrapper {

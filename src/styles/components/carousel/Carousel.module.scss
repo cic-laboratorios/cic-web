@@ -1,6 +1,7 @@
 @use "../../abstracts/index.scss" as *;
 
 .carouselWrapper {
+  @include generalMaxWidth();
   position: relative;
   margin: 47px 0 56px;
 }
@@ -13,10 +14,10 @@
 }
 
 .carouselHeading {
-  @include webFont(40px, 120%, 400);
+  @include webFont(28px, 110%, 400);
 
   text-align: center;
-  margin: 0 0 42px;
+  margin: 0 0 56px;
 }
 
 .carousel {
@@ -69,6 +70,12 @@
 }
 
 @include from-breakpoint("medium") {
+  .carouselHeading {
+    @include webFont(40px, 120%, 400);
+
+    margin: 0 0 42px;
+  }
+
   .carouselAction {
     display: block;
     position: absolute;

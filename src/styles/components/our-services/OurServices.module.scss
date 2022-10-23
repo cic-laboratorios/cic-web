@@ -1,14 +1,16 @@
 @use '../../abstracts/index.scss' as *;
 
 .ourServicesWrapper {
+    @include generalMaxWidth();
     margin: 50px 0;
 }
 
 .ourServicesHeading {
     @include webFont(40px, 120%, 400);
 
+    max-width: 180px;
     text-align: center;
-    margin: 0 0 42px;
+    margin: 0 auto 42px;
 }
 
 .ourServicesListWrapper {
@@ -21,7 +23,7 @@
 }
 
 .ourServicesListItemHeading {
-    @include webFont(24px, 123%, 400);
+    @include webFont(20px, 120%, 400);
 
     color: colors('headings');
     margin: 8px auto 28px;
@@ -29,9 +31,22 @@
 }
 
 .ourServicesListItemCopy {
-    @include webFont(16px, 120%, 400);
+    @include webFont(13px, 120%, 400);
 
     color: colors('copy');
+    text-align: left;
+}
+
+@include from-breakpoint("medium") {
+    .ourServicesListItemHeading {
+        @include webFont(24px, 123%, 400);
+    }
+
+    .ourServicesListItemCopy {
+        @include webFont(16px, 120%, 400);
+
+        text-align: center;
+    }
 }
 
 @include from-breakpoint("x-large") {

@@ -41,6 +41,13 @@
 }
 
 @include from-breakpoint("medium") {
+    .ourLocationsHeading {
+        @include webFont(40px, 120%, 400);
+
+        text-align: center;
+        margin: 0 0 42px;
+    }
+
     .ourLocationsListItem {
         width: 100%;
     }

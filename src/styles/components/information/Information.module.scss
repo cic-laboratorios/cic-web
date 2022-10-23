@@ -9,6 +9,10 @@
     flex-direction: column;
 }
 
+.informationCopyWrapper {
+    @include generalMaxWidth();
+}
+
 .informationTitle {
     @include webFont(24px, 123%, 400);
 
@@ -47,6 +51,7 @@
     margin: 24px 0 0;
     display: inline-block;
     width: 100%;
+    max-width: 240px;
 }
 
 .informationWrapperMainImage {
@@ -61,6 +66,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    line-height: 0;
 
     img {
         width: calc(100% - 70px);

@@ -47,12 +47,6 @@ const ourServices = [
     copy: "Consulta y descarga los resultados de tus exámenes por la página.",
   },
   {
-    img: "/img/virus-icon.png",
-    alt: "",
-    heading: "Toma de muestras Covid",
-    copy: "Realizamos pruebas PCR con entrega de resultados en 24 horas.",
-  },
-  {
     img: "/img/ambulance-icon.png",
     alt: "",
     heading: "Pruebas a domicilio",
@@ -61,8 +55,14 @@ const ourServices = [
   {
     img: "/img/medical-symbol-icon.png",
     alt: "",
-    heading: "Convenios y servicios",
+    heading: "Convenios y servicios de EPS",
     copy: "Consulta sobre los descuentos para los afiliados a EPS y cooperativas.",
+  },
+  {
+    img: "/img/virus-icon.png",
+    alt: "",
+    heading: "Toma de muestras Covid",
+    copy: "Realizamos pruebas PCR con entrega de resultados en 24 horas.",
   },
 ];
 
