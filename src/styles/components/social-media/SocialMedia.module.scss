@@ -31,15 +31,19 @@
     }
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
     .navigationBySocialMediaNavWrapper {
-        gap: 8px;
-
         &.isMenu {
             flex-direction: row;
             justify-content: flex-start;
             gap: 24px;
             padding: 0 0 0 32px;
         }
+    }
+}
+
+@include from-breakpoint("x-large") {
+    .navigationBySocialMediaNavWrapper {
+        gap: 8px;
     }
 }

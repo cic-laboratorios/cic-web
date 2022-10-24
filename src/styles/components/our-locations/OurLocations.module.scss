@@ -40,7 +40,12 @@
     margin-top: 8px;
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
+    .ourLocationsWrapper {
+        max-width: 465px;
+        margin: 0 auto;
+    }
+
     .ourLocationsHeading {
         @include webFont(40px, 120%, 400);
 
@@ -50,5 +55,10 @@
 
     .ourLocationsListItem {
         width: 100%;
+    }
+
+    .ourLocationsListWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }

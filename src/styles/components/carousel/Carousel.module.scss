@@ -2,8 +2,9 @@
 
 .carouselWrapper {
   @include generalMaxWidth();
+
   position: relative;
-  margin: 47px 0 56px;
+  padding: 47px 0 56px;
 }
 
 .carouselContainer {
@@ -69,11 +70,15 @@
   @include carouselActive();
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
+  .carouselWrapper {
+    padding: 50px 24px 56px
+  }
+
   .carouselHeading {
     @include webFont(40px, 120%, 400);
 
-    margin: 0 0 42px;
+    margin-bottom: 56px;
   }
 
   .carouselAction {
@@ -93,5 +98,13 @@
       background: rgba(138, 138, 138, 0.2);
       box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
     }
+  }
+
+  .carouselLeftButton {
+    left: 24px;
+  }
+
+  .carouselRightButton {
+    right: 24px;
   }
 }

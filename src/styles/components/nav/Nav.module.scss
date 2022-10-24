@@ -59,16 +59,15 @@
   display: none;
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
+  .header {
+    padding: 16px 32px;
+  }
+
   .logo {
     width: 29px;
     border-bottom: none;
     box-shadow: none;
-  }
-
-  .header {
-    padding-top: 14px;
-    padding-bottom: 14px;
   }
 
   .sideNav {

@@ -54,6 +54,10 @@
     max-width: 240px;
 }
 
+.informationImage {
+    width: 100%;
+}
+
 .informationWrapperMainImage {
     line-height: 0;
 
@@ -79,42 +83,53 @@
     }
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
     .informationWrapper {
         flex-direction: row;
-        padding: 0;
+        padding: 40px 0;
+        gap: 24px;
     }
 
-    .informationWrapperReverse {
-        flex-direction: row-reverse;
+    .informationCopyWrapper {
+        padding: 0 0 0 24px;
     }
 
     .informationTitle {
-        @include webFont(40px, 120%, 400);
+        @include webFont(28px, 120%, 400);
 
         color: colors('headings');
         width: 100%;
-        max-width: 464px;
-        margin: 0;
+        text-align: left;
     }
 
     .informationCopy {
-        @include webFont(24px, 120%, 400);
+        @include webFont(18px, 22px, 400);
 
         color: colors('copy');
         width: 100%;
-        max-width: 464px;
         margin: 24px 0 0;
+    }
+
+    .informationConsultNow {
+        margin: 24px 0 0;
+        max-width: 194px;
+    }
+
+    .informationWrapperImage {
+        img {
+            width: 100%;
+        }
     }
 
     .isMainInformation {
         text-align: initial;
+        max-width: 351px;
+        padding: 0 0 0 24px;
 
         .informationTitle {
             @include webFont(61px, 120%, 700);
 
-            width: 100%;
-            max-width: 381px;
+            text-align: left;
             margin: 0;
         }
 
@@ -124,6 +139,14 @@
             width: 100%;
             max-width: 299px;
             margin: 24px 0 0;
+        }
+    }
+
+    .informationWrapperReverse {
+        flex-direction: row-reverse;
+
+        .informationCopyWrapper {
+            padding: 0 24px 0 0;
         }
     }
 }

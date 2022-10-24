@@ -57,7 +57,7 @@ html {
       text-decoration: none;
     }
 
-    @include from-breakpoint("medium") {
+    @include from-breakpoint("large") {
       font-size: 18px;
     }
 
@@ -72,8 +72,9 @@ html {
 
   background: transparent;
   color: colors('black');
-  padding: 12px 36px;
+  padding: 12px;
   border-radius: 50px;
+  text-align: center;
 }
 
 .consultNow:hover,
@@ -94,7 +95,7 @@ html {
   display: none;
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
   .only-from-tablet {
       display: block;
   }
