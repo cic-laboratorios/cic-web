@@ -1,7 +1,7 @@
 @use "../../abstracts/index.scss" as *;
 
 .header {
-  @include generalMaxWidth();
+  @include generalMaxWidth(0 32px);
 
   display: flex;
   align-items: center;
