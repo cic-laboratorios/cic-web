@@ -85,6 +85,10 @@ html {
   color: colors('white');
 }
 
+.consultNow.active {
+  padding: 12px 36px;
+}
+
 .only-mobile {
   display: block;
   width: 100%;
@@ -117,7 +121,7 @@ html {
   .consultNow {
     background: transparent;
     color: colors('black');
-    padding: 12px 36px;
+    padding: 12px;
     border-radius: 50px;
   }
 }

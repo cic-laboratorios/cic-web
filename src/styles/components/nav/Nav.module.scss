@@ -88,17 +88,16 @@
   .header {
     border-bottom: none;
     box-shadow: none;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding: 11px 32px;
   }
 
   .navbar {
     display: flex;
-    gap: 42px;
+    gap: 120px;
   }
 
   .logo {
-    width: 225px;
+    width: 222px;
   }
 
   .toggleMenu,

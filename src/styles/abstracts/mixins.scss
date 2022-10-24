@@ -50,7 +50,7 @@
 
 @mixin generalMaxWidth($customPadding: 0 16px) {
   padding: $customPadding;
-  max-width: $large;
+  max-width: $x-large;
   margin: 0 auto;
 
   @include from-breakpoint("large") {

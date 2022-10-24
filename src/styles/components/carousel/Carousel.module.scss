@@ -108,3 +108,9 @@
     right: 24px;
   }
 }
+
+@include from-breakpoint("x-large") {
+  .carouselWrapper {
+    padding: 47px 32px 56px
+  }
+}

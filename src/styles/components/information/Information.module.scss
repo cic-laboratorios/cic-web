@@ -32,25 +32,9 @@
     margin: 24px 0 0;
 }
 
-.isMainInformation {
-    width: 100%;
-    max-width: 286px;
-    margin: 0 auto;
-    text-align: center;
-
-    .informationTitle {
-        @include webFont(40px, 110%, 700);
-    }
-
-    .informationCopy {
-        @include webFont(18px, 120%, 400);
-    }
-}
-
 .informationConsultNow {
     margin: 24px 0 0;
     display: inline-block;
-    width: 100%;
     max-width: 240px;
 }
 
@@ -74,6 +58,21 @@
 
     img {
         width: calc(100% - 70px);
+    }
+}
+
+.isMainInformation {
+    width: 100%;
+    max-width: 286px;
+    margin: 0 auto;
+    text-align: center;
+
+    .informationTitle {
+        @include webFont(40px, 110%, 700);
+    }
+
+    .informationCopy {
+        @include webFont(18px, 120%, 400);
     }
 }
 
@@ -112,7 +111,7 @@
 
     .informationConsultNow {
         margin: 24px 0 0;
-        max-width: 194px;
+        max-width: unset;
     }
 
     .informationWrapperImage {
@@ -148,5 +147,31 @@
         .informationCopyWrapper {
             padding: 0 24px 0 0;
         }
+    }
+}
+
+@include from-breakpoint("large") {
+    .informationWrapper {
+        max-width: $x-large;
+        padding: 56px 32px;
+        margin: 0 auto;
+        gap: 32px;
+    }
+
+    .informationImage {
+        flex: 1;
+    }
+
+    .informationTitle {
+        @include webFont(40px, 120%, 400);
+    }
+
+    .informationCopy {
+        @include webFont(24px, 123%, 400);
+    }
+
+    .isMainInformation {
+        max-width: 381px;
+        padding: 0;
     }
 }

@@ -64,7 +64,7 @@
 
 @include from-breakpoint("x-large") {
     .ourServicesWrapper {
-        margin: 90px 0;
+        padding: 40px 32px;
     }
 
     .navbar {
@@ -76,5 +76,9 @@
         display: flex;
         text-align: center;
         gap: 33px;
+    }
+
+    .ourServicesListItemHeading {
+        max-width: 190px;
     }
 }

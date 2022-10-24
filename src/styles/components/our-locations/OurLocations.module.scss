@@ -41,11 +41,6 @@
 }
 
 @include from-breakpoint("large") {
-    .ourLocationsWrapper {
-        max-width: 465px;
-        margin: 0 auto;
-    }
-
     .ourLocationsHeading {
         @include webFont(40px, 120%, 400);
 
@@ -60,5 +55,22 @@
     .ourLocationsListWrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ourLocationsWrapper {
+        max-width: 465px;
+        margin: 0 auto;
+    }
+}
+
+@include from-breakpoint("x-large") {
+    .ourLocationsListWrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ourLocationsWrapper {
+        max-width: unset;
+        margin: 0 auto;
     }
 }

@@ -18,11 +18,6 @@
     row-gap: 23px;
 }
 
-.ourAlliesListItem {
-    max-width: 97px;
-    height: 97px;
-}
-
 @include from-breakpoint("large") {
     .ourAlliesWrapper {
         padding: 32px 24px 48px;
@@ -36,5 +31,12 @@
     .ourAlliesListItem {
         max-width: 74px;
         height: 74px;
+    }
+}
+
+@include from-breakpoint("x-large") {
+    .ourAlliesListItem {
+        max-width: 97px;
+        height: 97px;
     }
 }

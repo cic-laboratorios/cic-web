@@ -41,9 +41,3 @@
         }
     }
 }
-
-@include from-breakpoint("x-large") {
-    .navigationBySocialMediaNavWrapper {
-        gap: 8px;
-    }
-}
