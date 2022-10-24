@@ -22,6 +22,8 @@
     .ourAlliesWrapper {
         padding: 32px 24px 48px;
         display: block;
+        max-width: $x-large;
+        margin: 0 auto;
     }
 
     .ourAlliesHeading {

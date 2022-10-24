@@ -55,6 +55,8 @@
 
     .footerNavigationWrapper {
         flex-direction: row;
+        max-width: $x-large;
+        margin: 0 auto;
     }
 
     .footerNavigation {
@@ -78,5 +80,7 @@
     .footerCopyright {
         padding: 16px 0 0;
         margin-top: 16px;
+        max-width: $x-large;
+        margin: 16px auto 0;
     }
 }

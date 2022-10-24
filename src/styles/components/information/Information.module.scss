@@ -170,8 +170,20 @@
         @include webFont(24px, 123%, 400);
     }
 
+    .informationWrapperImage {
+        img {
+            max-width: 528px;
+        }
+    }
+
     .isMainInformation {
         max-width: 381px;
         padding: 0;
+
+        .informationWrapperImage {
+            img {
+                max-width: 580px;
+            }
+        }
     }
 }
