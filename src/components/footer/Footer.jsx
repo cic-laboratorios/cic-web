@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import styles from "@styles/components/footer/Footer.module.scss";
@@ -9,12 +8,7 @@ export default function Footer() {
     <footer className={styles.footerWrapper}>
       <div className={styles.footerNavigationWrapper}>
         <div className={styles.footerNavigationLogoWrapper}>
-          <Image
-            src="/img/logo/logo-footer.png"
-            alt="Ciclaboratorios"
-            width="225"
-            height="58"
-          ></Image>
+          <img src="/img/logo/logo-footer.png" alt="Ciclaboratorios" />
         </div>
         <div className={styles.footerNavigation}>
           <div className={styles.footerNavigationByLink}>
