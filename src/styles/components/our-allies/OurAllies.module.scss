@@ -23,9 +23,18 @@
     height: 97px;
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
     .ourAlliesWrapper {
-        margin: 88px 0 48px;
+        padding: 32px 24px 48px;
         display: block;
+    }
+
+    .ourAlliesHeading {
+        margin: 0 0 49px;
+    }
+
+    .ourAlliesListItem {
+        max-width: 74px;
+        height: 74px;
     }
 }

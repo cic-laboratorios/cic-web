@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin: 24px 0 15px;
+    padding: 24px 0 15px;
     align-items: center;
 }
 
@@ -34,8 +34,8 @@
     }
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
     .slideDownWrapper {
-        margin: 88px 0 90px;
+        padding: 48px 0;
     }
 }

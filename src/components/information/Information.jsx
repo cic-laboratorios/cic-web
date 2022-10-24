@@ -31,7 +31,7 @@ export default function Information({ data }) {
           </div>
         </div>
       )}
-      <div className={`${data.isMainInformation && "only-from-tablet"}`}>
+      <div className={`${styles.informationImage} ${data.isMainInformation && "only-from-tablet"}`}>
         <div
           className={`${styles.informationWrapperImage} ${
             data.isMainInformation && "only-from-tablet"

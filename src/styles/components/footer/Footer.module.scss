@@ -1,12 +1,9 @@
 @use '../../abstracts/index.scss' as *;
 
 .footerWrapper {
-    @include generalMaxWidth();
-
     background: colors('footer-background');
     color: colors('white');
-    padding-top: 16px;
-    padding-bottom: 22px;
+    padding: 16px 16px 22px;
 }
 
 .footerNavigationWrapper {
@@ -52,27 +49,35 @@
     margin-top: 27px;
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
     .footerWrapper {
-        padding: 32px 32px 49px;
+        padding: 24px 32px 18px;
     }
 
     .footerNavigationWrapper {
-        @include generalMaxWidth();
-
         flex-direction: row;
-        gap: unset;
     }
 
     .footerNavigation {
         display: flex;
         align-items: flex-end;
-        gap: 100px;
+        gap: 32px;
     }
 
     .footerNavigationLogoWrapper {
         img {
             width: 225px;
         }
+    }
+
+    .footerNavigationByLink {
+        .footerNavigationByLinkNavWrapper {
+            gap: 62px;
+        }
+    }
+
+    .footerCopyright {
+        padding: 16px 0 0;
+        margin-top: 16px;
     }
 }

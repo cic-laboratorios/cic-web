@@ -2,7 +2,8 @@
 
 .ourServicesWrapper {
     @include generalMaxWidth();
-    margin: 50px 0;
+
+    padding: 50px 16px;
 }
 
 .ourServicesHeading {
@@ -37,9 +38,21 @@
     text-align: left;
 }
 
-@include from-breakpoint("medium") {
+@include from-breakpoint("large") {
+    .ourServicesWrapper {
+        padding: 42px 24px 56px;
+    }
+
+    .ourServicesHeading {
+        @include webFont(48px, 120%, 400);
+
+        max-width: unset;
+    }
+
     .ourServicesListItemHeading {
         @include webFont(24px, 123%, 400);
+
+        max-width: unset;
     }
 
     .ourServicesListItemCopy {
