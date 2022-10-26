@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import styles from "@styles/components/information/Information.module.scss";
@@ -6,11 +5,13 @@ import styles from "@styles/components/information/Information.module.scss";
 export default function Information({ data }) {
   return (
     <div
-      className={`${styles.informationWrapper} ${
-        data.layout == "reverse" && styles.informationWrapperReverse
-      }`}
+      className={`
+        ${styles.informationWrapper}
+        ${ data.layout == "reverse" && styles.informationWrapperReverse}
+        ${data.isMainInformation && styles.isMainInformation}
+      `}
     >
-      <div className={`${styles.informationCopyWrapper} ${data.isMainInformation && styles.isMainInformation}`}>
+      <div className={`${styles.informationCopyWrapper}`}>
         <h2 className={styles.informationTitle}>{data.title}</h2>
         <p className={styles.informationCopy}>{data.copy}</p>
         {data.link && (
@@ -22,22 +23,24 @@ export default function Information({ data }) {
         )}
       </div>
       {data.isMainInformation && (
-        <div className="only-mobile">
-          <div className={`${styles.informationWrapperMainImage} `}>
+        <div className={`${styles.informationImageOnlyMobile} only-mobile`}>
+          <div>
             <img
-              src="/img/home/results-online.png"
+              src={data.img.src}
               alt={data.img.alt}
             ></img>
           </div>
         </div>
       )}
-      <div className={`${styles.informationImage} ${data.isMainInformation && "only-from-tablet"}`}>
+      <div className={`${styles.informationImage}`}>
         <div
-          className={`${styles.informationWrapperImage} ${
-            data.isMainInformation && "only-from-tablet"
-          }`}
+          className={styles.informationWrapperBubble}
+          style={{
+            backgroundImage: `url(${data.img.src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
         >
-          <img src={data.img.src} alt={data.img.alt} />
         </div>
       </div>
     </div>

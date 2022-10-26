@@ -40,32 +40,40 @@
 
 .informationImage {
     width: 100%;
-}
-
-.informationWrapperMainImage {
-    line-height: 0;
-
-    img {
-        width: 100%;
-    }
-}
-
-.informationWrapperImage {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
-    line-height: 0;
+}
 
-    img {
-        width: calc(100% - 70px);
+.informationWrapperBubble {
+    max-width: 540px;
+    height: 292px;
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 270px 0 0 270px;
+    overflow: hidden;
+    position: relative;
+    right: -70px;
+}
+
+.informationWrapperReverse {
+    .informationWrapperBubble {
+        border-radius: 0 270px 270px 0;
+        right: unset;
+        left: -70px;
+    }
+
+    .informationImage {
+        justify-content: flex-start;
     }
 }
 
 .isMainInformation {
-    width: 100%;
-    max-width: 286px;
-    margin: 0 auto;
-    text-align: center;
+    .informationCopyWrapper {
+        width: 100%;
+        max-width: 286px;
+        margin: 0 auto;
+        text-align: center;
+    }
 
     .informationTitle {
         @include webFont(40px, 110%, 700);
@@ -74,23 +82,39 @@
     .informationCopy {
         @include webFont(18px, 120%, 400);
     }
-}
 
-.informationWrapperReverse {
-    .informationWrapperImage {
-        justify-content: flex-start;
+    .informationImage {
+        display: none;
+    }
+
+    .informationImageOnlyMobile {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .informationWrapperBubble {
+        width: 100%;
+        right: 0;
+        border-radius: 0;
+        height: 186px;
+        background-size: cover;
+        left: 0;
+        max-width: unset;
     }
 }
 
 @include from-breakpoint("large") {
     .informationWrapper {
         flex-direction: row;
-        padding: 40px 0;
-        gap: 24px;
+        padding: 40px 0 40px 24px;
+        gap: 0;
     }
 
     .informationCopyWrapper {
-        padding: 0 0 0 24px;
+        padding: 0;
     }
 
     .informationTitle {
@@ -120,15 +144,27 @@
         }
     }
 
+    .informationWrapperBubble {
+        width: 402px;
+        max-width: unset;
+        height: 303px;
+        left: unset;
+        right: -24px;
+    }
+
     .isMainInformation {
-        text-align: initial;
-        max-width: 351px;
-        padding: 0 0 0 24px;
+        &.informationWrapper {
+            padding: 40px 0 64px 24px;
+            gap: 32px;
+        }
+
+        .informationCopyWrapper {
+            text-align: left;
+        }
 
         .informationTitle {
-            @include webFont(61px, 120%, 700);
+            @include webFont(56px, 120%, 700);
 
-            text-align: left;
             margin: 0;
         }
 
@@ -138,6 +174,16 @@
             width: 100%;
             max-width: 299px;
             margin: 24px 0 0;
+        }
+
+        .informationImage {
+            display: flex;
+        }
+
+        .informationWrapperBubble {
+            max-width: 709px;
+            height: 383px;
+            border-radius: 270px 0 0 270px;
         }
     }
 
@@ -150,12 +196,12 @@
     }
 }
 
-@include from-breakpoint("large") {
+@include from-breakpoint("x-large") {
     .informationWrapper {
         max-width: $x-large;
-        padding: 56px 32px;
+        padding: 56px 0 56px 32px;
         margin: 0 auto;
-        gap: 32px;
+        gap: 24px;
     }
 
     .informationImage {
@@ -176,14 +222,61 @@
         }
     }
 
-    .isMainInformation {
-        max-width: 381px;
-        padding: 0;
+    .informationWrapperBubble {
+        width: 528px;
+        max-width: unset;
+        height: 399px;
+        border-radius: 270px 0 0 270px;
+        left: unset;
+        right: 0;
+    }
 
-        .informationWrapperImage {
-            img {
-                max-width: 580px;
-            }
+    .informationWrapperReverse {
+        padding: 56px 32px 56px 0;
+        .informationWrapperBubble {
+            right: unset;
+            left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .informationWrapper {
+        gap: 149px;
+    }
+
+    .informationWrapperBubble {
+        width: 700px;
+        max-width: unset;
+        height: 400px;
+        border-radius: 270px;
+        left: unset;
+        right: -210px;
+    }
+
+    .informationWrapperReverse {
+        .informationWrapperBubble {
+            width: 700px;
+            max-width: unset;
+            height: 400px;
+            border-radius: 270px;
+            right: unset;
+            left: -210px;
+        }
+    }
+
+    .isMainInformation {
+        &.informationWrapper {
+            gap: 149px;
+        }
+
+        .informationWrapperBubble {
+            width: 999px;
+            max-width: unset;
+            height: 540px;
+            border-radius: 270px;
+            left: unset;
+            right: -210px;
         }
     }
 }
