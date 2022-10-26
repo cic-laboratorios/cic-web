@@ -145,9 +145,9 @@
     }
 
     .informationWrapperBubble {
-        width: 402px;
-        max-width: unset;
-        height: 303px;
+        width: 90%;
+        max-width: 700px;
+        height: 500px;
         left: unset;
         right: -24px;
     }
@@ -193,6 +193,14 @@
         .informationCopyWrapper {
             padding: 0 24px 0 0;
         }
+
+        .informationWrapperBubble {
+            width: 90%;
+            max-width: 700px;
+            height: 500px;
+            right: unset;
+            left: -24px;
+        }
     }
 }
 
@@ -223,9 +231,9 @@
     }
 
     .informationWrapperBubble {
-        width: 528px;
-        max-width: unset;
-        height: 399px;
+        width: 100%;
+        max-width: 700px;
+        height: 500px;
         border-radius: 270px 0 0 270px;
         left: unset;
         right: 0;
@@ -233,32 +241,36 @@
 
     .informationWrapperReverse {
         padding: 56px 32px 56px 0;
+
         .informationWrapperBubble {
             right: unset;
             left: 0;
+            width: 100%;
+            max-width: 700px;
+            height: 500px;
         }
     }
 }
 
 @media screen and (min-width: 1440px) {
     .informationWrapper {
-        gap: 149px;
+        gap: 0;
     }
 
     .informationWrapperBubble {
-        width: 700px;
+        width: 900px;
         max-width: unset;
-        height: 400px;
+        height: 500px;
         border-radius: 270px;
         left: unset;
-        right: -210px;
+        right: -150px;
     }
 
     .informationWrapperReverse {
         .informationWrapperBubble {
-            width: 700px;
+            width: 900px;
             max-width: unset;
-            height: 400px;
+            height: 500px;
             border-radius: 270px;
             right: unset;
             left: -210px;
