@@ -7,7 +7,7 @@ export default function Information({ data }) {
     <div
       className={`
         ${styles.informationWrapper}
-        ${ data.layout == "reverse" && styles.informationWrapperReverse}
+        ${data.layout == "reverse" && styles.informationWrapperReverse}
         ${data.isMainInformation && styles.isMainInformation}
       `}
     >
@@ -22,25 +22,19 @@ export default function Information({ data }) {
           </Link>
         )}
       </div>
-      {data.isMainInformation && (
-        <div className={`${styles.informationImageOnlyMobile} only-mobile`}>
-          <div>
-            <img
-              src={data.img.src}
-              alt={data.img.alt}
-            ></img>
-          </div>
-        </div>
-      )}
-      <div className={`${styles.informationImage}`}>
-        <div
-          className={styles.informationWrapperBubble}
-          style={{
-            backgroundImage: `url(${data.img.src})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        >
+      <div className={`${styles.informationImageOnlyMobile} only-mobile`}>
+        <img src={data.img.src} alt={data.img.alt}></img>
+      </div>
+      <div className="only-from-tablet">
+        <div className={`${styles.informationImage}`}>
+          <div
+            className={styles.informationWrapperBubble}
+            style={{
+              backgroundImage: `url(${data.img.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
         </div>
       </div>
     </div>

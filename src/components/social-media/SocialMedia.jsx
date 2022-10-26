@@ -5,9 +5,10 @@ import styles from "@styles/components/social-media/SocialMedia.module.scss";
 export default function SocialMedia({ reverseLayout, color, isMenu }) {
   return (
     <nav
-      className={`${styles.navigationBySocialMediaNavWrapper} ${
-        reverseLayout && styles.reverseLayout
-      } ${isMenu && styles.isMenu}`}
+      className={`
+        ${styles.navigationBySocialMediaNavWrapper}
+        ${reverseLayout && styles.reverseLayout}
+        ${isMenu && styles.isMenu}`}
     >
       <Link href="">
         <a>

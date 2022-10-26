@@ -2,6 +2,7 @@
 
 .navigationBySocialMediaNavWrapper {
     display: flex;
+    justify-content: center;
     gap: 4px;
 
     a {
@@ -23,7 +24,6 @@
 
     &.reverseLayout {
         flex-direction: row-reverse;
-        justify-content: center;
     }
 
     &.isMenu {

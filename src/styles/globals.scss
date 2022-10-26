@@ -102,6 +102,7 @@ html {
 @include from-breakpoint("large") {
   .only-from-tablet {
       display: block;
+      width: 100%;
   }
 
   .only-mobile {
