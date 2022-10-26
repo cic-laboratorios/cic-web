@@ -2,8 +2,9 @@
 
 .mainWrapper {
   width: 100%;
-  background: url("../../../public/img/background.png");
+  background: url("/img/layout/vector.png");
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: 260px;
+  overflow: hidden;
 }
