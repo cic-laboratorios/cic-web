@@ -55,6 +55,14 @@
     right: -70px;
 }
 
+.informationImageOnlyMobile {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
 .informationWrapperReverse {
     .informationWrapperBubble {
         border-radius: 0 270px 270px 0;
@@ -85,14 +93,6 @@
 
     .informationImage {
         display: none;
-    }
-
-    .informationImageOnlyMobile {
-        width: 100%;
-
-        img {
-            width: 100%;
-        }
     }
 
     .informationWrapperBubble {

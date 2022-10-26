@@ -51,6 +51,12 @@
   box-shadow: -5px -1px 12px rgb(0 0 0 / 10%);
   z-index: zindex("menu");
   padding: 25px 32px;
+  transition: transform .3s linear;
+  transform: translateX(100%);
+}
+
+.sideNavOpened {
+  transform: translateX(0);
 }
 
 .sideNavCloseIcon {

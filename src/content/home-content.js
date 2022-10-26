@@ -32,7 +32,7 @@ const informationData3 = {
   copy: "Somos tu mano aliada, un equipo humano y especializado que genera resultados de exámenes de laboratorio clínico confiables y efectivos.",
   layout: "normal",
   img: {
-    src: "/img/information/more-than-results.png",
+    src: "/img/information/our-priority.png",
     alt: "Señora haciendo estudios en el laboratorio",
     width: "528",
     height: "399",
