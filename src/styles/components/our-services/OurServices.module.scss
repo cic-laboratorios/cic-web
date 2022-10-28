@@ -32,7 +32,7 @@
 }
 
 .ourServicesListItemCopy {
-    @include webFont(13px, 120%, 400);
+    @include webFont(16px, 120%, 400);
 
     color: colors('copy');
     text-align: left;
