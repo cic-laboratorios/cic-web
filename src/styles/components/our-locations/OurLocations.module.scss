@@ -22,11 +22,17 @@
     width: 100%;
 }
 
+.ourLocationsListItemImageHeading {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
 .ourLocationsListItemHeading {
     @include webFont(16px, 120%, 700);
 
     color: colors('headings');
-    margin: 16px auto 28px;
 }
 
 .ourLocationsListItemCopy,
@@ -50,6 +56,12 @@
 
     .ourLocationsListItem {
         width: 100%;
+    }
+
+    .ourLocationsListItemImageHeading {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 8px;
     }
 
     .ourLocationsListWrapper {
@@ -80,5 +92,11 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         max-width: 1143px;
+        column-gap: 32px;
+        row-gap: 56px;
+    }
+
+    .ourLocationsListItemImageHeading {
+        margin-bottom: 16px;
     }
 }
