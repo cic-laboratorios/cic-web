@@ -1,23 +1,29 @@
 @use "../../abstracts/index.scss" as *;
 
 .header {
+  border-bottom: 1px solid rgba(230, 230, 230, 0.05);
+  box-shadow: 0px 3px 12px rgb(236 233 233 / 50%);
+  position: fixed;
+  width: 100%;
+  z-index: zindex("menu");
+  background: colors("white");
+  top: 0;
+  left: 0;
+  right: 0;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.headerWrapper {
   @include generalMaxWidth(0 32px);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(230, 230, 230, 0.05);
-  box-shadow: 0px 3px 12px rgb(236 233 233 / 50%);
   padding-top: 10px;
   padding-bottom: 10px;
-  position: fixed;
-  width: 100%;
-  z-index: zindex("menu");
-  background: colors("white");
-
-  h1 {
-    margin: 0;
-  }
 }
 
 .logo {
