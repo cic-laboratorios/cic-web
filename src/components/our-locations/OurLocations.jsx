@@ -11,16 +11,18 @@ export default function OurLocations({ ourLocations, showHeading }) {
       <div className={styles.ourLocationsListWrapper}>
         {ourLocations.map((location, index) => (
           <div className={styles.ourLocationsListItem} key={index}>
-            <div>
-              <Image
-                src={location.img}
-                alt="Location icon"
-                width="24"
-                height="24"
-              ></Image>
-            </div>
-            <div className={styles.ourLocationsListItemHeading}>
-              {location.heading}
+            <div className={styles.ourLocationsListItemImageHeading}>
+              <div>
+                <Image
+                  src={location.img}
+                  alt="Location icon"
+                  width="24"
+                  height="24"
+                ></Image>
+              </div>
+              <div className={styles.ourLocationsListItemHeading}>
+                {location.heading}
+              </div>
             </div>
             <div className={styles.ourLocationsListItemCopy}>
               {location.copy}
