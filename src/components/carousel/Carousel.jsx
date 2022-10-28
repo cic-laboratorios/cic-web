@@ -1,14 +1,19 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "@styles/components/carousel/Carousel.module.scss";
 import OurLocations from "@components/our-locations/OurLocations";
+import useDeviceSize from "@utils/WindowResize";
 
 export default function Carousel({ carouselData }) {
   const [carouselIndex, setIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
   const minSwipeDistance = 50;
+  const [width, height] = useDeviceSize();
+  const [slidersItemsBySize, setSlidersItemsBySize] = useState([]);
+  const mobileSize = 780;
+  const largeScreenSize = 1440;
 
   const onTouchStart = (e) => {
     setTouchEnd(null);
@@ -44,13 +49,51 @@ export default function Carousel({ carouselData }) {
 
   const next = () => {
     setIndex((currentIndex) => {
-      if (currentIndex < carouselData.length - 1) {
+      if (currentIndex < slidersItemsBySize.length - 1) {
         return currentIndex + 1;
       }
 
       return currentIndex;
     });
   }
+
+  useEffect(() => {
+    let totalBySize = 0;
+    let totalSliders = 0;
+    const sliders = [];
+
+    if (width < mobileSize) {
+      totalBySize = 4;
+      setIndex(0);
+    }
+
+    if (width >= mobileSize) {
+      totalBySize = 6;
+      setIndex(0);
+    }
+
+    if (width >= largeScreenSize) {
+      totalBySize = 10;
+      setIndex(0);
+    }
+
+    totalSliders = carouselData.length / totalBySize;
+
+    if (!Number.isInteger(totalSliders)) {
+      totalSliders++;
+      totalSliders = ~~totalSliders;
+    }
+
+    for(let startIndex = 0; startIndex<totalSliders; startIndex++) {
+      const endIndex = startIndex + 1;
+
+      sliders.push({
+        data: carouselData.slice(startIndex*totalBySize, endIndex*totalBySize)
+      });
+    }
+
+    setSlidersItemsBySize(sliders)
+  }, [carouselData, width])
 
   return (
     <div className={styles.carouselWrapper} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
@@ -71,9 +114,9 @@ export default function Carousel({ carouselData }) {
           style={{ transform: `translateX(-${carouselIndex * 100}%)` }}
           className={`${styles.carousel}`}
         >
-          {carouselData.map((carouselItem, index) => (
+          {slidersItemsBySize.map((sliderItem, index) => (
             <div className={styles.carouselItem} key={index}>
-              <OurLocations ourLocations={carouselItem.data}></OurLocations>
+              <OurLocations ourLocations={sliderItem.data}></OurLocations>
             </div>
           ))}
         </div>
@@ -90,7 +133,7 @@ export default function Carousel({ carouselData }) {
         </button>
       </div>
       <div className={styles.dotsWrapper}>
-        {carouselData.map((carouselItem, index) => (
+        {slidersItemsBySize.map((sliderItem, index) => (
           <button
             className={`${styles.dotsItem} ${
               carouselIndex == index && styles.dotsItemActive
