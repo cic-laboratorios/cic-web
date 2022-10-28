@@ -20,54 +20,56 @@ export default function Nav({ navLinks, mobileNavLinks }) {
 
   return (
     <header className={styles.header}>
-      <h1>
-        <picture>
-          <source
-            media="(min-width: 1024px)"
-            srcSet="/img/logo/logo-white.svg"
-          />
-          <img
-            src="/img/logo/logo-tablet-mobile.svg"
-            alt={MENU.LOGO_ALT}
-            className={styles.logo}
-          />
-        </picture>
-      </h1>
-      <button onClick={toggleMenu} className={styles.toggleMenu}>
-        {MENU.LABEL}
-      </button>
-      {isOpen && (
-        <div className={`${styles.sideNavWrapper} `}></div>
-      )}
-      <div className={`${styles.sideNav} ${isOpen && styles.sideNavOpened}`}>
-        <div className={styles.sideNavCloseIcon}>
-          <button onClick={toggleMenu} className={styles.toggleMenu}>
+      <div className={styles.headerWrapper}>
+        <h1>
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcSet="/img/logo/logo-white.svg"
+            />
             <img
-              src="/img/nav/close-menu.svg"
-              width="22"
-              height="22"
-              alt=""
-            ></img>
-          </button>
+              src="/img/logo/logo-tablet-mobile.svg"
+              alt={MENU.LOGO_ALT}
+              className={styles.logo}
+            />
+          </picture>
+        </h1>
+        <button onClick={toggleMenu} className={styles.toggleMenu}>
+          {MENU.LABEL}
+        </button>
+        {isOpen && (
+          <div className={`${styles.sideNavWrapper} `}></div>
+        )}
+        <div className={`${styles.sideNav} ${isOpen && styles.sideNavOpened}`}>
+          <div className={styles.sideNavCloseIcon}>
+            <button onClick={toggleMenu} className={styles.toggleMenu}>
+              <img
+                src="/img/nav/close-menu.svg"
+                width="22"
+                height="22"
+                alt=""
+              ></img>
+            </button>
+          </div>
+          <nav className={styles.navbarMobile}>
+            {mobileNavLinks.map((navItem, index) => (
+              <Link key={index} href={navItem.link}>
+                <a>{navItem.label}</a>
+              </Link>
+            ))}
+          </nav>
+          <SocialMedia color="#BC1919" isMenu></SocialMedia>
         </div>
-        <nav className={styles.navbarMobile}>
-          {mobileNavLinks.map((navItem, index) => (
+        <nav className={styles.navbar}>
+          {navLinks.map((navItem, index) => (
             <Link key={index} href={navItem.link}>
-              <a>{navItem.label}</a>
+              <a className={`consultNow ${navItem.isConsultNow && "active"}`}>
+                {navItem.label}
+              </a>
             </Link>
           ))}
         </nav>
-        <SocialMedia color="#BC1919" isMenu></SocialMedia>
       </div>
-      <nav className={styles.navbar}>
-        {navLinks.map((navItem, index) => (
-          <Link key={index} href={navItem.link}>
-            <a className={`consultNow ${navItem.isConsultNow && "active"}`}>
-              {navItem.label}
-            </a>
-          </Link>
-        ))}
-      </nav>
     </header>
   );
 }
