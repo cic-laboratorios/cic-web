@@ -24,7 +24,7 @@
 }
 
 .informationCopy {
-    @include webFont(12px, 120%, 400);
+    @include webFont(16px, 120%, 400);
 
     color: colors('copy');
     width: 100%;
