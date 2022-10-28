@@ -9,3 +9,25 @@
   overflow: hidden;
   padding-top: 60px;
 }
+
+@include from-breakpoint("large") {
+  .mainWrapper {
+    background-position-x: 260px;
+    background-position-y: 710px;
+  }
+}
+
+@include from-breakpoint("x-large") {
+  .mainWrapper {
+    background-position-x: 46vw;
+    background-position-y: 370px;
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .mainWrapper {
+    background-position-x: 57vw;
+    background-position-y: 36px;
+  }
+}
