@@ -3,12 +3,13 @@ import { useState } from "react";
 
 import { MENU } from "./constants/index";
 import SocialMedia from "@components/social-media/SocialMedia";
+import useScrollDirection from "@utils/NavScroll";
 
 import styles from "@styles/components/nav/Nav.module.scss";
 
 export default function Nav({ navLinks, mobileNavLinks }) {
   const [isOpen, toggleIsOpen] = useState(false);
-  const [slideMenu, toggleSlideMenu] = useState(false);
+  const scrollDirection = useScrollDirection();
 
   function toggleMenu() {
     const body = document.querySelector("body");
@@ -19,7 +20,7 @@ export default function Nav({ navLinks, mobileNavLinks }) {
   }
 
   return (
-    <header className={styles.header}>
+    <header className={`${scrollDirection === "down" ? styles.mainNavHidden : styles.mainNavVisible} ${styles.mainNav} ${styles.header}`}>
       <div className={styles.headerWrapper}>
         <h1>
           <picture>
