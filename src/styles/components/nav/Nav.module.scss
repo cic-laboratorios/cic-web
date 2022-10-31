@@ -1,15 +1,26 @@
 @use "../../abstracts/index.scss" as *;
 
+.mainNav {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-duration: .5s;
+  position: sticky;
+}
+
+.mainNavVisible {
+  top: 0;
+}
+
+.mainNavHidden {
+  top: -60px
+}
+
 .header {
   border-bottom: 1px solid rgba(230, 230, 230, 0.05);
   box-shadow: 0px 3px 12px rgb(236 233 233 / 50%);
-  position: fixed;
   width: 100%;
   z-index: zindex("menu");
   background: colors("white");
-  top: 0;
-  left: 0;
-  right: 0;
 
   h1 {
     margin: 0;
@@ -88,6 +99,10 @@
 }
 
 @include from-breakpoint("large") {
+  .mainNavHidden {
+    top: -85px
+  }
+
   .header {
     padding: 16px 32px;
   }
