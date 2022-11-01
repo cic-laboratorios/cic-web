@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 import { MENU } from "./constants/index";
 import SocialMedia from "@components/social-media/SocialMedia";
@@ -10,6 +11,8 @@ import styles from "@styles/components/nav/Nav.module.scss";
 export default function Nav({ navLinks, mobileNavLinks }) {
   const [isOpen, toggleIsOpen] = useState(false);
   const scrollDirection = useScrollDirection();
+  const router = useRouter();
+  console.log(router.pathname);
 
   function toggleMenu() {
     const body = document.querySelector("body");
@@ -64,7 +67,7 @@ export default function Nav({ navLinks, mobileNavLinks }) {
         <nav className={styles.navbar}>
           {navLinks.map((navItem, index) => (
             <Link key={index} href={navItem.link}>
-              <a className={`consultNow ${navItem.isConsultNow && "active"}`}>
+              <a className={`generalButton ${navItem.isConsultNowButton && 'isConsultNowButton'} ${router.pathname === navItem.link && 'active'}`}>
                 {navItem.label}
               </a>
             </Link>

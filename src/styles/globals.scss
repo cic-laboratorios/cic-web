@@ -67,7 +67,7 @@ html {
   }
 }
 
-.consultNow {
+.generalButton {
   @include webFont(16px, 100%, 700);
 
   background: transparent;
@@ -77,16 +77,24 @@ html {
   text-align: center;
 }
 
-.consultNow:hover,
-.consultNow:focus,
-.consultNow:active,
-.consultNow.active {
-  background: colors('secondary');
+.generalButton:hover,
+.generalButton:focus {
+  background: colors('hover-focus-state');;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
   color: colors('white');
 }
 
-.consultNow.active {
-  padding: 12px 36px;
+.generalButton:active,
+.generalButton.active {
+  background: colors('active-state');
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
+  color: colors('white');
+}
+
+.generalButton.isConsultNowButton {
+  background: colors('secondary');
+  color: colors('white');
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .only-mobile {
@@ -119,10 +127,10 @@ html {
     display: none;
   }
 
-  .consultNow {
+  .generalButton {
     background: transparent;
     color: colors('black');
-    padding: 12px;
+    padding: 12px 16px;
     border-radius: 50px;
   }
 }

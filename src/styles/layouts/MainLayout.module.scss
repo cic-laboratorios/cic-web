@@ -10,6 +10,22 @@
   padding-top: 60px;
 }
 
+.fixedHeaderAndFooter {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+      'header'
+      'main'
+      'footer';
+
+  .mainWrapper {
+    background-position-x: -39vw;
+    background-position-y: -270px
+  }
+}
+
 @include from-breakpoint("large") {
   .mainWrapper {
     background-position-x: 260px;

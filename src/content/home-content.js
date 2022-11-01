@@ -3,7 +3,7 @@ const informationData = {
   copy: "Ingresa con tu documento de identidad para conocer todo sobre tus exámenes.",
   link: {
     label: "Consultar Ahora",
-    href: "ConsultNow",
+    href: "generalButton",
   },
   isMainInformation: true,
   layout: "normal",
@@ -281,17 +281,17 @@ const carouselData = [
 
 const navLinks = [
   {
-    link: "",
+    link: "/",
     label: "Inicio",
   },
   {
-    link: "procedures",
+    link: "/nuestras-pruebas",
     label: "Nuestras pruebas",
   },
   {
-    link: "consultNow",
+    link: "/nuestras-pruebas",
     label: "Consultar Ahora",
-    isConsultNow: true,
+    isConsultNowButton: true,
   },
 ];
 
