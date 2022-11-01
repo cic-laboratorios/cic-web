@@ -5,9 +5,9 @@ import Footer from "@components/footer/Footer";
 
 import styles from "@styles/layouts/MainLayout.module.scss";
 
-export default function MainLayout({ navLinks, mobileNavLinks, children }) {
+export default function MainLayout({ navLinks, mobileNavLinks, children, isFixedHeaderAndFooter }) {
   return (
-    <div>
+    <div className={`${isFixedHeaderAndFooter && styles.fixedHeaderAndFooter}`}>
       <Head>
         <title>CIC</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
