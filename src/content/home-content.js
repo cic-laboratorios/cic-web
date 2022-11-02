@@ -297,11 +297,11 @@ const navLinks = [
 
 const mobileNavLinks = [
   {
-    link: "",
+    link: "/",
     label: "Inicio",
   },
   {
-    link: "procedures",
+    link: "/nuestras-pruebas",
     label: "Nuestras pruebas",
   }
 ];
