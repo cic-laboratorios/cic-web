@@ -21,8 +21,9 @@
       'footer';
 
   .mainWrapper {
-    background-position-x: -39vw;
-    background-position-y: -270px
+    background-position-x: -309vw;
+    background-position-y: -670px;
+    padding-top: 32px;
   }
 }
 
@@ -30,6 +31,13 @@
   .mainWrapper {
     background-position-x: 260px;
     background-position-y: 710px;
+  }
+
+  .fixedHeaderAndFooter {
+    .mainWrapper {
+      background-position-x: -39vw;
+      background-position-y: -270px;
+    }
   }
 }
 
