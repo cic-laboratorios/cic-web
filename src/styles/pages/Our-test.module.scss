@@ -1,0 +1,112 @@
+@use '../abstracts/index.scss' as *;
+
+.ourTestWrapper {
+    @include generalMaxWidth();
+
+}
+
+.ourTestMainTitle {
+    @include webFont(48px, 110%, 700);
+
+    text-align: center;
+    margin: 0;
+}
+
+.ourTestSearchWrapper {
+    padding-top: 56px;
+}
+
+.ourTestSearchInput {
+    appearance: none;
+    width: 100%;
+    border: 0.744038px solid colors('input-search-border-color');
+    border-radius: 74px;
+    height: 45px;
+    padding: 11px 18px 11px 50px;
+    background-image: url("/img/search.svg");
+    background-repeat: no-repeat;
+    background-position-x: 16px;
+    background-position-y: center;
+}
+
+.ourTestResults {
+    margin-top: 8px;
+    width: 100%;
+    height: 221px;
+    background: colors('white');;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: auto;
+    padding: 0px 8px;
+}
+
+.ourTestResultsTotal {
+    @include webFont(13px, 120%, 400);
+
+    padding: 16px;
+    color: colors('input-search-border-color');;
+}
+
+.ourTestResultsList {
+    @include webFont(16px, 110%, 400);
+}
+
+.ourTestResultsListItem {
+    margin: 2px 8px;
+    padding: 16px 28px;
+    border-top: 0.5px solid colors('border-separator-color')
+}
+
+.ourTestResultsListItemDetails {
+    margin-top: 8px;
+    background: colors('white');
+    box-shadow: -4.51562px -0.903125px 10.8375px rgba(0, 0, 0, 0.1);
+    border-radius: 10.8375px;
+    height: 230px;
+    width: 100%;
+    padding: 21px 24px;
+    overflow-y: auto;
+}
+
+.ourTestResultsListItemDetailsHeader {
+    h3 {
+        @include webFont(16px, 120%, 700);
+
+        margin: 0;
+    }
+
+    span {
+        @include webFont(11px, 120%, 300);
+
+        margin-top: 8px;
+        display: block;
+        color: colors('copy');
+    }
+}
+
+.ourTestResultsListItemDetailsBody {
+    margin-top: 22px;
+}
+
+.ourTestResultsListItemDetailsBodyList {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.ourTestResultsListItemDetailsBodyListItem {
+    display: flex;
+    gap: 21px;
+    align-items: center;
+
+    span {
+        @include webFont(11px, 120%, 300);
+
+        color: colors('black');
+    }
+}
+
+.ourTestResultsListItemDetailsBodyListItem + .ourTestResultsListItemDetailsBodyListItem {
+    border-top: 0.451562px solid colors('border-separator-color');
+    padding-top: 22px;
+}

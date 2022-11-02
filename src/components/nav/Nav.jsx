@@ -12,7 +12,6 @@ export default function Nav({ navLinks, mobileNavLinks }) {
   const [isOpen, toggleIsOpen] = useState(false);
   const scrollDirection = useScrollDirection();
   const router = useRouter();
-  console.log(router.pathname);
 
   function toggleMenu() {
     const body = document.querySelector("body");
