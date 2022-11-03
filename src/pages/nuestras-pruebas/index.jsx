@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { API } from "./constants";
 import MainLayout from "@components/layouts/MainLayout";
 
 import styles from "@styles/pages/Our-test.module.scss";
@@ -10,7 +9,7 @@ export default function Procedures(props) {
   const [results, setResults] = useState([]);
   const [details, setDetails] = useState({});
   const [showDetails, setShowDetails] = useState(false);
-  const api = API.PATH;
+  const api = 'http://localhost:3000/';
 
   function changeInputSearch(event) {
     if (event.target.value.length >= 3) {
