@@ -1,67 +1,24 @@
 import { useState } from "react";
 
+import { API } from "./constants";
 import MainLayout from "@components/layouts/MainLayout";
 
 import styles from "@styles/pages/Our-test.module.scss";
+
 
 export default function Procedures(props) {
   const [results, setResults] = useState([]);
   const [details, setDetails] = useState({});
   const [showDetails, setShowDetails] = useState(false);
+  const api = API.PATH;
 
-  function changeBuyPrice(event) {
+  function changeInputSearch(event) {
     if (event.target.value.length >= 3) {
-      setResults([
-        {
-          label: "Prueba de laboratorio # 1",
-          code: "999999",
-          suggestions:
-            "Se sugiere tomar muestra en ayuno, mas no es excluyente.",
-          time: "24 horas a partir del día de procesamiento.",
-        },
-        {
-          label: "Prueba de laboratorio # 2",
-          code: "999999",
-          suggestions:
-            "Se sugiere tomar muestra en ayuno, mas no es excluyente.",
-          time: "24 horas a partir del día de procesamiento.",
-        },
-        {
-          label: "Prueba de laboratorio # 3",
-          code: "999999",
-          suggestions:
-            "Se sugiere tomar muestra en ayuno, mas no es excluyente.",
-          time: "24 horas a partir del día de procesamiento.",
-        },
-        {
-          label: "Prueba de laboratorio # 4",
-          code: "999999",
-          suggestions:
-            "Se sugiere tomar muestra en ayuno, mas no es excluyente.",
-          time: "24 horas a partir del día de procesamiento.",
-        },
-        {
-          label: "Prueba de laboratorio # 5",
-          code: "999999",
-          suggestions:
-            "Se sugiere tomar muestra en ayuno, mas no es excluyente.",
-          time: "24 horas a partir del día de procesamiento.",
-        },
-        {
-          label: "Prueba de laboratorio # 6",
-          code: "999999",
-          suggestions:
-            "Se sugiere tomar muestra en ayuno, mas no es excluyente.",
-          time: "24 horas a partir del día de procesamiento.",
-        },
-        {
-          label: "Prueba de laboratorio # 7",
-          code: "999999",
-          suggestions:
-            "Se sugiere tomar muestra en ayuno, mas no es excluyente.",
-          time: "24 horas a partir del día de procesamiento.",
-        },
-      ]);
+        fetch(`${api}api/labs?search=${event.target.value}`)
+          .then((res) => res.json())
+          .then((data) => {
+            setResults(data);
+          });
     } else {
       setResults([]);
     }
@@ -91,7 +48,7 @@ export default function Procedures(props) {
               id="search"
               type="text"
               autoComplete="off"
-              onChange={(event) => changeBuyPrice(event)}
+              onChange={(event) => changeInputSearch(event)}
               placeholder="Busca por nombre de prueba o código"
             />
           </form>
@@ -107,7 +64,7 @@ export default function Procedures(props) {
                     key={index}
                     onClick={(event) => openDetails(index)}
                   >
-                    {resultItem.label}
+                    {resultItem.nombre_prueba}
                   </div>
                 ))}
               </div>
@@ -116,8 +73,8 @@ export default function Procedures(props) {
           {showDetails && (
             <div className={styles.ourTestResultsListItemDetails}>
               <div className={styles.ourTestResultsListItemDetailsHeader}>
-                <h3>{details.label}</h3>
-                <span>Código: {details.code}</span>
+                <h3>{details.nombre_prueba}</h3>
+                <span>Código: {details.codigo_cups}</span>
               </div>
               <div className={styles.ourTestResultsListItemDetailsBody}>
                 <div className={styles.ourTestResultsListItemDetailsBodyList}>
@@ -126,14 +83,14 @@ export default function Procedures(props) {
                   >
                     <img src="/img/patient.svg" alt="" />
                     <span>
-                      {details.suggestions}
+                      {details.condicion_paciente}
                     </span>
                   </div>
                   <div
                     className={styles.ourTestResultsListItemDetailsBodyListItem}
                   >
                     <img src="/img/time.svg" alt="" />
-                    <span>{details.time}</span>
+                    <span>{details.tiempo_entrega}</span>
                   </div>
                 </div>
               </div>
