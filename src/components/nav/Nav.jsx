@@ -8,7 +8,7 @@ import useScrollDirection from "@utils/NavScroll";
 
 import styles from "@styles/components/nav/Nav.module.scss";
 
-export default function Nav({ navLinks, mobileNavLinks }) {
+export default function Nav({ navLinks, mobileNavLinks, isFixedHeaderAndFooter }) {
   const [isOpen, toggleIsOpen] = useState(false);
   const scrollDirection = useScrollDirection();
   const router = useRouter();
@@ -22,7 +22,7 @@ export default function Nav({ navLinks, mobileNavLinks }) {
   }
 
   return (
-    <header className={`${scrollDirection === "down" ? styles.mainNavHidden : styles.mainNavVisible} ${styles.mainNav} ${styles.header}`}>
+    <header className={`${scrollDirection === "down" ? styles.mainNavHidden : styles.mainNavVisible} ${styles.header} ${!isFixedHeaderAndFooter && styles.mainNav}`}>
       <div className={styles.headerWrapper}>
         <h1>
           <picture>

@@ -14,7 +14,7 @@ export default function MainLayout({ navLinks, mobileNavLinks, children, isFixed
         <meta name="description" content="Pagina web CIC Laboratorios" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav navLinks={navLinks} mobileNavLinks={mobileNavLinks}></Nav>
+      <Nav navLinks={navLinks} mobileNavLinks={mobileNavLinks} isFixedHeaderAndFooter></Nav>
       <main className={styles.mainWrapper}>{children}</main>
       <Footer></Footer>
     </div>

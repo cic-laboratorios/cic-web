@@ -23,7 +23,8 @@
   .mainWrapper {
     background-position-x: -309vw;
     background-position-y: -670px;
-    padding-top: 32px;
+    padding: 32px 0;
+    overflow-y: auto;
   }
 }
 
