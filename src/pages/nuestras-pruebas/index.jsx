@@ -9,7 +9,7 @@ export default function Procedures(props) {
   const [results, setResults] = useState([]);
   const [details, setDetails] = useState({});
   const [showDetails, setShowDetails] = useState(false);
-  const api = 'https://cic-web-pi.vercel.app/';
+  const api = process.env.API_KEY;
 
   function changeInputSearch(event) {
     if (event.target.value.length >= 3) {
