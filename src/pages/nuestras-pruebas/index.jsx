@@ -9,9 +9,12 @@ export default function Procedures(props) {
   const [results, setResults] = useState([]);
   const [details, setDetails] = useState({});
   const [showDetails, setShowDetails] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
   const api = process.env.API_KEY;
 
   function changeInputSearch(event) {
+    setSearchValue(event.target.value);
+
     if (event.target.value.length >= 3) {
         fetch(`${api}api/labs?search=${event.target.value}`)
           .then((res) => res.json())
@@ -29,6 +32,7 @@ export default function Procedures(props) {
     if (results[index]) {
       setDetails(results[index]);
       setShowDetails(true);
+      setSearchValue('');
     }
   }
 
@@ -44,8 +48,9 @@ export default function Procedures(props) {
           <form>
             <input
               className={styles.ourTestSearchInput}
+              value={searchValue}
               id="search"
-              type="text"
+              type="search"
               autoComplete="off"
               onChange={(event) => changeInputSearch(event)}
               placeholder="Busca por nombre de prueba o código"

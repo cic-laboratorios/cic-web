@@ -52,7 +52,6 @@
 }
 
 .ourTestResultsListItem {
-    margin: 2px 8px;
     padding: 16px 28px;
     border-top: 0.5px solid colors('border-separator-color')
 }
@@ -109,4 +108,83 @@
 .ourTestResultsListItemDetailsBodyListItem + .ourTestResultsListItemDetailsBodyListItem {
     border-top: 0.451562px solid colors('border-separator-color');
     padding-top: 22px;
+}
+
+@include from-breakpoint("large") {
+    .ourTestMainTitle {
+        @include webFont(61px, 120%, 700);
+    }
+
+    .ourTestSearchWrapper {
+        padding-top: 80px;
+    }
+
+    .ourTestSearchInput {
+        max-width: 629px;
+        margin: 0 auto;
+        display: flex;
+        height: 60px;
+        background-size: 32px;
+        background-position-x: 22px;
+        padding: 11px 18px 11px 70px;
+    }
+
+    .ourTestResults {
+        max-width: 629px;
+        margin: 18px auto 0;
+        padding: 0px 16px;
+    }
+
+    .ourTestResultsList {
+        @include webFont(18px, 120%, 400);
+    }
+
+    .ourTestResultsListItem {
+        padding: 16px;
+    }
+
+    .ourTestResultsListItemDetails {
+        max-width: 629px;
+        margin: 18px auto 0;
+        height: auto;
+    }
+
+    .ourTestResultsListItemDetailsBodyList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ourTestResultsListItemDetailsBodyListItem + .ourTestResultsListItemDetailsBodyListItem {
+        border-top: none;
+        border-left: 0.451562px solid colors('border-separator-color');
+        padding-top: 0;
+        padding-left: 21px;
+    }
+
+    .ourTestResultsListItemDetailsHeader {
+        h3 {
+            @include webFont(18px, 120%, 400);
+        }
+
+        span {
+            @include webFont(13px, 120%, 300);
+        }
+    }
+
+    .ourTestResultsListItemDetailsBody {
+        margin-top: 27px;
+    }
+
+    .ourTestResultsListItemDetailsBodyListItem {
+        gap: 32px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        span {
+            @include webFont(13px, 120%, 300);
+        }
+    }
 }
