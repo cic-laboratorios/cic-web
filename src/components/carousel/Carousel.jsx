@@ -135,6 +135,7 @@ export default function Carousel({ carouselData }) {
       <div className={styles.dotsWrapper}>
         {slidersItemsBySize.map((sliderItem, index) => (
           <button
+            onClick={(event) => setIndex(index)}
             className={`${styles.dotsItem} ${
               carouselIndex == index && styles.dotsItemActive
             }`}

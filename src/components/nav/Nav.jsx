@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { MENU } from "./constants/index";
@@ -8,21 +8,37 @@ import useScrollDirection from "@utils/NavScroll";
 
 import styles from "@styles/components/nav/Nav.module.scss";
 
-export default function Nav({ navLinks, mobileNavLinks, isFixedHeaderAndFooter }) {
+export default function Nav({
+  navLinks,
+  mobileNavLinks,
+  isFixedHeaderAndFooter,
+}) {
   const [isOpen, toggleIsOpen] = useState(false);
   const scrollDirection = useScrollDirection();
   const router = useRouter();
 
   function toggleMenu() {
-    const body = document.querySelector("body");
-    const overflow = !isOpen ? "hidden" : "auto";
-    body.style.overflow = overflow;
+    if (isFixedHeaderAndFooter) {
+      const body = document.querySelector("body");
+      body.style.overflow = !isOpen ? "hidden" : "auto";
+    }
 
     toggleIsOpen(!isOpen);
   }
 
+  useEffect( () => () => {
+    const body = document.querySelector("body");
+    body.style.overflow =  "auto";
+  }, [] );
+
   return (
-    <header className={`${scrollDirection === "down" ? styles.mainNavHidden : styles.mainNavVisible} ${styles.header} ${!isFixedHeaderAndFooter && styles.mainNav}`}>
+    <header
+      className={`${
+        scrollDirection === "down"
+          ? styles.mainNavHidden
+          : styles.mainNavVisible
+      } ${styles.header} ${styles.mainNav} ${isFixedHeaderAndFooter ? styles.mainNavFixed : ''}`}
+    >
       <div className={styles.headerWrapper}>
         <h1>
           <picture>
@@ -40,9 +56,7 @@ export default function Nav({ navLinks, mobileNavLinks, isFixedHeaderAndFooter }
         <button onClick={toggleMenu} className={styles.toggleMenu}>
           {MENU.LABEL}
         </button>
-        {isOpen && (
-          <div className={`${styles.sideNavWrapper} `}></div>
-        )}
+        {isOpen && <div className={`${styles.sideNavWrapper} `}></div>}
         <div className={`${styles.sideNav} ${isOpen && styles.sideNavOpened}`}>
           <div className={styles.sideNavCloseIcon}>
             <button onClick={toggleMenu} className={styles.toggleMenu}>
@@ -66,7 +80,11 @@ export default function Nav({ navLinks, mobileNavLinks, isFixedHeaderAndFooter }
         <nav className={styles.navbar}>
           {navLinks.map((navItem, index) => (
             <Link key={index} href={navItem.link}>
-              <a className={`generalButton ${navItem.isConsultNowButton && 'isConsultNowButton'} ${router.pathname === navItem.link && 'active'}`}>
+              <a
+                className={`generalButton ${
+                  navItem.isConsultNowButton && "isConsultNowButton"
+                } ${router.pathname === navItem.link && "active"}`}
+              >
                 {navItem.label}
               </a>
             </Link>

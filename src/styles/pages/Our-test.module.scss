@@ -17,6 +17,8 @@
 }
 
 .ourTestSearchInput {
+    @include webFont(12px, 120%, 400);
+
     appearance: none;
     width: 100%;
     border: 0.744038px solid colors('input-search-border-color');
@@ -27,6 +29,7 @@
     background-repeat: no-repeat;
     background-position-x: 16px;
     background-position-y: center;
+    background-color: colors('white');
 }
 
 .ourTestResults {
@@ -120,6 +123,8 @@
     }
 
     .ourTestSearchInput {
+        @include webFont(18px, 120%, 400);
+
         max-width: 629px;
         margin: 0 auto;
         display: flex;

@@ -4,7 +4,6 @@ import MainLayout from "@components/layouts/MainLayout";
 
 import styles from "@styles/pages/Our-test.module.scss";
 
-
 export default function Procedures(props) {
   const [results, setResults] = useState([]);
   const [details, setDetails] = useState({});
@@ -40,7 +39,7 @@ export default function Procedures(props) {
     <MainLayout
       navLinks={props.navLinks}
       mobileNavLinks={props.mobileNavLinks}
-      isFixedHeaderAndFooter
+      isFixedHeaderAndFooter={true}
     >
       <div className={styles.ourTestWrapper}>
         <h2 className={styles.ourTestMainTitle}>Nuestras pruebas</h2>
