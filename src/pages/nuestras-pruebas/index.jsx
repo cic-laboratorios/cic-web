@@ -7,21 +7,28 @@ import styles from "@styles/pages/Our-test.module.scss";
 export default function Procedures(props) {
   const [results, setResults] = useState([]);
   const [details, setDetails] = useState({});
+  const [showEmptyMessage, setShowEmptyMessage] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
   const api = process.env.API_KEY;
 
   function changeInputSearch(event) {
     setSearchValue(event.target.value);
 
     if (event.target.value.length >= 3) {
-        fetch(`${api}api/labs?search=${event.target.value}`)
-          .then((res) => res.json())
-          .then((data) => {
+      fetch(`${api}api/labs?search=${event.target.value}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.length > 0) {
             setResults(data);
-          });
+            setShowEmptyMessage(false);
+          } else {
+            setShowEmptyMessage(true);
+          }
+        });
     } else {
       setResults([]);
+      setShowEmptyMessage(false);
     }
 
     setShowDetails(false);
@@ -31,7 +38,7 @@ export default function Procedures(props) {
     if (results[index]) {
       setDetails(results[index]);
       setShowDetails(true);
-      setSearchValue('');
+      setSearchValue("");
     }
   }
 
@@ -55,7 +62,7 @@ export default function Procedures(props) {
               placeholder="Busca por nombre de prueba o código"
             />
           </form>
-          {results && results.length > 0 && !showDetails && (
+          {results && results.length > 0 && !showEmptyMessage && !showDetails && (
             <div className={styles.ourTestResults}>
               <div className={styles.ourTestResultsTotal}>
                 Resultados: {results.length}
@@ -67,10 +74,17 @@ export default function Procedures(props) {
                     key={index}
                     onClick={(event) => openDetails(index)}
                   >
-                    {resultItem.nombre_prueba}
+                    <div className={styles.ourTestResultsListItemLabel}>
+                      {resultItem.nombre_prueba}
+                    </div>
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+          {showEmptyMessage && (
+            <div className={styles.ourTestEmptyResults}>
+              No hay resultados para tu búsqueda
             </div>
           )}
           {showDetails && (
@@ -85,9 +99,7 @@ export default function Procedures(props) {
                     className={styles.ourTestResultsListItemDetailsBodyListItem}
                   >
                     <img src="/img/patient.svg" alt="" />
-                    <span>
-                      {details.condicion_paciente}
-                    </span>
+                    <span>{details.condicion_paciente}</span>
                   </div>
                   <div
                     className={styles.ourTestResultsListItemDetailsBodyListItem}

@@ -32,7 +32,8 @@
     background-color: colors('white');
 }
 
-.ourTestResults {
+.ourTestResults,
+.ourTestEmptyResults {
     margin-top: 8px;
     width: 100%;
     height: 221px;
@@ -41,6 +42,12 @@
     border-radius: 10px;
     overflow-y: auto;
     padding: 0px 8px;
+}
+
+.ourTestEmptyResults {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ourTestResultsTotal {
@@ -55,8 +62,23 @@
 }
 
 .ourTestResultsListItem {
+    border-top: 0.5px solid colors('border-separator-color');
+    padding: 2px 8px;
+}
+
+.ourTestResultsListItemLabel {
+    padding: 0 8px;
     padding: 16px 28px;
-    border-top: 0.5px solid colors('border-separator-color')
+    cursor: pointer;
+    border-radius: 11px;
+
+    &:hover {
+        background-color: colors('search-items-hover-state');
+    }
+
+    &:active {
+        background-color: colors('search-items-active-state');
+    }
 }
 
 .ourTestResultsListItemDetails {
@@ -134,7 +156,8 @@
         padding: 11px 18px 11px 70px;
     }
 
-    .ourTestResults {
+    .ourTestResults,
+    .ourTestEmptyResults {
         max-width: 629px;
         margin: 18px auto 0;
         padding: 0px 16px;
@@ -145,6 +168,15 @@
     }
 
     .ourTestResultsListItem {
+        padding: 2px 0;
+        width: calc(100% - 32px);
+        margin: 0 auto;
+    }
+
+    .ourTestResultsListItemLabel {
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        border-radius: 11px;
         padding: 16px;
     }
 

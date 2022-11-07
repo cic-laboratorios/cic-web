@@ -36,7 +36,7 @@
 
   .fixedHeaderAndFooter {
     .mainWrapper {
-      background-position-x: -39vw;
+      background-position-x: -99vw;
       background-position-y: -270px;
       padding: 64px 0;
     }
@@ -47,6 +47,14 @@
   .mainWrapper {
     background-position-x: 46vw;
     background-position-y: 370px;
+  }
+
+  .fixedHeaderAndFooter {
+    .mainWrapper {
+      background-position-x: -42vw;
+      background-position-y: -260px;
+      padding: 64px 0;
+    }
   }
 }
 
