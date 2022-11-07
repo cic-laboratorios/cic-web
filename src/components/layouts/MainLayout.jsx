@@ -9,10 +9,7 @@ export default function MainLayout({ navLinks, mobileNavLinks, children, isFixed
   return (
     <div className={`${isFixedHeaderAndFooter && styles.fixedHeaderAndFooter}`}>
       <Head>
-        <title>CIC</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <meta name="description" content="Pagina web CIC Laboratorios" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>CIC - Web</title>
       </Head>
       <Nav navLinks={navLinks} mobileNavLinks={mobileNavLinks} isFixedHeaderAndFooter={isFixedHeaderAndFooter}></Nav>
       <main className={styles.mainWrapper}>{children}</main>
