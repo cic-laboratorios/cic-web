@@ -2,7 +2,7 @@ const informationData = {
   title: "Resultados en línea",
   copy: "Ingresa con tu documento de identidad para conocer todo sobre tus exámenes.",
   link: {
-    label: "Consultar Ahora",
+    label: "Consulta Ahora",
     href: "generalButton",
   },
   isMainInformation: true,
@@ -290,7 +290,7 @@ const navLinks = [
   },
   {
     link: "/nuestras-pruebas",
-    label: "Consultar Ahora",
+    label: "Consulta Ahora",
     isConsultNowButton: true,
   },
 ];
