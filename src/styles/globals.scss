@@ -67,31 +67,23 @@ html {
 .generalButton {
   @include webFont(16px, 100%, 700);
 
-  background: transparent;
   color: colors('black');
-  padding: 12px;
-  border-radius: 50px;
+  padding: 12px 0;
   text-align: center;
 }
 
 .generalButton:hover,
-.generalButton:focus {
-  background: colors('hover-focus-state');;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
-  color: colors('white');
-}
-
-.generalButton:active,
+.generalButton:focus,
 .generalButton.active {
-  background: colors('active-state');
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
-  color: colors('white');
+  color: colors('third');
 }
 
 .generalButton.isConsultNowButton {
   background: colors('secondary');
   color: colors('white');
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
+  padding: 12px 16px;
+  border-radius: 50px;
 }
 
 .only-mobile {
@@ -122,12 +114,5 @@ html {
 
   .only-mobile {
     display: none;
-  }
-
-  .generalButton {
-    background: transparent;
-    color: colors('black');
-    padding: 12px 16px;
-    border-radius: 50px;
   }
 }
