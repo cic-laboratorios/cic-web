@@ -74,7 +74,8 @@ html {
 
 .generalButton:hover,
 .generalButton:focus,
-.generalButton.active {
+.generalButton.active,
+.menu-active {
   color: colors('third');
 }
 

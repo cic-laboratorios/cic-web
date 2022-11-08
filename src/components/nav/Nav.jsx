@@ -71,7 +71,7 @@ export default function Nav({
           <nav className={styles.navbarMobile}>
             {mobileNavLinks.map((navItem, index) => (
               <Link key={index} href={navItem.link}>
-                <a>{navItem.label}</a>
+                <a className={`${router.pathname === navItem.link && "menu-active"}`}>{navItem.label}</a>
               </Link>
             ))}
           </nav>
