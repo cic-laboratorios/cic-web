@@ -291,27 +291,27 @@ const navLinks = [
   {
     link: "/nuestras-pruebas",
     label: "Consulta Ahora",
+    onlyForDesktop: true,
     isConsultNowButton: true,
   },
 ];
 
-const mobileNavLinks = [
-  {
-    link: "/",
-    label: "Inicio",
-  },
-  {
-    link: "/nuestras-pruebas",
-    label: "Nuestras pruebas",
+const i18n = {
+  ourTest: {
+    mainTitle: 'Nuestras pruebas',
+    searchPlaceHolder: 'Busca por nombre de prueba o código',
+    searchResultsLabel: 'Resultados: ',
+    searchEmptyMessage: 'No hay resultados para tu búsqueda',
+    codeLabel: 'Código: '
   }
-];
+}
 
 export {
   carouselData,
+  i18n,
   informationData,
   informationData2,
   informationData3,
-  mobileNavLinks,
   navLinks,
   ourAllies,
   ourServices,

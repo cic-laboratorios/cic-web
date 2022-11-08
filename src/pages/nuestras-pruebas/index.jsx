@@ -1,22 +1,23 @@
 import { useState } from "react";
 
+import { APP_CONSTANTS } from "src/constants";
 import MainLayout from "@components/layouts/MainLayout";
 
 import styles from "@styles/pages/Our-test.module.scss";
 
 export default function Procedures(props) {
-  const [results, setResults] = useState([]);
   const [details, setDetails] = useState({});
-  const [showEmptyMessage, setShowEmptyMessage] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
+  const [results, setResults] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const api = process.env.API_KEY;
+  const [showDetails, setShowDetails] = useState(false);
+  const [showEmptyMessage, setShowEmptyMessage] = useState(false);
+  const apiPath = process.env.API_PATH;
 
   function changeInputSearch(event) {
     setSearchValue(event.target.value);
 
     if (event.target.value.length >= 3) {
-      fetch(`${api}api/labs?search=${event.target.value}`)
+      fetch(`${apiPath}${APP_CONSTANTS.API.SEARCH}${event.target.value}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.length > 0) {
@@ -43,13 +44,11 @@ export default function Procedures(props) {
   }
 
   return (
-    <MainLayout
-      navLinks={props.navLinks}
-      mobileNavLinks={props.mobileNavLinks}
-      isOurTestPage={true}
-    >
+    <MainLayout navLinks={props.navLinks} isOurTestPage={true}>
       <div className={styles.ourTestWrapper}>
-        <h2 className={styles.ourTestMainTitle}>Nuestras pruebas</h2>
+        <h2 className={styles.ourTestMainTitle}>
+          {props.i18n.ourTest.mainTitle}
+        </h2>
         <div className={styles.ourTestSearchWrapper}>
           <form>
             <input
@@ -59,13 +58,13 @@ export default function Procedures(props) {
               type="search"
               autoComplete="off"
               onChange={(event) => changeInputSearch(event)}
-              placeholder="Busca por nombre de prueba o código"
+              placeholder={props.i18n.ourTest.searchPlaceHolder}
             />
           </form>
           {results && results.length > 0 && !showEmptyMessage && !showDetails && (
             <div className={styles.ourTestResults}>
               <div className={styles.ourTestResultsTotal}>
-                Resultados: {results.length}
+                {props.i18n.ourTest.searchResultsLabel} {results.length}
               </div>
               <div className={styles.ourTestResultsList}>
                 {results.map((resultItem, index) => (
@@ -84,27 +83,36 @@ export default function Procedures(props) {
           )}
           {showEmptyMessage && (
             <div className={styles.ourTestEmptyResults}>
-              No hay resultados para tu búsqueda
+              {props.i18n.ourTest.searchEmptyMessage}
             </div>
           )}
           {showDetails && (
             <div className={styles.ourTestResultsListItemDetails}>
               <div className={styles.ourTestResultsListItemDetailsHeader}>
                 <h3>{details.nombre_prueba}</h3>
-                <span>Código: {details.codigo_cups}</span>
+                <span>
+                  {props.i18n.ourTest.codeLabel} {details.codigo_cups}
+                </span>
               </div>
               <div className={styles.ourTestResultsListItemDetailsBody}>
                 <div className={styles.ourTestResultsListItemDetailsBodyList}>
                   <div
                     className={styles.ourTestResultsListItemDetailsBodyListItem}
                   >
-                    <img src="/img/patient.svg" alt="" />
+                    <img
+                      src={APP_CONSTANTS.OUR_TEST.ICONS.PATIENT.SRC}
+                      alt={APP_CONSTANTS.OUR_TEST.ICONS.PATIENT.ALT}
+                      aria-hidden="true"
+                    />
                     <span>{details.condicion_paciente}</span>
                   </div>
                   <div
                     className={styles.ourTestResultsListItemDetailsBodyListItem}
                   >
-                    <img src="/img/time.svg" alt="" />
+                    <img
+                      src={APP_CONSTANTS.OUR_TEST.ICONS.TIME.SRC}
+                      alt={APP_CONSTANTS.OUR_TEST.ICONS.TIME.ALT}
+                      aria-hidden="true" />
                     <span>{details.tiempo_entrega}</span>
                   </div>
                 </div>
@@ -118,8 +126,8 @@ export default function Procedures(props) {
 }
 
 export async function getServerSideProps() {
-  const api = process?.env?.API_PATH;
-  const res = await fetch(`${api}api/home`);
+  const apiPath = process?.env?.API_PATH;
+  const res = await fetch(`${apiPath}${APP_CONSTANTS.API.DATA_INFORMATION}`);
   const data = await res.json();
 
   return {

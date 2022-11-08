@@ -8,7 +8,7 @@ import useScrollDirection from "@utils/NavScroll";
 
 import styles from "@styles/components/nav/Nav.module.scss";
 
-export default function Nav({ navLinks, mobileNavLinks }) {
+export default function Nav({ navLinks }) {
   const [isOpen, toggleIsOpen] = useState(false);
   const scrollDirection = useScrollDirection();
   const router = useRouter();
@@ -66,7 +66,7 @@ export default function Nav({ navLinks, mobileNavLinks }) {
             </button>
           </div>
           <nav className={styles.navbarMobile}>
-            {mobileNavLinks.map((navItem, index) => (
+            {navLinks.filter(navItem => !navItem.onlyForDesktop).map((navItem, index) => (
               <Link key={index} href={navItem.link}>
                 <a
                   className={`${

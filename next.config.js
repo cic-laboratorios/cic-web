@@ -7,7 +7,7 @@ const nextConfig = {
     domains: ["res.cloudinary.com"],
   },
   env:{
-    API_KEY: process.env.API_PATH
+    API_PATH: process.env.API_PATH
   }
 };
 module.exports = nextConfig;
