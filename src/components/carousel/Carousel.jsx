@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import styles from "@styles/components/carousel/Carousel.module.scss";
-import OurLocations from "@components/our-locations/OurLocations";
+import { APP_CONSTANTS } from "@constants/index";
 import useDeviceSize from "@utils/WindowResize";
+import OurLocations from "@components/our-locations/OurLocations";
+
+import styles from "@styles/components/carousel/Carousel.module.scss";
 
 export default function Carousel({ carouselData }) {
   const [carouselIndex, setIndex] = useState(0);
@@ -45,7 +47,7 @@ export default function Carousel({ carouselData }) {
 
       return currentIndex;
     });
-  }
+  };
 
   const next = () => {
     setIndex((currentIndex) => {
@@ -55,7 +57,7 @@ export default function Carousel({ carouselData }) {
 
       return currentIndex;
     });
-  }
+  };
 
   useEffect(() => {
     let totalBySize = 0;
@@ -77,37 +79,45 @@ export default function Carousel({ carouselData }) {
       setIndex(0);
     }
 
-    totalSliders = carouselData.length / totalBySize;
+    totalSliders = carouselData.sliders.length / totalBySize;
 
     if (!Number.isInteger(totalSliders)) {
       totalSliders++;
       totalSliders = ~~totalSliders;
     }
 
-    for(let startIndex = 0; startIndex<totalSliders; startIndex++) {
+    for (let startIndex = 0; startIndex < totalSliders; startIndex++) {
       const endIndex = startIndex + 1;
 
       sliders.push({
-        data: carouselData.slice(startIndex*totalBySize, endIndex*totalBySize)
+        data: carouselData.sliders.slice(
+          startIndex * totalBySize,
+          endIndex * totalBySize
+        ),
       });
     }
 
-    setSlidersItemsBySize(sliders)
-  }, [carouselData, width])
+    setSlidersItemsBySize(sliders);
+  }, [carouselData, width]);
 
   return (
-    <div className={styles.carouselWrapper} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
-      <div className={styles.carouselHeading}>Nuestros Sedes</div>
+    <div
+      className={styles.carouselWrapper}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
+      <div className={styles.carouselHeading}>{carouselData.title}</div>
       <div className={styles.carouselContainer}>
         <button
           onClick={previous}
           className={`${styles.carouselAction} ${styles.carouselLeftButton}`}
         >
           <Image
-            src="/img/carousel-left-icon.png"
-            alt="Previous slide"
-            width="6"
-            height="12"
+            src={APP_CONSTANTS.HOME.CAROUSEL.NAV.PREVIOUS_ICON}
+            alt={APP_CONSTANTS.HOME.CAROUSEL.NAV.PREVIOUS_ALT_ICON}
+            width={APP_CONSTANTS.HOME.CAROUSEL.NAV.ICON_WIDTH}
+            height={APP_CONSTANTS.HOME.CAROUSEL.NAV.ICON_HEIGHT}
           ></Image>
         </button>
         <div
@@ -125,10 +135,10 @@ export default function Carousel({ carouselData }) {
           className={`${styles.carouselAction} ${styles.carouselRightButton}`}
         >
           <Image
-            src="/img/carousel-right-icon.png"
-            alt="Next slide"
-            width="6"
-            height="12"
+            src={APP_CONSTANTS.HOME.CAROUSEL.NAV.NEXT_ICON}
+            alt={APP_CONSTANTS.HOME.CAROUSEL.NAV.NEXT_ALT_ICON}
+            width={APP_CONSTANTS.HOME.CAROUSEL.NAV.ICON_WIDTH}
+            height={APP_CONSTANTS.HOME.CAROUSEL.NAV.ICON_HEIGHT}
           ></Image>
         </button>
       </div>

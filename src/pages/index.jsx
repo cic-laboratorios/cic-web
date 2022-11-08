@@ -1,4 +1,4 @@
-import { APP_CONSTANTS } from "src/constants";
+import { APP_CONSTANTS } from "@constants/index";
 import Carousel from "@components/carousel/Carousel";
 import Information from "@components/information/Information";
 import MainLayout from "@components/layouts/MainLayout";
@@ -8,7 +8,7 @@ import SlideDown from "@components/slide-down/SlideDown";
 
 export default function Home(props) {
   return (
-    <MainLayout navLinks={props.navLinks}>
+    <MainLayout navLinks={props.navLinks} footerData={props.footerData}>
       <Information data={props.informationData}></Information>
       <SlideDown></SlideDown>
       <OurServices ourServices={props.ourServices}></OurServices>

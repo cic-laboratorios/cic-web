@@ -9,6 +9,7 @@ export default function MainLayout({
   navLinks,
   children,
   isOurTestPage,
+  footerData
 }) {
   return (
     <div className={`${isOurTestPage && styles.isOurTestPage}`}>
@@ -17,7 +18,7 @@ export default function MainLayout({
       </Head>
       <Nav navLinks={navLinks}></Nav>
       <main className={styles.mainWrapper}>{children}</main>
-      <Footer></Footer>
+      <Footer footerData={footerData}></Footer>
     </div>
   );
 }

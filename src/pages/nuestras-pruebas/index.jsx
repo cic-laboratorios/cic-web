@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { APP_CONSTANTS } from "src/constants";
+import { APP_CONSTANTS } from "@constants/index";
 import MainLayout from "@components/layouts/MainLayout";
 
 import styles from "@styles/pages/Our-test.module.scss";
@@ -44,7 +44,11 @@ export default function Procedures(props) {
   }
 
   return (
-    <MainLayout navLinks={props.navLinks} isOurTestPage={true}>
+    <MainLayout
+      navLinks={props.navLinks}
+      isOurTestPage={true}
+      footerData={props.footerData}
+    >
       <div className={styles.ourTestWrapper}>
         <h2 className={styles.ourTestMainTitle}>
           {props.i18n.ourTest.mainTitle}
@@ -112,7 +116,8 @@ export default function Procedures(props) {
                     <img
                       src={APP_CONSTANTS.OUR_TEST.ICONS.TIME.SRC}
                       alt={APP_CONSTANTS.OUR_TEST.ICONS.TIME.ALT}
-                      aria-hidden="true" />
+                      aria-hidden="true"
+                    />
                     <span>{details.tiempo_entrega}</span>
                   </div>
                 </div>

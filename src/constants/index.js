@@ -14,7 +14,19 @@ const APP_CONSTANTS = {
                 SRC: '/img/time.svg'
             }
         },
-    }
+    },
+    HOME: {
+        CAROUSEL: {
+            NAV: {
+                NEXT_ICON: '/img/carousel-right-icon.png',
+                NEXT_ALT_ICON: 'Next slide',
+                PREVIOUS_ICON: '/img/carousel-left-icon.png',
+                PREVIOUS_ALT_ICON: 'Previous slide',
+                ICON_WIDTH: '6px',
+                ICON_HEIGHT: '12px'
+            }
+        }
+    },
 };
 
 export {
