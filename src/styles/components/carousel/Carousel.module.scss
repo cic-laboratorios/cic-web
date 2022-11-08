@@ -82,7 +82,9 @@
   }
 
   .carouselAction {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 37px;
     height: 37px;

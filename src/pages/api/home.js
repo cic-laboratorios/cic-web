@@ -1,5 +1,6 @@
 import {
   carouselData,
+  footerData,
   i18n,
   informationData,
   informationData2,
@@ -12,6 +13,7 @@ import {
 export default function handler(req, res) {
   res.status(200).json({
     carouselData,
+    footerData,
     i18n,
     informationData,
     informationData2,

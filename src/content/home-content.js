@@ -185,99 +185,102 @@ const ourAllies = [
   },
 ];
 
-const carouselData = [
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 1",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 2",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 3",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 4",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 5",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 6",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 7",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 8",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 9",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 10",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 11",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 12",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-  {
-    img: "/img/pin.png",
-    alt: "",
-    heading: "CIC Ansermanuevo 13",
-    copy: "calle 17 1-03 Esquina",
-    phoneNumber: "555 555 5555",
-  },
-];
+const carouselData = {
+  title: "Nuestros Sedes",
+  sliders: [
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 1",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 2",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 3",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 4",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 5",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 6",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 7",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 8",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 9",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 10",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 11",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 12",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+    {
+      img: "/img/pin.png",
+      alt: "",
+      heading: "CIC Ansermanuevo 13",
+      copy: "calle 17 1-03 Esquina",
+      phoneNumber: "555 555 5555",
+    },
+  ],
+};
 
 const navLinks = [
   {
@@ -306,8 +309,26 @@ const i18n = {
   }
 }
 
+const footerData = {
+  copyright: '© 2022 CIC Laboratorios. Todos derechos reservados',
+  logo: '/img/logo/logo-footer.png',
+  logoAlt: 'Ciclaboratorios logo',
+  navLinks: [
+    {
+      link: "/",
+      label: "Inicio",
+    },
+    {
+      link: "",
+      label: "Portafolio",
+    }
+  ],
+  socialMediaButtonsColors: '#FFFFFF'
+}
+
 export {
   carouselData,
+  footerData,
   i18n,
   informationData,
   informationData2,
