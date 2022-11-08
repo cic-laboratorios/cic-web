@@ -46,7 +46,7 @@ export default function Procedures(props) {
     <MainLayout
       navLinks={props.navLinks}
       mobileNavLinks={props.mobileNavLinks}
-      isFixedHeaderAndFooter={true}
+      isOurTestPage={true}
     >
       <div className={styles.ourTestWrapper}>
         <h2 className={styles.ourTestMainTitle}>Nuestras pruebas</h2>

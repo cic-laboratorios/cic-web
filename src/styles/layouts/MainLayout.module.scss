@@ -10,21 +10,9 @@
   padding-top: 60px;
 }
 
-.fixedHeaderAndFooter {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-      'header'
-      'main'
-      'footer';
-
+.isOurTestPage {
   .mainWrapper {
-    background-position-x: -309vw;
-    background-position-y: -670px;
-    padding: 32px 0;
-    overflow-y: auto;
+    min-height: calc(100vh - 83px);
   }
 }
 
@@ -33,28 +21,12 @@
     background-position-x: 260px;
     background-position-y: 710px;
   }
-
-  .fixedHeaderAndFooter {
-    .mainWrapper {
-      background-position-x: -99vw;
-      background-position-y: -270px;
-      padding: 64px 0;
-    }
-  }
 }
 
 @include from-breakpoint("x-large") {
   .mainWrapper {
     background-position-x: 46vw;
     background-position-y: 370px;
-  }
-
-  .fixedHeaderAndFooter {
-    .mainWrapper {
-      background-position-x: -42vw;
-      background-position-y: -260px;
-      padding: 64px 0;
-    }
   }
 }
 

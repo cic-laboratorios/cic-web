@@ -8,28 +8,25 @@ import useScrollDirection from "@utils/NavScroll";
 
 import styles from "@styles/components/nav/Nav.module.scss";
 
-export default function Nav({
-  navLinks,
-  mobileNavLinks,
-  isFixedHeaderAndFooter,
-}) {
+export default function Nav({ navLinks, mobileNavLinks }) {
   const [isOpen, toggleIsOpen] = useState(false);
   const scrollDirection = useScrollDirection();
   const router = useRouter();
 
   function toggleMenu() {
-    if (isFixedHeaderAndFooter) {
-      const body = document.querySelector("body");
-      body.style.overflow = !isOpen ? "hidden" : "auto";
-    }
+    const body = document.querySelector("body");
+    body.style.overflow = !isOpen ? "hidden" : "auto";
 
     toggleIsOpen(!isOpen);
   }
 
-  useEffect( () => () => {
-    const body = document.querySelector("body");
-    body.style.overflow =  "auto";
-  }, [] );
+  useEffect(
+    () => () => {
+      const body = document.querySelector("body");
+      body.style.overflow = "auto";
+    },
+    []
+  );
 
   return (
     <header
@@ -37,7 +34,7 @@ export default function Nav({
         scrollDirection === "down"
           ? styles.mainNavHidden
           : styles.mainNavVisible
-      } ${styles.header} ${styles.mainNav} ${isFixedHeaderAndFooter ? styles.mainNavFixed : ''}`}
+      } ${styles.header} ${styles.mainNav}`}
     >
       <div className={styles.headerWrapper}>
         <h1>
@@ -71,7 +68,13 @@ export default function Nav({
           <nav className={styles.navbarMobile}>
             {mobileNavLinks.map((navItem, index) => (
               <Link key={index} href={navItem.link}>
-                <a className={`${router.pathname === navItem.link && "menu-active"}`}>{navItem.label}</a>
+                <a
+                  className={`${
+                    router.pathname === navItem.link && "menu-active"
+                  }`}
+                >
+                  {navItem.label}
+                </a>
               </Link>
             ))}
           </nav>
