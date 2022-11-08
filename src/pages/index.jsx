@@ -1,3 +1,4 @@
+import { APP_CONSTANTS } from "src/constants";
 import Carousel from "@components/carousel/Carousel";
 import Information from "@components/information/Information";
 import MainLayout from "@components/layouts/MainLayout";
@@ -7,7 +8,7 @@ import SlideDown from "@components/slide-down/SlideDown";
 
 export default function Home(props) {
   return (
-    <MainLayout navLinks={props.navLinks} mobileNavLinks={props.mobileNavLinks}>
+    <MainLayout navLinks={props.navLinks}>
       <Information data={props.informationData}></Information>
       <SlideDown></SlideDown>
       <OurServices ourServices={props.ourServices}></OurServices>
@@ -20,8 +21,8 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps() {
-  const api = process?.env?.API_PATH;
-  const res = await fetch(`${api}api/home`);
+  const apiPath = process?.env?.API_PATH;
+  const res = await fetch(`${apiPath}${APP_CONSTANTS.API.DATA_INFORMATION}`);
   const data = await res.json();
 
   return {

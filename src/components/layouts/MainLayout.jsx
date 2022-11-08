@@ -7,7 +7,6 @@ import styles from "@styles/layouts/MainLayout.module.scss";
 
 export default function MainLayout({
   navLinks,
-  mobileNavLinks,
   children,
   isOurTestPage,
 }) {
@@ -16,7 +15,7 @@ export default function MainLayout({
       <Head>
         <title>CIC - Web</title>
       </Head>
-      <Nav navLinks={navLinks} mobileNavLinks={mobileNavLinks}></Nav>
+      <Nav navLinks={navLinks}></Nav>
       <main className={styles.mainWrapper}>{children}</main>
       <Footer></Footer>
     </div>
