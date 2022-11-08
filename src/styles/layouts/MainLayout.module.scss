@@ -2,7 +2,7 @@
 
 .mainWrapper {
   width: 100%;
-  background: url("/img/layout/vector.png");
+  background-image: url("/img/layout/home-background.png");
   background-repeat: no-repeat;
   background-position-x: 50px;
   background-position-y: 710px;
@@ -13,6 +13,12 @@
 .isOurTestPage {
   .mainWrapper {
     min-height: calc(100vh - 83px);
+    background-image: url("/img/layout/our-test-background.png");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: 232px 597px;
+    padding-top: 32px;
   }
 }
 
@@ -21,6 +27,12 @@
     background-position-x: 260px;
     background-position-y: 710px;
   }
+
+  .isOurTestPage {
+    .mainWrapper {
+      padding-top: 64px;
+    }
+  }
 }
 
 @include from-breakpoint("x-large") {
@@ -28,8 +40,17 @@
     background-position-x: 46vw;
     background-position-y: 370px;
   }
-}
 
+  .isOurTestPage {
+    .mainWrapper {
+      background-image: url("/img/layout/our-test-background-desktop.png");
+      background-repeat: no-repeat;
+      background-position-x: left;
+      background-position-y: top;
+      background-size: 362px 929px;
+    }
+  }
+}
 
 @media screen and (min-width: 1440px) {
   .mainWrapper {
