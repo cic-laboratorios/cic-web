@@ -28,8 +28,8 @@ export default function SocialMedia({ reverseLayout, color, isMenu, socialMediaL
           </svg>
         </a>
       </Link>
-      <Link href={socialMediaLinks.facebook}>
-        <a target={socialMediaLinks.instagram.target}>
+      <Link href={socialMediaLinks.facebook.url}>
+        <a target={socialMediaLinks.facebook.target}>
           <svg
             width="11"
             height="18"
