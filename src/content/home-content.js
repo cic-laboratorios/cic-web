@@ -1,9 +1,21 @@
+const socialMediaLinks = {
+  instagram: {
+    url: "https://instagram.com/cic.laboratoriossas?igshid=YmMyMTA2M2Y=",
+    target: "_blank"
+  },
+  facebook: {
+    url: "https://www.facebook.com/profile.php?id=100009502059274",
+    target: "_blank"
+  }
+};
+
 const informationData = {
   title: "Resultados en línea",
   copy: "Ingresa con tu documento de identidad para conocer todo sobre tus exámenes.",
   link: {
     label: "Consulta Ahora",
-    href: "generalButton",
+    target: '_blank',
+    href: "http://resultados.ciclaboratorios.com/",
   },
   isMainInformation: true,
   layout: "normal",
@@ -185,101 +197,159 @@ const ourAllies = [
   },
 ];
 
+const ourLocations = [
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Andalucía",
+    copy: "Cra 4 # 14 - 48",
+    phoneNumber: "318 349 2569",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Ansermanuevo",
+    copy: "Calle 6 # 5 - 53",
+    phoneNumber: "318 349 2656",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Buga | sede principal",
+    copy: "Cra 13 # 4 - 51",
+    phoneNumber: "315 659 6551",
+    tel: "236 0100 - 237 0100"
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Bugalagrande",
+    copy: "Calle 7 # 7 - 10",
+    phoneNumber: "316 017 6053",
+    tel: "226 5939"
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Caicedonia",
+    copy: "Cra 14 # 8 - 58",
+    phoneNumber: "316 017 6058",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Cartago",
+    copy: "Calle 8 bis # 4 - 40",
+    phoneNumber: "316 545 7444",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Dagua",
+    copy: "Calle 9 # 21 - 51",
+    phoneNumber: "318 349 2696",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Darién",
+    copy: "Calle 11 # 5 - 17",
+    phoneNumber: "316 017 6052",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Guacarí",
+    copy: "Calle 4 # 6 - 75",
+    phoneNumber: "318 349 2881",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Jamundí",
+    copy: "Calle 12 # 11 - 55 Local 4",
+    phoneNumber: "316 017 6046",
+    tel: "228 3038",
+    cc: "El cacique"
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "La cumbre",
+    copy: "Calle 4 # 5 - 20",
+    phoneNumber: "316 017 6047",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "La Unión",
+    copy: "Cra 12 # 15 - 68",
+    phoneNumber: "316 017 6054",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "La victoria",
+    copy: "Calle 9 # 7 - 28",
+    phoneNumber: "316 017 6045",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Obando",
+    copy: "Cra 3 # 3 - 68",
+    phoneNumber: "316 017 6048",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Restrepo",
+    copy: "Cra 3 # 3 - 68",
+    phoneNumber: "316 017 6051",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Roldanillo",
+    copy: "Calle 10 # 5 - 57",
+    phoneNumber: "316 017 6051",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "San pedro",
+    copy: "Cra 2 # 3 - 94",
+    phoneNumber: "316 017 6043",
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Tulúa",
+    copy: "Calle 26 # 32 - 05",
+    phoneNumber: "316 017 6056",
+    tel: "233 5588"
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Yotoco",
+    copy: "Calle 6 # 3 - 75",
+    phoneNumber: "316 017 6049",
+    tel: "233 5588"
+  },
+  {
+    img: "/img/pin.png",
+    alt: "",
+    heading: "Zarzal",
+    copy: "Cra 10 # 5 - 19",
+    phoneNumber: "316 017 6055",
+    tel: "220 6452"
+  },
+];
+
 const carouselData = {
-  title: "Nuestros Sedes",
-  sliders: [
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 1",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 2",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 3",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 4",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 5",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 6",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 7",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 8",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 9",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 10",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 11",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 12",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-    {
-      img: "/img/pin.png",
-      alt: "",
-      heading: "CIC Ansermanuevo 13",
-      copy: "calle 17 1-03 Esquina",
-      phoneNumber: "555 555 5555",
-    },
-  ],
+  title: "Nuestras Sedes",
+  sliders: ourLocations,
 };
 
 const navLinks = [
@@ -292,8 +362,9 @@ const navLinks = [
     label: "Nuestras pruebas",
   },
   {
-    link: "/nuestras-pruebas",
+    link: "http://resultados.ciclaboratorios.com/",
     label: "Consulta Ahora",
+    target: "_blank",
     onlyForDesktop: true,
     isConsultNowButton: true,
   },
@@ -313,27 +384,25 @@ const footerData = {
   copyright: '© 2022 CIC Laboratorios. Todos derechos reservados',
   logo: '/img/logo/logo-footer.png',
   logoAlt: 'Ciclaboratorios logo',
-  navLinks: [
-    {
-      link: "/",
-      label: "Inicio",
-    },
-    {
-      link: "",
-      label: "Portafolio",
-    }
-  ],
+  navLinks,
+  socialMediaLinks,
   socialMediaButtonsColors: '#FFFFFF'
+}
+
+const headerData = {
+  socialMediaButtonsColors: '#BC1919',
+  socialMediaLinks,
+  navLinks
 }
 
 export {
   carouselData,
   footerData,
+  headerData,
   i18n,
   informationData,
   informationData2,
   informationData3,
-  navLinks,
   ourAllies,
   ourServices,
 };

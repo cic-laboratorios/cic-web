@@ -48,6 +48,7 @@ export default function Procedures(props) {
       navLinks={props.navLinks}
       isOurTestPage={true}
       footerData={props.footerData}
+      headerData={props.headerData}
     >
       <div className={styles.ourTestWrapper}>
         <h2 className={styles.ourTestMainTitle}>

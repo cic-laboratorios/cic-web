@@ -8,14 +8,12 @@ export default function Footer({ footerData }) {
     <footer className={styles.footerWrapper}>
       <div className={styles.footerNavigationWrapper}>
         <div className={styles.footerNavigationLogoWrapper}>
-          <img
-            src={footerData.logo}
-            alt={footerData.logoAlt} />
+          <img src={footerData.logo} alt={footerData.logoAlt} />
         </div>
         <div className={styles.footerNavigation}>
           <div className={styles.footerNavigationByLink}>
             <nav className={styles.footerNavigationByLinkNavWrapper}>
-              {footerData.navLinks.map((navItem, index) => (
+              {footerData.navLinks.filter((navItem) => !navItem.isConsultNowButton).map((navItem, index) => (
                 <Link href={navItem.link} key={index}>
                   <a>{navItem.label}</a>
                 </Link>
@@ -23,13 +21,14 @@ export default function Footer({ footerData }) {
             </nav>
           </div>
           <div className={styles.footerNavigationBySocialMedia}>
-            <SocialMedia color={footerData.socialMediaButtonsColors}></SocialMedia>
+            <SocialMedia
+              color={footerData.socialMediaButtonsColors}
+              socialMediaLinks={footerData.socialMediaLinks}
+            ></SocialMedia>
           </div>
         </div>
       </div>
-      <div className={styles.footerCopyright}>
-        {footerData.copyright}
-      </div>
+      <div className={styles.footerCopyright}>{footerData.copyright}</div>
     </footer>
   );
 }
