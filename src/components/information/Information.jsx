@@ -16,7 +16,10 @@ export default function Information({ data }) {
         <p className={styles.informationCopy}>{data.copy}</p>
         {data.link && (
           <Link href={data.link.href}>
-            <a className={`${styles.informationGeneralButton} generalButton isConsultNowButton`}>
+            <a
+              className={`${styles.informationGeneralButton} generalButton isConsultNowButton`}
+              target={data.link.target}
+            >
               {data.link.label}
             </a>
           </Link>

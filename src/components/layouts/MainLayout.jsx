@@ -6,17 +6,21 @@ import Footer from "@components/footer/Footer";
 import styles from "@styles/layouts/MainLayout.module.scss";
 
 export default function MainLayout({
-  navLinks,
   children,
+  footerData,
+  headerData,
   isOurTestPage,
-  footerData
 }) {
   return (
     <div className={`${isOurTestPage && styles.isOurTestPage}`}>
       <Head>
         <title>CIC - Web</title>
       </Head>
-      <Nav navLinks={navLinks}></Nav>
+      <Nav
+        navLinks={headerData.navLinks}
+        socialMediaButtonsColors={headerData.socialMediaButtonsColors}
+        socialMediaLinks={headerData.socialMediaLinks}
+      ></Nav>
       <main className={styles.mainWrapper}>{children}</main>
       <Footer footerData={footerData}></Footer>
     </div>

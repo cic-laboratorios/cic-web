@@ -8,7 +8,11 @@ import useScrollDirection from "@utils/NavScroll";
 
 import styles from "@styles/components/nav/Nav.module.scss";
 
-export default function Nav({ navLinks }) {
+export default function Nav({
+  navLinks,
+  socialMediaButtonsColors,
+  socialMediaLinks,
+}) {
   const [isOpen, toggleIsOpen] = useState(false);
   const scrollDirection = useScrollDirection();
   const router = useRouter();
@@ -66,19 +70,25 @@ export default function Nav({ navLinks }) {
             </button>
           </div>
           <nav className={styles.navbarMobile}>
-            {navLinks.filter(navItem => !navItem.onlyForDesktop).map((navItem, index) => (
-              <Link key={index} href={navItem.link}>
-                <a
-                  className={`${
-                    router.pathname === navItem.link && "menu-active"
-                  }`}
-                >
-                  {navItem.label}
-                </a>
-              </Link>
-            ))}
+            {navLinks
+              .filter((navItem) => !navItem.onlyForDesktop)
+              .map((navItem, index) => (
+                <Link key={index} href={navItem.link}>
+                  <a
+                    className={`${
+                      router.pathname === navItem.link && "menu-active"
+                    }`}
+                  >
+                    {navItem.label}
+                  </a>
+                </Link>
+              ))}
           </nav>
-          <SocialMedia color="#BC1919" isMenu></SocialMedia>
+          <SocialMedia
+            color={socialMediaButtonsColors}
+            isMenu
+            socialMediaLinks={socialMediaLinks}
+          ></SocialMedia>
         </div>
         <nav className={styles.navbar}>
           {navLinks.map((navItem, index) => (
@@ -87,6 +97,7 @@ export default function Nav({ navLinks }) {
                 className={`generalButton ${
                   navItem.isConsultNowButton && "isConsultNowButton"
                 } ${router.pathname === navItem.link && "active"}`}
+                target={navItem.target}
               >
                 {navItem.label}
               </a>

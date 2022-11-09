@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "@styles/components/social-media/SocialMedia.module.scss";
 
-export default function SocialMedia({ reverseLayout, color, isMenu }) {
+export default function SocialMedia({ reverseLayout, color, isMenu, socialMediaLinks }) {
   return (
     <nav
       className={`
@@ -10,8 +10,8 @@ export default function SocialMedia({ reverseLayout, color, isMenu }) {
         ${reverseLayout && styles.reverseLayout}
         ${isMenu && styles.isMenu}`}
     >
-      <Link href="">
-        <a>
+      <Link href={socialMediaLinks.instagram.url}>
+        <a target={socialMediaLinks.instagram.target}>
           <svg
             width="20"
             height="20"
@@ -28,8 +28,8 @@ export default function SocialMedia({ reverseLayout, color, isMenu }) {
           </svg>
         </a>
       </Link>
-      <Link href="">
-        <a>
+      <Link href={socialMediaLinks.facebook}>
+        <a target={socialMediaLinks.instagram.target}>
           <svg
             width="11"
             height="18"
