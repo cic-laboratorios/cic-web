@@ -52,7 +52,7 @@ export default function Procedures(props) {
     >
       <div className={styles.ourTestWrapper}>
         <h2 className={styles.ourTestMainTitle}>
-          {props.i18n.ourTest.mainTitle}
+          {props.ourTestPage.mainTitle}
         </h2>
         <div className={styles.ourTestSearchWrapper}>
           <form>
@@ -63,13 +63,13 @@ export default function Procedures(props) {
               type="search"
               autoComplete="off"
               onChange={(event) => changeInputSearch(event)}
-              placeholder={props.i18n.ourTest.searchPlaceHolder}
+              placeholder={props.ourTestPage.search.searchPlaceHolder}
             />
           </form>
           {results && results.length > 0 && !showEmptyMessage && !showDetails && (
             <div className={styles.ourTestResults}>
               <div className={styles.ourTestResultsTotal}>
-                {props.i18n.ourTest.searchResultsLabel} {results.length}
+                {props.ourTestPage.search.searchResultsLabel} {results.length}
               </div>
               <div className={styles.ourTestResultsList}>
                 {results.map((resultItem, index) => (
@@ -88,7 +88,7 @@ export default function Procedures(props) {
           )}
           {showEmptyMessage && (
             <div className={styles.ourTestEmptyResults}>
-              {props.i18n.ourTest.searchEmptyMessage}
+              {props.ourTestPage.search.searchEmptyMessage}
             </div>
           )}
           {showDetails && (
@@ -96,7 +96,7 @@ export default function Procedures(props) {
               <div className={styles.ourTestResultsListItemDetailsHeader}>
                 <h3>{details.nombre_prueba}</h3>
                 <span>
-                  {props.i18n.ourTest.codeLabel} {details.codigo_cups}
+                  {props.ourTestPage.search.codeLabel} {details.codigo_cups}
                 </span>
               </div>
               <div className={styles.ourTestResultsListItemDetailsBody}>

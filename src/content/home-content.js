@@ -506,16 +506,6 @@ const navLinks = [
   },
 ];
 
-const i18n = {
-  ourTest: {
-    mainTitle: "Nuestras pruebas",
-    searchPlaceHolder: "Busca por nombre de prueba o código",
-    searchResultsLabel: "Resultados: ",
-    searchEmptyMessage: "No hay resultados para tu búsqueda",
-    codeLabel: "Código: ",
-  },
-};
-
 const footerData = {
   copyright: "© 2022 CIC Laboratorios. Todos derechos reservados",
   logo: "/img/logo/logo-footer.png",
@@ -542,11 +532,21 @@ const slideDownData = {
   }
 };
 
+const ourTestPage = {
+  mainTitle: "Nuestras pruebas",
+  search: {
+    searchPlaceHolder: "Busca por nombre de prueba o código",
+    searchResultsLabel: "Resultados: ",
+    searchEmptyMessage: "No hay resultados para tu búsqueda",
+    codeLabel: "Código: ",
+  }
+};
+
 export {
   carouselData,
   footerData,
   headerData,
-  i18n,
+  ourTestPage,
   moreThanResults,
   ourAllies,
   ourPriority,
