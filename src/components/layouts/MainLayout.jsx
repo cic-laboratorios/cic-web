@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import { APP_CONSTANTS } from "@constants/index";
 import Nav from "@components/nav/Nav";
 import Footer from "@components/footer/Footer";
 import WhatsApp from "@components/whatsapp/WhatsApp";
@@ -15,7 +16,7 @@ export default function MainLayout({
   return (
     <div className={`${isOurTestPage && styles.isOurTestPage}`}>
       <Head>
-        <title>CIC - Web</title>
+        <title>{APP_CONSTANTS.TITLE_PAGE}</title>
       </Head>
 
       <Nav

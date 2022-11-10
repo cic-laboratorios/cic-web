@@ -5,16 +5,16 @@ import styles from "@styles/components/our-services/OurServices.module.scss";
 export default function OurServices({ ourServices }) {
   return (
     <div className={styles.ourServicesWrapper} id="our-services">
-      <div className={styles.ourServicesHeading}>Nuestros servicios</div>
+      <div className={styles.ourServicesHeading}>{ourServices.title}</div>
       <div className={styles.ourServicesListWrapper}>
-        {ourServices.map((service, index) => (
+        {ourServices.services.map((service, index) => (
           <div key={index}>
             <div>
                 <Image
                   src={service.img}
-                  alt="Service icon"
-                  width="50"
-                  height="50">
+                  alt={service.alt}
+                  width={service.width}
+                  height={service.height}>
                 </Image>
             </div>
             <div className={styles.ourServicesListItemHeading}>

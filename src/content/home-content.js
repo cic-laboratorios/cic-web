@@ -9,7 +9,7 @@ const socialMediaLinks = {
   },
 };
 
-const informationData = {
+const resultsOnLine = {
   title: "Resultados en línea",
   copy: "Ingresa con tu documento de identidad para conocer todo sobre tus exámenes.",
   link: {
@@ -27,7 +27,7 @@ const informationData = {
   },
 };
 
-const informationData2 = {
+const ourPriority = {
   title: "Eres nuestra prioridad",
   copy: "Nuestro trabajo se fundamenta en la confianza y cercanía para obtener alianzas duraderas entregando noticias que pueden cambiar la vida.",
   layout: "reverse",
@@ -39,7 +39,7 @@ const informationData2 = {
   },
 };
 
-const informationData3 = {
+const moreThanResults = {
   title: "Más que resultados",
   copy: "Somos tu mano aliada, un equipo humano y especializado que genera resultados de exámenes de laboratorio clínico confiables y efectivos.",
   layout: "normal",
@@ -51,299 +51,435 @@ const informationData3 = {
   },
 };
 
-const ourServices = [
+const services = [
   {
     img: "/img/tube-icon.png",
-    alt: "",
+    alt: "Service icon",
+    width: "50px",
+    height: "50px",
     heading: "Resultados en línea",
     copy: "Consulta y descarga los resultados de tus exámenes por la página.",
   },
   {
     img: "/img/ambulance-icon.png",
-    alt: "",
+    alt: "Service icon",
+    width: "50px",
+    height: "50px",
     heading: "Pruebas a domicilio",
     copy: "Realizamos toma de muestras a domicilio para todos nuestros exámenes.",
   },
   {
     img: "/img/medical-symbol-icon.png",
-    alt: "",
+    alt: "Service icon",
+    width: "50px",
+    height: "50px",
     heading: "Convenios y servicios de EPS",
     copy: "Consulta sobre los descuentos para los afiliados a EPS y cooperativas.",
   },
   {
     img: "/img/virus-icon.png",
-    alt: "",
+    alt: "Service icon",
+    width: "50px",
+    height: "50px",
     heading: "Toma de muestras Covid",
     copy: "Realizamos pruebas PCR con entrega de resultados en 24 horas.",
   },
 ];
 
-const ourAllies = [
+const ourServices = {
+  title: 'Nuestros servicios',
+  services
+}
+
+const allies = [
   {
     img: "/img/our-allies-logos/logo-1.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-2.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-3.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-4.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-5.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-6.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-7.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-8.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-9.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-10.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-11.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-12.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-13.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-14.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-15.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-16.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-17.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-18.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-19.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-20.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-21.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-22.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-23.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-24.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-25.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-26.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-27.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-28.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
   {
     img: "/img/our-allies-logos/logo-29.png",
-    alt: "",
+    alt: "Logo de aliado",
+    width: "97px",
+    height: "97px"
   },
 ];
+
+const ourAllies = {
+  title: 'Nuestros Aliados',
+  allies
+};
 
 const ourLocations = [
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Andalucía",
-    copy: "Cra 4 # 14 - 48",
-    phoneNumber: "318 349 2569",
+    address: "Cra 4 # 14 - 48",
+    copy: "",
+    cellPhoneNumber: "318 349 2569",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Ansermanuevo",
-    copy: "Calle 6 # 5 - 53",
-    phoneNumber: "318 349 2656",
+    address: "Calle 6 # 5 - 53",
+    copy: "",
+    cellPhoneNumber: "318 349 2656",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Buga | sede principal",
-    copy: "Cra 13 # 4 - 51",
-    phoneNumber: "315 659 6551",
-    tel: "236 0100 - 237 0100",
+    address: "Cra 13 # 4 - 51",
+    copy: "",
+    cellPhoneNumber: "315 659 6551",
+    phoneNumber: "236 0100 - 237 0100",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Bugalagrande",
-    copy: "Calle 7 # 7 - 10",
-    phoneNumber: "316 017 6053",
-    tel: "226 5939",
+    address: "Calle 7 # 7 - 10",
+    copy: "",
+    cellPhoneNumber: "316 017 6053",
+    phoneNumber: "226 5939",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Caicedonia",
-    copy: "Cra 14 # 8 - 58",
-    phoneNumber: "316 017 6058",
+    address: "Cra 14 # 8 - 58",
+    copy: "",
+    cellPhoneNumber: "316 017 6058",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Cartago",
-    copy: "Calle 8 bis # 4 - 40",
-    phoneNumber: "316 545 7444",
+    address: "Calle 8 bis # 4 - 40",
+    copy: "",
+    cellPhoneNumber: "316 545 7444",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Dagua",
-    copy: "Calle 9 # 21 - 51",
-    phoneNumber: "318 349 2696",
+    address: "Calle 9 # 21 - 51",
+    copy: "",
+    cellPhoneNumber: "318 349 2696",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Darién",
-    copy: "Calle 11 # 5 - 17",
-    phoneNumber: "316 017 6052",
+    address: "Calle 11 # 5 - 17",
+    copy: "",
+    cellPhoneNumber: "316 017 6052",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Guacarí",
-    copy: "Calle 4 # 6 - 75",
-    phoneNumber: "318 349 2881",
+    address: "Calle 4 # 6 - 75",
+    copy: "",
+    cellPhoneNumber: "318 349 2881",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Jamundí",
-    copy: "Calle 12 # 11 - 55 Local 4",
-    phoneNumber: "316 017 6046",
-    tel: "228 3038",
+    address: "Calle 12 # 11 - 55 Local 4",
+    copy: "C.C. El Cacique",
+    cellPhoneNumber: "316 017 6046",
+    phoneNumber: "228 3038",
     cc: "El cacique",
   },
   {
     img: "/img/pin.png",
-    alt: "",
-    heading: "La cumbre",
-    copy: "Calle 4 # 5 - 20",
-    phoneNumber: "316 017 6047",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
+    heading: "La Cumbre",
+    address: "Calle 4 # 5 - 20",
+    copy: "",
+    cellPhoneNumber: "316 017 6047",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "La Unión",
-    copy: "Cra 12 # 15 - 68",
-    phoneNumber: "316 017 6054",
+    address: "Cra 12 # 15 - 68",
+    copy: "Centro Médico y Estético Kirel",
+    cellPhoneNumber: "316 017 6054",
   },
   {
     img: "/img/pin.png",
-    alt: "",
-    heading: "La victoria",
-    copy: "Calle 9 # 7 - 28",
-    phoneNumber: "316 017 6045",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
+    heading: "La Victoria",
+    address: "Calle 9 # 7 - 28",
+    copy: "",
+    cellPhoneNumber: "316 017 6045",
+    phoneNumber: "220 2061"
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Obando",
-    copy: "Cra 3 # 3 - 68",
-    phoneNumber: "316 017 6048",
+    address: "Cra 3 # 3 - 68",
+    copy: "",
+    cellPhoneNumber: "316 017 6048",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Restrepo",
-    copy: "Cra 3 # 3 - 68",
-    phoneNumber: "316 017 6051",
+    address: "Calle 9 # 13 - 68",
+    copy: "",
+    cellPhoneNumber: "316 017 6051",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Roldanillo",
-    copy: "Calle 10 # 5 - 57",
-    phoneNumber: "316 017 6051",
+    address: "Calle 10 # 5 - 57",
+    copy: "",
+    cellPhoneNumber: "317 254 2489",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "San pedro",
-    copy: "Cra 2 # 3 - 94",
-    phoneNumber: "316 017 6043",
+    address: "Cra 2 # 3 - 94",
+    copy: "",
+    cellPhoneNumber: "316 017 6043",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Tulúa",
-    copy: "Calle 26 # 32 - 05",
-    phoneNumber: "316 017 6056",
-    tel: "233 5588",
+    address: "Calle 26 # 32 - 05",
+    copy: "",
+    cellPhoneNumber: "316 017 6056",
+    phoneNumber: "233 5588",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Yotoco",
-    copy: "Calle 6 # 3 - 75",
-    phoneNumber: "316 017 6049",
-    tel: "233 5588",
+    address: "Calle 6 # 3 - 75",
+    copy: "",
+    cellPhoneNumber: "316 017 6049",
   },
   {
     img: "/img/pin.png",
-    alt: "",
+    alt: "Location icon",
+    width: "24px",
+    height: "24px",
     heading: "Zarzal",
-    copy: "Cra 10 # 5 - 19",
-    phoneNumber: "316 017 6055",
-    tel: "220 6452",
+    address: "Cra 10 # 5 - 19",
+    copy: "",
+    cellPhoneNumber: "316 017 6055",
+    phoneNumber: "220 6452",
   },
 ];
 
@@ -396,14 +532,25 @@ const headerData = {
   navLinks,
 };
 
+const slideDownData = {
+  label: 'Desliza para ver más',
+  icon: {
+    src: '/img/slide-down-icon.png',
+    alt: 'slide down icon',
+    width: '24px',
+    height: '20px',
+  }
+};
+
 export {
   carouselData,
   footerData,
   headerData,
   i18n,
-  informationData,
-  informationData2,
-  informationData3,
+  moreThanResults,
   ourAllies,
+  ourPriority,
   ourServices,
+  resultsOnLine,
+  slideDownData,
 };
