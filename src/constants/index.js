@@ -27,6 +27,7 @@ const APP_CONSTANTS = {
             }
         }
     },
+    TITLE_PAGE: 'CIC - Web'
 };
 
 export {

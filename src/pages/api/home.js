@@ -2,12 +2,13 @@ import {
   carouselData,
   footerData,
   headerData,
-  i18n,
-  informationData,
-  informationData2,
-  informationData3,
+  ourTestPage,
+  moreThanResults,
   ourAllies,
+  ourPriority,
   ourServices,
+  resultsOnLine,
+  slideDownData
 } from "./../../content/home-content";
 
 export default function handler(req, res) {
@@ -15,11 +16,12 @@ export default function handler(req, res) {
     carouselData,
     footerData,
     headerData,
-    i18n,
-    informationData,
-    informationData2,
-    informationData3,
+    ourTestPage,
+    moreThanResults,
     ourAllies,
+    ourPriority,
     ourServices,
+    resultsOnLine,
+    slideDownData
   });
 }

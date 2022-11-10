@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import styles from "@styles/components/slide-down/SlideDown.module.scss";
 
-export default function SlideDown() {
+export default function SlideDown({ slideDownData }) {
   function goToOurServices() {
     const ourServicesWrapper = document.getElementById("our-services");
 
@@ -13,14 +13,14 @@ export default function SlideDown() {
 
   return (
     <div className={styles.slideDownWrapper}>
-      <div className={styles.slideDownCopy}>Desliza para ver más</div>
+      <div className={styles.slideDownCopy}>{slideDownData.label}</div>
       <button onClick={goToOurServices} className={`${styles.slideDownIcon}`}>
         <Image
-          src="/img/slide-down-icon.png"
-          alt="slide down icon"
+          src={slideDownData.icon.src}
+          alt={slideDownData.icon.alt}
           aria-hidden="true"
-          width="24"
-          height="20"
+          width={slideDownData.icon.width}
+          height={slideDownData.icon.height}
         ></Image>
       </button>
     </div>

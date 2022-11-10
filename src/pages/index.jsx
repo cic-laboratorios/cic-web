@@ -9,11 +9,11 @@ import SlideDown from "@components/slide-down/SlideDown";
 export default function Home(props) {
   return (
     <MainLayout headerData={props.headerData} footerData={props.footerData}>
-      <Information data={props.informationData}></Information>
-      <SlideDown></SlideDown>
+      <Information informationData={props.resultsOnLine}></Information>
+      <SlideDown slideDownData={props.slideDownData}></SlideDown>
       <OurServices ourServices={props.ourServices}></OurServices>
-      <Information data={props.informationData2}></Information>
-      <Information data={props.informationData3}></Information>
+      <Information informationData={props.ourPriority}></Information>
+      <Information informationData={props.moreThanResults}></Information>
       <Carousel carouselData={props.carouselData}></Carousel>
       <OurAllies ourAllies={props.ourAllies}></OurAllies>
     </MainLayout>

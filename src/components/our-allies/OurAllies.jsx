@@ -5,16 +5,16 @@ import styles from "@styles/components/our-allies/OurAllies.module.scss";
 export default function OurLocations({ ourAllies }) {
   return (
     <div  className={styles.ourAlliesWrapper}>
-      <div className={styles.ourAlliesHeading}>Nuestros Aliados</div>
+      <div className={styles.ourAlliesHeading}>{ourAllies.title}</div>
       <div className={styles.ourAlliesListWrapper}>
-        {ourAllies.map((allie, index) => (
+        {ourAllies.allies.map((allie, index) => (
           <div className={styles.ourAlliesListItem} key={index}>
             <div>
                 <Image
                   src={allie.img}
-                  alt="Logo"
-                  width="97"
-                  height="97">
+                  alt={allie.alt}
+                  width={allie.width}
+                  height={allie.height}>
                 </Image>
             </div>
           </div>

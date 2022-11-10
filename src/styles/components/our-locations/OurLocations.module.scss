@@ -35,14 +35,18 @@
     color: colors('headings');
 }
 
-.ourLocationsListItemCopy,
-.ourLocationsListItemPhoneNumber {
+.ourLocationsListItemAddress,
+.ourLocationsListItemCellPhoneNumber,
+.ourLocationsListItemPhoneNumber,
+.ourLocationsListItemCopy {
     @include webFont(16px, 120%, 400);
 
     color: colors('copy');
 }
 
-.ourLocationsListItemPhoneNumber {
+.ourLocationsListItemCellPhoneNumber,
+.ourLocationsListItemPhoneNumber,
+.ourLocationsListItemCopy {
     margin-top: 8px;
 }
 
