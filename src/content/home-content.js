@@ -1,12 +1,12 @@
 const socialMediaLinks = {
   instagram: {
     url: "https://instagram.com/cic.laboratoriossas?igshid=YmMyMTA2M2Y=",
-    target: "_blank"
+    target: "_blank",
   },
   facebook: {
     url: "https://www.facebook.com/profile.php?id=100009502059274",
-    target: "_blank"
-  }
+    target: "_blank",
+  },
 };
 
 const informationData = {
@@ -14,7 +14,7 @@ const informationData = {
   copy: "Ingresa con tu documento de identidad para conocer todo sobre tus exámenes.",
   link: {
     label: "Consulta Ahora",
-    target: '_blank',
+    target: "_blank",
     href: "http://resultados.ciclaboratorios.com/",
   },
   isMainInformation: true,
@@ -24,7 +24,7 @@ const informationData = {
     alt: "Señor sonriente en el consultorio",
     width: "580",
     height: "440",
-  }
+  },
 };
 
 const informationData2 = {
@@ -218,7 +218,7 @@ const ourLocations = [
     heading: "Buga | sede principal",
     copy: "Cra 13 # 4 - 51",
     phoneNumber: "315 659 6551",
-    tel: "236 0100 - 237 0100"
+    tel: "236 0100 - 237 0100",
   },
   {
     img: "/img/pin.png",
@@ -226,7 +226,7 @@ const ourLocations = [
     heading: "Bugalagrande",
     copy: "Calle 7 # 7 - 10",
     phoneNumber: "316 017 6053",
-    tel: "226 5939"
+    tel: "226 5939",
   },
   {
     img: "/img/pin.png",
@@ -270,7 +270,7 @@ const ourLocations = [
     copy: "Calle 12 # 11 - 55 Local 4",
     phoneNumber: "316 017 6046",
     tel: "228 3038",
-    cc: "El cacique"
+    cc: "El cacique",
   },
   {
     img: "/img/pin.png",
@@ -327,7 +327,7 @@ const ourLocations = [
     heading: "Tulúa",
     copy: "Calle 26 # 32 - 05",
     phoneNumber: "316 017 6056",
-    tel: "233 5588"
+    tel: "233 5588",
   },
   {
     img: "/img/pin.png",
@@ -335,7 +335,7 @@ const ourLocations = [
     heading: "Yotoco",
     copy: "Calle 6 # 3 - 75",
     phoneNumber: "316 017 6049",
-    tel: "233 5588"
+    tel: "233 5588",
   },
   {
     img: "/img/pin.png",
@@ -343,7 +343,7 @@ const ourLocations = [
     heading: "Zarzal",
     copy: "Cra 10 # 5 - 19",
     phoneNumber: "316 017 6055",
-    tel: "220 6452"
+    tel: "220 6452",
   },
 ];
 
@@ -372,28 +372,29 @@ const navLinks = [
 
 const i18n = {
   ourTest: {
-    mainTitle: 'Nuestras pruebas',
-    searchPlaceHolder: 'Busca por nombre de prueba o código',
-    searchResultsLabel: 'Resultados: ',
-    searchEmptyMessage: 'No hay resultados para tu búsqueda',
-    codeLabel: 'Código: '
-  }
-}
+    mainTitle: "Nuestras pruebas",
+    searchPlaceHolder: "Busca por nombre de prueba o código",
+    searchResultsLabel: "Resultados: ",
+    searchEmptyMessage: "No hay resultados para tu búsqueda",
+    codeLabel: "Código: ",
+  },
+};
 
 const footerData = {
-  copyright: '© 2022 CIC Laboratorios. Todos derechos reservados',
-  logo: '/img/logo/logo-footer.png',
-  logoAlt: 'Ciclaboratorios logo',
+  copyright: "© 2022 CIC Laboratorios. Todos derechos reservados",
+  logo: "/img/logo/logo-footer.png",
+  logoAlt: "Ciclaboratorios logo",
   navLinks,
   socialMediaLinks,
-  socialMediaButtonsColors: '#FFFFFF'
-}
+  socialMediaButtonsColors: "#FFFFFF",
+  whatsAppUrl: "https://api.whatsapp.com/send?phone=573158197366&amp;text=Hola",
+};
 
 const headerData = {
-  socialMediaButtonsColors: '#BC1919',
+  socialMediaButtonsColors: "#BC1919",
   socialMediaLinks,
-  navLinks
-}
+  navLinks,
+};
 
 export {
   carouselData,

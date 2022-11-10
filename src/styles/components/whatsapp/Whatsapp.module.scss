@@ -1,0 +1,16 @@
+@use "../../abstracts/index.scss" as *;
+
+.whatsappContainer {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 40px;
+  height: 40px;
+}
+
+@include from-breakpoint("large") {
+  .whatsappContainer {
+    width: 80px;
+    height: 80px;
+  }
+}
