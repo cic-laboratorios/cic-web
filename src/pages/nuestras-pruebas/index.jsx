@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { debounce } from 'lodash';
 
 import { APP_CONSTANTS } from "@constants/index";
 import MainLayout from "@components/layouts/MainLayout";
@@ -8,13 +9,14 @@ import styles from "@styles/pages/Our-test.module.scss";
 export default function Procedures(props) {
   const [details, setDetails] = useState({});
   const [results, setResults] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
   const [showDetails, setShowDetails] = useState(false);
   const [showEmptyMessage, setShowEmptyMessage] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const apiPath = process.env.API_PATH;
 
-  function changeInputSearch(event) {
-    setSearchValue(event.target.value);
+  const changeHandler = (event) => {
+    setIsLoading(true);
+    setShowDetails(false);
 
     if (event.target.value.length >= 3) {
       fetch(`${apiPath}${APP_CONSTANTS.API.SEARCH}${event.target.value}`)
@@ -26,22 +28,38 @@ export default function Procedures(props) {
           } else {
             setShowEmptyMessage(true);
           }
+
+          setIsLoading(false);
         });
     } else {
       setResults([]);
       setShowEmptyMessage(false);
+      setIsLoading(false);
     }
+  };
 
-    setShowDetails(false);
-  }
+  const debouncedChangeHandler = useMemo(() => {
+    return debounce(changeHandler, 300);
+  }, []);
 
   function openDetails(index) {
     if (results[index]) {
+      const searchInput = document.querySelector('#search');
+
       setDetails(results[index]);
       setShowDetails(true);
-      setSearchValue("");
+
+      if (searchInput) {
+        searchInput.value = '';
+      }
     }
   }
+
+  useEffect(() => {
+    return () => {
+      debouncedChangeHandler.cancel();
+    }
+  });
 
   return (
     <MainLayout
@@ -58,15 +76,19 @@ export default function Procedures(props) {
           <form>
             <input
               className={styles.ourTestSearchInput}
-              value={searchValue}
               id="search"
               type="search"
               autoComplete="off"
-              onChange={(event) => changeInputSearch(event)}
+              onChange={(event) => debouncedChangeHandler(event)}
               placeholder={props.ourTestPage.search.searchPlaceHolder}
             />
           </form>
-          {results && results.length > 0 && !showEmptyMessage && !showDetails && (
+          {isLoading && (
+            <div className="loading-wrapper">
+              <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
+          )}
+          {results && results.length > 0 && !showEmptyMessage && !showDetails && !isLoading && (
             <div className={styles.ourTestResults}>
               <div className={styles.ourTestResultsTotal}>
                 {props.ourTestPage.search.searchResultsLabel} {results.length}
@@ -86,7 +108,7 @@ export default function Procedures(props) {
               </div>
             </div>
           )}
-          {showEmptyMessage && (
+          {showEmptyMessage && !isLoading && (
             <div className={styles.ourTestEmptyResults}>
               {props.ourTestPage.search.searchEmptyMessage}
             </div>
