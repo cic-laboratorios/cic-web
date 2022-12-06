@@ -78,6 +78,7 @@ export default function Nav({
                     className={`${
                       router.pathname === navItem.link && "menu-active"
                     }`}
+                    target={navItem.target}
                   >
                     {navItem.label}
                   </a>
@@ -96,7 +97,7 @@ export default function Nav({
               <a
                 className={`generalButton ${
                   navItem.isConsultNowButton && "isConsultNowButton"
-                } ${router.pathname === navItem.link && "active"}`}
+                } ${router.pathname === navItem.link && "menu-active"}`}
                 target={navItem.target}
               >
                 {navItem.label}

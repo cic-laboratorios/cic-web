@@ -1,294 +1,294 @@
-@use '../../abstracts/index.scss' as *;
+@use "../../abstracts/index.scss" as *;
 
 .informationWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
-    padding: 32px 0;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 0;
+  flex-direction: column;
 }
 
 .informationCopyWrapper {
-    @include generalMaxWidth();
+  @include generalMaxWidth();
 }
 
 .informationTitle {
-    @include webFont(24px, 123%, 400);
+  @include webFont(24px, 123%, 400);
 
-    text-align: center;
-    color: colors('headings');
-    width: 100%;
-    max-width: 464px;
-    margin: 0;
+  text-align: center;
+  color: colors("headings");
+  width: 100%;
+  max-width: 464px;
+  margin: 0;
 }
 
 .informationCopy {
-    @include webFont(16px, 120%, 400);
+  @include webFont(16px, 120%, 400);
 
-    color: colors('copy');
-    width: 100%;
-    max-width: 464px;
-    margin: 24px 0 0;
+  color: colors("copy");
+  width: 100%;
+  max-width: 464px;
+  margin: 24px 0 0;
 }
 
 .informationGeneralButton {
-    margin: 24px 0 0;
-    display: inline-block;
-    max-width: 240px;
+  margin: 24px 0 0;
+  display: inline-block;
+  max-width: 240px;
 }
 
 .informationImage {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .informationWrapperBubble {
-    max-width: 540px;
-    height: 292px;
-    width: 100%;
-    background-color: #D9D9D9;
-    border-radius: 270px 0 0 270px;
-    overflow: hidden;
-    position: relative;
-    right: -70px;
+  max-width: 540px;
+  height: 292px;
+  width: 100%;
+  background-color: #d9d9d9;
+  border-radius: 270px 0 0 270px;
+  overflow: hidden;
+  position: relative;
+  right: -70px;
 }
 
 .informationImageOnlyMobile {
-    width: 100%;
+  width: 100%;
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
 
 .informationWrapperReverse {
-    .informationWrapperBubble {
-        border-radius: 0 270px 270px 0;
-        right: unset;
-        left: -70px;
-    }
+  .informationWrapperBubble {
+    border-radius: 0 270px 270px 0;
+    right: unset;
+    left: -70px;
+  }
 
-    .informationImage {
-        justify-content: flex-start;
-    }
+  .informationImage {
+    justify-content: flex-start;
+  }
 }
 
 .isMainInformation {
-    .informationCopyWrapper {
-        width: 100%;
-        max-width: 286px;
-        margin: 0 auto;
-        text-align: center;
-    }
+  .informationCopyWrapper {
+    width: 100%;
+    max-width: 286px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-    .informationTitle {
-        @include webFont(40px, 110%, 700);
-    }
+  .informationTitle {
+    @include webFont(40px, 110%, 700);
+  }
 
-    .informationCopy {
-        @include webFont(18px, 120%, 400);
-    }
+  .informationCopy {
+    @include webFont(18px, 120%, 400);
+  }
 
-    .informationImage {
-        display: none;
-    }
+  .informationImage {
+    display: none;
+  }
 
-    .informationWrapperBubble {
-        width: 100%;
-        right: 0;
-        border-radius: 0;
-        height: 186px;
-        background-size: cover;
-        left: 0;
-        max-width: unset;
-    }
+  .informationWrapperBubble {
+    width: 100%;
+    right: 0;
+    border-radius: 0;
+    height: 186px;
+    background-size: cover;
+    left: 0;
+    max-width: unset;
+  }
 }
 
 @include from-breakpoint("large") {
-    .informationWrapper {
-        flex-direction: row;
-        padding: 40px 0 40px 24px;
-        gap: 0;
+  .informationWrapper {
+    flex-direction: row;
+    padding: 40px 0 40px 24px;
+    gap: 0;
+  }
+
+  .informationCopyWrapper {
+    padding: 0;
+  }
+
+  .informationTitle {
+    @include webFont(28px, 120%, 400);
+
+    color: colors("headings");
+    width: 100%;
+    text-align: left;
+  }
+
+  .informationCopy {
+    @include webFont(18px, 22px, 400);
+
+    color: colors("copy");
+    width: 100%;
+    margin: 24px 0 0;
+  }
+
+  .informationGeneralButton {
+    margin: 24px 0 0;
+    max-width: unset;
+  }
+
+  .informationWrapperImage {
+    img {
+      width: 100%;
+    }
+  }
+
+  .informationWrapperBubble {
+    width: 90%;
+    max-width: 700px;
+    height: 500px;
+    left: unset;
+    right: -24px;
+  }
+
+  .isMainInformation {
+    &.informationWrapper {
+      padding: 40px 0 64px 24px;
+      gap: 32px;
     }
 
     .informationCopyWrapper {
-        padding: 0;
+      text-align: left;
     }
 
     .informationTitle {
-        @include webFont(28px, 120%, 400);
+      @include webFont(56px, 120%, 700);
 
-        color: colors('headings');
-        width: 100%;
-        text-align: left;
+      margin: 0;
     }
 
     .informationCopy {
-        @include webFont(18px, 22px, 400);
+      @include webFont(18px, 120%, 400);
 
-        color: colors('copy');
-        width: 100%;
-        margin: 24px 0 0;
-    }
-
-    .informationGeneralButton {
-        margin: 24px 0 0;
-        max-width: unset;
-    }
-
-    .informationWrapperImage {
-        img {
-            width: 100%;
-        }
-    }
-
-    .informationWrapperBubble {
-        width: 90%;
-        max-width: 700px;
-        height: 500px;
-        left: unset;
-        right: -24px;
-    }
-
-    .isMainInformation {
-        &.informationWrapper {
-            padding: 40px 0 64px 24px;
-            gap: 32px;
-        }
-
-        .informationCopyWrapper {
-            text-align: left;
-        }
-
-        .informationTitle {
-            @include webFont(56px, 120%, 700);
-
-            margin: 0;
-        }
-
-        .informationCopy {
-            @include webFont(18px, 120%, 400);
-
-            width: 100%;
-            max-width: 299px;
-            margin: 24px 0 0;
-        }
-
-        .informationImage {
-            display: flex;
-        }
-
-        .informationWrapperBubble {
-            max-width: 709px;
-            height: 383px;
-            border-radius: 270px 0 0 270px;
-        }
-    }
-
-    .informationWrapperReverse {
-        flex-direction: row-reverse;
-
-        .informationCopyWrapper {
-            padding: 0 24px 0 0;
-        }
-
-        .informationWrapperBubble {
-            width: 90%;
-            max-width: 700px;
-            height: 500px;
-            right: unset;
-            left: -24px;
-        }
-    }
-}
-
-@include from-breakpoint("x-large") {
-    .informationWrapper {
-        max-width: $x-large;
-        padding: 56px 0 56px 32px;
-        margin: 0 auto;
-        gap: 24px;
+      width: 100%;
+      max-width: 299px;
+      margin: 24px 0 0;
     }
 
     .informationImage {
-        flex: 1;
-    }
-
-    .informationTitle {
-        @include webFont(40px, 120%, 400);
-    }
-
-    .informationCopy {
-        @include webFont(24px, 123%, 400);
-    }
-
-    .informationWrapperImage {
-        img {
-            max-width: 528px;
-        }
+      display: flex;
     }
 
     .informationWrapperBubble {
-        width: 100%;
-        max-width: 700px;
-        height: 500px;
-        border-radius: 270px 0 0 270px;
-        left: unset;
-        right: 0;
+      max-width: 709px;
+      height: 450px;
+      border-radius: 270px 0 0 270px;
+    }
+  }
+
+  .informationWrapperReverse {
+    flex-direction: row-reverse;
+
+    .informationCopyWrapper {
+      padding: 0 24px 0 0;
     }
 
-    .informationWrapperReverse {
-        padding: 56px 32px 56px 0;
-
-        .informationWrapperBubble {
-            right: unset;
-            left: 0;
-            width: 100%;
-            max-width: 700px;
-            height: 500px;
-        }
+    .informationWrapperBubble {
+      width: 90%;
+      max-width: 700px;
+      height: 500px;
+      right: unset;
+      left: -24px;
     }
+  }
+}
+
+@include from-breakpoint("x-large") {
+  .informationWrapper {
+    max-width: $x-large;
+    padding: 56px 0 56px 32px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .informationImage {
+    flex: 1;
+  }
+
+  .informationTitle {
+    @include webFont(40px, 120%, 400);
+  }
+
+  .informationCopy {
+    @include webFont(24px, 123%, 400);
+  }
+
+  .informationWrapperImage {
+    img {
+      max-width: 528px;
+    }
+  }
+
+  .informationWrapperBubble {
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    border-radius: 270px 0 0 270px;
+    left: unset;
+    right: 0;
+  }
+
+  .informationWrapperReverse {
+    padding: 56px 32px 56px 0;
+
+    .informationWrapperBubble {
+      right: unset;
+      left: 0;
+      width: 100%;
+      max-width: 700px;
+      height: 500px;
+    }
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .informationWrapper {
-        gap: 0;
+  .informationWrapper {
+    gap: 0;
+  }
+
+  .informationWrapperBubble {
+    width: 900px;
+    max-width: unset;
+    height: 500px;
+    border-radius: 270px;
+    left: unset;
+    right: -150px;
+  }
+
+  .informationWrapperReverse {
+    .informationWrapperBubble {
+      width: 900px;
+      max-width: unset;
+      height: 500px;
+      border-radius: 270px;
+      right: unset;
+      left: -210px;
+    }
+  }
+
+  .isMainInformation {
+    &.informationWrapper {
+      gap: 149px;
     }
 
     .informationWrapperBubble {
-        width: 900px;
-        max-width: unset;
-        height: 500px;
-        border-radius: 270px;
-        left: unset;
-        right: -150px;
+      width: 999px;
+      max-width: unset;
+      height: 540px;
+      border-radius: 270px;
+      left: unset;
+      right: -210px;
     }
-
-    .informationWrapperReverse {
-        .informationWrapperBubble {
-            width: 900px;
-            max-width: unset;
-            height: 500px;
-            border-radius: 270px;
-            right: unset;
-            left: -210px;
-        }
-    }
-
-    .isMainInformation {
-        &.informationWrapper {
-            gap: 149px;
-        }
-
-        .informationWrapperBubble {
-            width: 999px;
-            max-width: unset;
-            height: 540px;
-            border-radius: 270px;
-            left: unset;
-            right: -210px;
-        }
-    }
+  }
 }

@@ -20,7 +20,7 @@ const resultsOnLine = {
   isMainInformation: true,
   layout: "normal",
   img: {
-    src: "/img/information/results-online.png",
+    src: "/img/information/hero-desktop.jpg",
     alt: "Señor sonriente en el consultorio",
     width: "580",
     height: "440",
@@ -32,7 +32,7 @@ const ourPriority = {
   copy: "Nuestro trabajo se fundamenta en la confianza y cercanía para obtener alianzas duraderas entregando noticias que pueden cambiar la vida.",
   layout: "reverse",
   img: {
-    src: "/img/information/our-priority.png",
+    src: "/img/information/our-priority.jpg",
     alt: "Señor realizando estudios en un microscopio",
     width: "528",
     height: "399",
@@ -44,7 +44,7 @@ const moreThanResults = {
   copy: "Somos tu mano aliada, un equipo humano y especializado que genera resultados de exámenes de laboratorio clínico confiables y efectivos.",
   layout: "normal",
   img: {
-    src: "/img/information/our-priority.png",
+    src: "/img/information/more-than-results.jpg",
     alt: "Señora haciendo estudios en el laboratorio",
     width: "528",
     height: "399",
@@ -87,190 +87,190 @@ const services = [
 ];
 
 const ourServices = {
-  title: 'Nuestros servicios',
-  services
-}
+  title: "Nuestros servicios",
+  services,
+};
 
 const allies = [
   {
     img: "/img/our-allies-logos/logo-1.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-2.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-3.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-4.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-5.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-6.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-7.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-8.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-9.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-10.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-11.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-12.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-13.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-14.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-15.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-16.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-17.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-18.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-19.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-20.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-21.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-22.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-23.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-24.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-25.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-26.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-27.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-28.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
   {
     img: "/img/our-allies-logos/logo-29.png",
     alt: "Logo de aliado",
     width: "97px",
-    height: "97px"
+    height: "97px",
   },
 ];
 
 const ourAllies = {
-  title: 'Nuestros Aliados',
-  allies
+  title: "Nuestros Aliados",
+  allies,
 };
 
 const ourLocations = [
@@ -407,7 +407,7 @@ const ourLocations = [
     address: "Calle 9 # 7 - 28",
     copy: "",
     cellPhoneNumber: "316 017 6045",
-    phoneNumber: "220 2061"
+    phoneNumber: "220 2061",
   },
   {
     img: "/img/pin.png",
@@ -498,6 +498,11 @@ const navLinks = [
     label: "Nuestras pruebas",
   },
   {
+    link: "http://validadorqr.ciclaboratorios.com/",
+    label: "Validacion QR",
+    target: "_blank",
+  },
+  {
     link: "http://resultados.ciclaboratorios.com/",
     label: "Consulta Ahora",
     target: "_blank",
@@ -523,13 +528,13 @@ const headerData = {
 };
 
 const slideDownData = {
-  label: 'Desliza para ver más',
+  label: "Desliza para ver más",
   icon: {
-    src: '/img/slide-down-icon.png',
-    alt: 'slide down icon',
-    width: '24px',
-    height: '20px',
-  }
+    src: "/img/slide-down-icon.png",
+    alt: "slide down icon",
+    width: "24px",
+    height: "20px",
+  },
 };
 
 const ourTestPage = {
@@ -539,7 +544,7 @@ const ourTestPage = {
     searchResultsLabel: "Resultados: ",
     searchEmptyMessage: "No hay resultados para tu búsqueda",
     codeLabel: "Código: ",
-  }
+  },
 };
 
 export {
