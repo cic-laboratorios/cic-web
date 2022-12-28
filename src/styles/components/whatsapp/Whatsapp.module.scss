@@ -3,14 +3,14 @@
 .whatsappContainer {
   position: fixed;
   right: 16px;
-  bottom: 16px;
+  bottom: 30%;
   width: 40px;
   height: 40px;
 }
 
 @include from-breakpoint("large") {
   .whatsappContainer {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
   }
 }

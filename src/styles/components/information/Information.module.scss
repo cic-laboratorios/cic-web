@@ -84,7 +84,7 @@
   }
 
   .informationTitle {
-    @include webFont(40px, 110%, 700);
+    @include webFont(32px, 110%, 700);
   }
 
   .informationCopy {
@@ -217,11 +217,11 @@
   }
 
   .informationTitle {
-    @include webFont(40px, 120%, 400);
+    @include webFont(32px, 120%, 400);
   }
 
   .informationCopy {
-    @include webFont(24px, 123%, 400);
+    @include webFont(20px, 123%, 400);
   }
 
   .informationWrapperImage {
