@@ -18,7 +18,7 @@
     justify-content: center;
 
     img {
-        width: 131px;
+        width: 150px;
     }
 }
 
@@ -26,12 +26,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footerNavigationByLink {
     .footerNavigationByLinkNavWrapper {
         display: flex;
-        gap: 50px;
+        gap: 20px;
 
         a:hover {
             color: colors('third');
@@ -62,7 +64,7 @@
 
     .footerNavigation {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         gap: 32px;
     }
 
@@ -75,6 +77,10 @@
     .footerNavigationByLink {
         .footerNavigationByLinkNavWrapper {
             gap: 62px;
+
+            a {
+                font-size: 16px;
+            }
         }
     }
 
