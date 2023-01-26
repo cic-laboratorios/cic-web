@@ -41,7 +41,7 @@ const ourPriority = {
 
 const moreThanResults = {
   title: "Más que resultados",
-  copy: "Somos tu mano aliada, un equipo humano y especializado que genera resultados de exámenes de laboratorio clínico confiables y efectivos.",
+  copy: "Somos tu mano aliada, un equipo humano y especializado que genera resultados de exámenes de laboratorio clínico confiables y oportunos.",
   layout: "normal",
   img: {
     src: "/img/information/more-than-results.jpg",
@@ -303,7 +303,7 @@ const ourLocations = [
     address: "Cra 13 # 4 - 51",
     copy: "",
     cellPhoneNumber: "315 659 6551",
-    phoneNumber: "236 0100 - 237 0100",
+    phoneNumber: "(602) 236 0100 - (602) 237 0100",
   },
   {
     img: "/img/pin.png",
@@ -314,7 +314,7 @@ const ourLocations = [
     address: "Calle 7 # 7 - 10",
     copy: "",
     cellPhoneNumber: "316 017 6053",
-    phoneNumber: "226 5939",
+    phoneNumber: "(602) 226 5939",
   },
   {
     img: "/img/pin.png",
@@ -375,7 +375,7 @@ const ourLocations = [
     address: "Calle 12 # 11 - 55 Local 4",
     copy: "C.C. El Cacique",
     cellPhoneNumber: "316 017 6046",
-    phoneNumber: "228 3038",
+    phoneNumber: "(602) 228 3038",
     cc: "El cacique",
   },
   {
@@ -407,7 +407,7 @@ const ourLocations = [
     address: "Calle 9 # 7 - 28",
     copy: "",
     cellPhoneNumber: "316 017 6045",
-    phoneNumber: "220 2061",
+    phoneNumber: "(602) 220 2061",
   },
   {
     img: "/img/pin.png",
@@ -458,7 +458,7 @@ const ourLocations = [
     address: "Calle 26 # 32 - 05",
     copy: "",
     cellPhoneNumber: "316 017 6056",
-    phoneNumber: "233 5588",
+    phoneNumber: "(602) 233 5588",
   },
   {
     img: "/img/pin.png",
@@ -479,7 +479,7 @@ const ourLocations = [
     address: "Cra 10 # 5 - 19",
     copy: "",
     cellPhoneNumber: "316 017 6055",
-    phoneNumber: "220 6452",
+    phoneNumber: "(602) 220 6452",
   },
 ];
 
