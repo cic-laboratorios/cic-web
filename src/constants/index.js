@@ -14,6 +14,10 @@ const APP_CONSTANTS = {
         SRC: "/img/time.svg",
       },
     },
+    CARD_HEADINGS: {
+        TEST_TIME: 'TIEMPO DE INFORME:',
+        PATIENT_CONDITION: 'CONDICIONES ESPECIALES:'
+      }
   },
   HOME: {
     CAROUSEL: {

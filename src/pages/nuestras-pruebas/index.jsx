@@ -127,21 +127,28 @@ export default function Procedures(props) {
                     className={styles.ourTestResultsListItemDetailsBodyListItem}
                   >
                     <img
-                      src={APP_CONSTANTS.OUR_TEST.ICONS.PATIENT.SRC}
-                      alt={APP_CONSTANTS.OUR_TEST.ICONS.PATIENT.ALT}
+                      src={APP_CONSTANTS.OUR_TEST.ICONS.TIME.SRC}
+                      alt={APP_CONSTANTS.OUR_TEST.ICONS.TIME.ALT}
                       aria-hidden="true"
                     />
-                    <span>{details.condicion_paciente}</span>
+                     <div>
+                      <span> <strong>{APP_CONSTANTS.OUR_TEST.CARD_HEADINGS.TEST_TIME}</strong><br /></span>
+                      <span>{details.condicion_paciente}</span>
+                    </div>
+
                   </div>
                   <div
                     className={styles.ourTestResultsListItemDetailsBodyListItem}
                   >
                     <img
-                      src={APP_CONSTANTS.OUR_TEST.ICONS.TIME.SRC}
-                      alt={APP_CONSTANTS.OUR_TEST.ICONS.TIME.ALT}
+                      src={APP_CONSTANTS.OUR_TEST.ICONS.PATIENT.SRC}
+                      alt={APP_CONSTANTS.OUR_TEST.ICONS.PATIENT.ALT}
                       aria-hidden="true"
                     />
-                    <span>{details.tiempo_entrega}</span>
+                    <div>
+                      <span> <strong>{APP_CONSTANTS.OUR_TEST.CARD_HEADINGS.PATIENT_CONDITION} </strong><br /></span>
+                      <span>{details.tiempo_entrega}</span>
+                    </div>
                   </div>
                 </div>
               </div>
