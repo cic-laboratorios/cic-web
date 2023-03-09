@@ -28,8 +28,8 @@ const resultsOnLine = {
 };
 
 const ourPriority = {
-  title: "Eres nuestra prioridad",
-  copy: "Nuestro trabajo se fundamenta en la confianza y cercanía para obtener alianzas duraderas entregando noticias que pueden cambiar la vida.",
+  title: "Nuestra Misión y Visión",
+  copy: "En CIC Laboratorios, ofrecemos procesamiento y análisis de exámenes de laboratorio clínico con resultados rápidos y confiables. Nuestra atención personalizada y compromiso con la innovación tecnológica garantiza una experiencia de calidad para nuestros usuarios. Para 2027, seremos líderes indiscutibles en exámenes de alta complejidad en el suroccidente colombiano y expandiremos nuestra cobertura nacional e internacional. Confía en nosotros para una atención cercana y confiable en tu salud.",
   layout: "reverse",
   img: {
     src: "/img/information/our-priority.jpg",
@@ -41,7 +41,7 @@ const ourPriority = {
 
 const moreThanResults = {
   title: "Más que resultados",
-  copy: "Somos tu mano aliada, un equipo humano y especializado que genera resultados de exámenes de laboratorio clínico confiables y oportunos.",
+  copy: "En CIC Laboratorios, nuestro equipo altamente capacitado se dedica a brindarte resultados precisos y confiables para el cuidado de tu salud. Con un servicio cercano y personalizado, establecemos relaciones de confianza con nuestros usuarios, proveedores y colaboradores. Nuestra pasión por la excelencia en el servicio nos permite brindarte noticias que pueden cambiar tu vida, ofreciéndote la tranquilidad que necesitas para tomar decisiones informadas sobre tu salud. Contáctanos hoy mismo para obtener más información sobre cómo podemos ayudarte en tu cuidado de la salud.",
   layout: "normal",
   img: {
     src: "/img/information/more-than-results.jpg",

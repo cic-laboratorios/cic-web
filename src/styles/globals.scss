@@ -165,7 +165,7 @@ html {
 @include from-breakpoint("large") {
   .only-from-tablet {
     display: block;
-    width: 100%;
+    width: 50%;
   }
 
   .only-mobile {
