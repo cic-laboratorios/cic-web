@@ -16,6 +16,10 @@ export default function EstadosFinancieros() {
       name: "NOTAS CIC 2021",
       url: "./pdf/NOTASCIC2021.pdf",
     },
+    {
+      name: "ESF CIC 2022",
+      url: "./pdf/ESFCIC2022.pdf",
+    },
   ];
 
   return (
