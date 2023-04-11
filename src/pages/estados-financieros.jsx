@@ -20,10 +20,6 @@ export default function EstadosFinancieros() {
       name: "ESF CIC 2022",
       url: "./pdf/ESFCIC2022.pdf",
     },
-    {
-      name: "ESF SANE 2022",
-      url: "./pdf/ESFSANE2022.pdf",
-    },
   ];
 
   return (
