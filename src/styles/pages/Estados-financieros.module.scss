@@ -1,5 +1,10 @@
 .content {
   margin: 24px;
+  h1 {
+    margin-top: 5rem;
+    display: block;
+    text-align: center;
+  }
 
   a {
     width: 200px;
@@ -10,8 +15,10 @@
     margin: 48px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    margin: 0 auto;
     gap: 48px;
+    margin: 0 auto;
   }
 
   .card {
