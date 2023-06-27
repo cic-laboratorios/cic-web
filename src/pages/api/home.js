@@ -1,5 +1,6 @@
 import {
   carouselData,
+  customerRights,
   footerData,
   headerData,
   ourTestPage,
@@ -14,6 +15,7 @@ import {
 export default function handler(req, res) {
   res.status(200).json({
     carouselData,
+    customerRights,
     footerData,
     headerData,
     ourTestPage,

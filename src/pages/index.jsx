@@ -1,5 +1,6 @@
 import { APP_CONSTANTS } from "@constants/index";
 import Carousel from "@components/carousel/Carousel";
+import CustomerRights from "@components/customer-rights/CustomerRights";
 import Information from "@components/information/Information";
 import MainLayout from "@components/layouts/MainLayout";
 import OurAllies from "@components/our-allies/OurAllies";
@@ -14,6 +15,7 @@ export default function Home(props) {
       <OurServices ourServices={props.ourServices}></OurServices>
       <Information informationData={props.ourPriority}></Information>
       <Information informationData={props.moreThanResults}></Information>
+      <CustomerRights customerRights={props.customerRights}></CustomerRights>
       <Carousel carouselData={props.carouselData}></Carousel>
       <OurAllies ourAllies={props.ourAllies}></OurAllies>
     </MainLayout>

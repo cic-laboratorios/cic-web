@@ -535,8 +535,36 @@ const ourTestPage = {
   },
 };
 
+const rights = {
+  title: 'Derechos del usuario',
+  data: [
+    'Todo paciente tiene derecho a recibir un trato digno y respetuoso sin restricción de: raza, sexo, religión, idioma, creencias, costumbres, condición social y económica.',
+    'Su derecho a elegir a los profesionales de la salúd, instituciones y laboratorios clínicos, para que le presten la atención requerida.',
+    'su derecho a una comunicación completa, clara, segura y confidencial de sus resultados y condiciones para la realización de las pruebas.',
+    'Su derecho a presentar quejas, reclamos y sugerencias ante la gerencia.'
+  ]
+}
+
+const duties = { 
+  title: 'Deberes del usuario',
+  data: [
+    'Seguir cuidadosamente las instrucciones recibidas para la toma de muestras.',
+    'Solicitar los servicios de manera cordial y respetuosa.',
+    'Cumplir con los requisitos establecidos por su entidad de salud como: documentos, copagos, o pago total de los estudios en caso de solicitar un servicio particular para recibir el servicio.',
+    'Contestar con honestidad a preguntas importantes realizadas, que ayudan a garantizar el buen resultado de sus examenes.',
+  ]
+}
+
+const customerRights = {
+  rights,
+  duties
+}
+
+
+
 export {
   carouselData,
+  customerRights,
   footerData,
   headerData,
   ourTestPage,
