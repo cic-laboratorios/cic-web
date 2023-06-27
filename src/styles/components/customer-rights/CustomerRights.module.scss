@@ -2,7 +2,8 @@
 
 .customerRightsWrapper {
   @include generalMaxWidth();
-  margin: 32px 0;
+  margin: 32px auto;
+  
 }
 
 .customerRightsHeader {
