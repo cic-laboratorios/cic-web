@@ -403,7 +403,7 @@ const ourLocations = [
     width: "24px",
     height: "24px",
     heading: "Obando",
-    address: "Cra 3 # 3 - 68",
+    address: "Cra 3 # 4 - 97",
     copy: "",
     cellPhoneNumber: "316 017 6048",
   },
