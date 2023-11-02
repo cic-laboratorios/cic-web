@@ -1,0 +1,62 @@
+@use "../../abstracts/index.scss" as *;
+
+.heroWrapper {
+  @include generalMaxWidth();
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 0;
+  flex-direction: column;
+}
+
+.heroCopy {
+  padding: 32px;
+  text-align: center;
+  // background-color: red;
+
+  h2 {
+    line-height: 120%;
+    font-size: 32px;
+  }
+}
+
+.heroImageWrapper {
+  background-color: red;
+  width: 100%;
+}
+
+.consultButton {
+  display: block;
+  width: fit-content;
+  margin-top: 32px;
+  margin: 0 auto;
+}
+
+@include from-breakpoint("large") {
+  .heroWrapper {
+    flex-direction: row;
+  }
+
+  .heroCopy {
+    flex: 1 0 45%;
+    text-align: left;
+    padding-left: 100px;
+    line-height: 120%;
+
+    h2 {
+      line-height: 100%;
+      color: colors("headings");
+      font-size: 56px;
+    }
+  }
+
+  .heroImageWrapper{
+    transform: translateX(32px);
+  }
+
+  .consultButton {
+    margin: 0;
+  }
+}

@@ -27,6 +27,22 @@ const resultsOnLine = {
   },
 };
 
+const heroData = {
+  title: "Resultados en línea",
+  copy: "Ingresa con tu documento de identidad para conocer todo sobre tus exámenes.",
+  link: {
+    label: "Consulta Ahora",
+    target: "_blank",
+    href: "http://resultados.ciclaboratorios.com/",
+  },
+  isMainInformation: true,
+  layout: "normal",
+  img: {
+    src: "/img/information/hero-desktop.jpg",
+    alt: "Señor sonriente en el consultorio",
+  },
+}
+
 const ourPriority = {
   title: "Nuestra Misión y Visión",
   copy: "En CIC Laboratorios, ofrecemos procesamiento y análisis de exámenes de laboratorio clínico con resultados rápidos y confiables. Nuestra atención personalizada y compromiso con la innovación tecnológica garantiza una experiencia de calidad para nuestros usuarios. Para 2027, seremos líderes indiscutibles en exámenes de alta complejidad en el suroccidente colombiano y expandiremos nuestra cobertura nacional e internacional. Confía en nosotros para una atención cercana y confiable en tu salud.",
@@ -263,6 +279,12 @@ const allies = [
   {
     img: "/img/our-allies-logos/logo-29.png",
     alt: "Logo de aliado",
+    width: "97px",
+    height: "97px",
+  },
+  {
+    img: "/img/our-allies-logos/logo-30.png",
+    alt: "Logo de Cooatraipi",
     width: "97px",
     height: "97px",
   },
@@ -573,5 +595,6 @@ export {
   ourPriority,
   ourServices,
   resultsOnLine,
-  slideDownData,
+  heroData,
+  slideDownData
 };

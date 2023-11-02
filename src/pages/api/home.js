@@ -9,6 +9,7 @@ import {
   ourPriority,
   ourServices,
   resultsOnLine,
+  heroData,
   slideDownData
 } from "./../../content/home-content";
 
@@ -24,6 +25,7 @@ export default function handler(req, res) {
     ourPriority,
     ourServices,
     resultsOnLine,
+    heroData,
     slideDownData
   });
 }
