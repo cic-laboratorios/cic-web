@@ -288,6 +288,12 @@ const allies = [
     width: "97px",
     height: "97px",
   },
+  {
+    img: "/img/our-allies-logos/logo-31.png",
+    alt: "Logo de Cootraunion",
+    width: "97px",
+    height: "97px",
+  },
 ];
 
 const ourAllies = {
