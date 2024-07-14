@@ -330,8 +330,8 @@ const ourLocations = [
     heading: "Buga | sede principal",
     address: "Cra 13 # 4 - 51",
     copy: "",
-    cellPhoneNumber: "317 432 8255 - 315 819 7366",
-    phoneNumber: "(602) 236 0100",
+    cellPhoneNumber: "317 432 8255",
+    phoneNumber: "315 819 7366",
   },
   {
     img: "/img/pin.png",
