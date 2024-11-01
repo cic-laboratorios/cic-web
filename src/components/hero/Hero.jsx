@@ -22,11 +22,13 @@ export default function Hero({heroData}) {
       <div className={`${styles.heroImageWrapper}`}>
         <Image
           className={`${styles.heroImage}`}
+          fill
           src={heroData.img.src} 
           width={700}
           height={444}
           layout="responsive"
-          alt={heroData.img.alt}>
+          alt={heroData.img.alt}
+          style={{objectFit: "cover"}}>
         </Image>
       </div>
 

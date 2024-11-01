@@ -20,7 +20,7 @@ const resultsOnLine = {
   isMainInformation: true,
   layout: "normal",
   img: {
-    src: "/img/information/hero-desktop.jpg",
+    src: "/img/information/hero-desktop.png",
     alt: "Señor sonriente en el consultorio",
     width: "580",
     height: "440",
