@@ -22,7 +22,7 @@ export default function Hero({heroData}) {
       <div className={`${styles.heroImageWrapper}`}>
         <Image
           className={`${styles.heroImage}`}
-          fill
+          fill="true"
           src={heroData.img.src} 
           width={700}
           height={444}
