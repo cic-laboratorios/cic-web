@@ -4,7 +4,7 @@ const socialMediaLinks = {
     target: "_blank",
   },
   facebook: {
-    url: "https://www.facebook.com/profile.php?id=100009502059274",
+    url: "https://www.facebook.com/share/1CEhgrw441/",
     target: "_blank",
   },
 };
