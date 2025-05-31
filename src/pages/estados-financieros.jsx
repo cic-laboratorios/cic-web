@@ -24,6 +24,18 @@ export default function EstadosFinancieros() {
       name: "ESF CIC 2023",
       url: "./pdf/ESFCIC2023.pdf",
     },
+    {
+      name: "ESF CIC 2024",
+      url: "./pdf/ESFCIC2024.pdf",
+    },
+    {
+      name: "ERI CIC 2024",
+      url: "./pdf/ERICIC2024.pdf",
+    },
+    {
+      name: "NOTAS CIC 2024",
+      url: "./pdf/NOTASCIC2024.pdf",
+    },
   ];
 
   return (
