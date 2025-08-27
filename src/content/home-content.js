@@ -315,7 +315,7 @@ const ourLocations = [
     height: "24px",
     heading: "Andalucía",
     address: "Cra 4 # 14 - 48",
-    copy: "",
+    copy: "7:00am - 10:50am Lun - Vie | 7:00am - 10:00am Sáb",
     cellPhoneNumber: "318 349 2569",
   },
   {
