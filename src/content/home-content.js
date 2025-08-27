@@ -529,7 +529,7 @@ const footerData = {
   navLinks,
   socialMediaLinks,
   socialMediaButtonsColors: "#FFFFFF",
-  whatsAppUrl: "https://api.whatsapp.com/send?phone=573171225619&amp;text=Hola",
+  whatsAppUrl: "https://api.whatsapp.com/send?phone=573158197366&amp;text=Hola",
 };
 
 const headerData = {
