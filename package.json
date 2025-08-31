@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "lodash": "^4.17.21",
     "mongodb": "^3.5.9",
     "next": "^15.5.2",
