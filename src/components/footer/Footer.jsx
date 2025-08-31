@@ -13,11 +13,13 @@ export default function Footer({ footerData }) {
         <div className={styles.footerNavigation}>
           <div className={styles.footerNavigationByLink}>
             <nav className={styles.footerNavigationByLinkNavWrapper}>
-              {footerData.navLinks.filter((navItem) => !navItem.isConsultNowButton).map((navItem, index) => (
-                <Link href={navItem.link} key={index}>
-                  <a>{navItem.label}</a>
-                </Link>
-              ))}
+              {footerData.navLinks
+                .filter((navItem) => !navItem.isConsultNowButton)
+                .map((navItem, index) => (
+                  <Link href={navItem.link} key={index}>
+                    {navItem.label}
+                  </Link>
+                ))}
             </nav>
           </div>
           <div className={styles.footerNavigationBySocialMedia}>
@@ -32,3 +34,4 @@ export default function Footer({ footerData }) {
     </footer>
   );
 }
+

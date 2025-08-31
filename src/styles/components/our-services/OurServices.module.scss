@@ -1,84 +1,78 @@
-@use '../../abstracts/index.scss' as *;
+@use "../../abstracts/index.scss" as *;
 
 .ourServicesWrapper {
-    @include generalMaxWidth();
-
-    padding: 50px 16px;
+  padding: 50px 16px;
+  @include generalMaxWidth();
 }
 
 .ourServicesHeading {
-    @include webFont(32px, 120%, 400);
-
-    max-width: 180px;
-    text-align: center;
-    margin: 0 auto 42px;
+  max-width: 180px;
+  text-align: center;
+  margin: 0 auto 42px;
+  @include webFont(32px, 120%, 400);
 }
 
 .ourServicesListWrapper {
-    display: flex;
-    text-align: center;
-    gap: 33px;
+  display: flex;
+  text-align: center;
+  gap: 33px;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .ourServicesListItemHeading {
-    @include webFont(20px, 120%, 400);
-
-    color: colors('headings');
-    margin: 8px auto 28px;
-    max-width: 190px;
+  color: colors("headings");
+  margin: 8px auto 28px;
+  max-width: 190px;
+  @include webFont(20px, 120%, 400);
 }
 
 .ourServicesListItemCopy {
-    @include webFont(16px, 120%, 400);
-
-    color: colors('copy');
-    text-align: left;
+  color: colors("copy");
+  text-align: left;
+  @include webFont(16px, 120%, 400);
 }
 
 @include from-breakpoint("large") {
-    .ourServicesWrapper {
-        padding: 42px 24px 56px;
-    }
+  .ourServicesWrapper {
+    padding: 42px 24px 56px;
+  }
 
-    .ourServicesHeading {
-        @include webFont(48px, 120%, 400);
+  .ourServicesHeading {
+    max-width: unset;
+    @include webFont(48px, 120%, 400);
+  }
 
-        max-width: unset;
-    }
+  .ourServicesListItemHeading {
+    max-width: unset;
+    @include webFont(24px, 123%, 400);
+  }
 
-    .ourServicesListItemHeading {
-        @include webFont(24px, 123%, 400);
-
-        max-width: unset;
-    }
-
-    .ourServicesListItemCopy {
-        @include webFont(16px, 120%, 400);
-
-        text-align: center;
-    }
+  .ourServicesListItemCopy {
+    text-align: center;
+    @include webFont(16px, 120%, 400);
+  }
 }
 
 @include from-breakpoint("x-large") {
-    .ourServicesWrapper {
-        padding: 40px 32px;
-    }
+  .ourServicesWrapper {
+    padding: 40px 32px;
+  }
 
-    .navbar {
-        display: flex;
-        gap: 42px;
-    }
+  .navbar {
+    display: flex;
+    gap: 42px;
+  }
 
-    .ourServicesListWrapper {
-        display: flex;
-        text-align: center;
-        gap: 33px;
-    }
+  .ourServicesListWrapper {
+    display: flex;
+    text-align: center;
+    gap: 33px;
+  }
 
-    .ourServicesListItemHeading {
-        max-width: 190px;
-    }
+  .ourServicesListItemHeading {
+    max-width: 190px;
+  }
 }
+

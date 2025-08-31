@@ -1,44 +1,44 @@
-@use '../../abstracts/index.scss' as *;
+@use "../../abstracts/index.scss" as *;
 
 .ourAlliesWrapper {
-    display: none;
+  display: none;
 }
 
 .ourAlliesHeading {
-    @include webFont(40px, 120%, 400);
-
-    text-align: center;
-    margin: 0 0 42px;
+  text-align: center;
+  margin: 0 0 42px;
+  @include webFont(40px, 120%, 400);
 }
 
 .ourAlliesListWrapper {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);;
-    column-gap: 23px;
-    row-gap: 23px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 23px;
+  row-gap: 23px;
 }
 
 @include from-breakpoint("large") {
-    .ourAlliesWrapper {
-        padding: 32px 24px 48px;
-        display: block;
-        max-width: $x-large;
-        margin: 0 auto;
-    }
+  .ourAlliesWrapper {
+    padding: 32px 24px 48px;
+    display: block;
+    max-width: $x-large;
+    margin: 0 auto;
+  }
 
-    .ourAlliesHeading {
-        margin: 0 0 49px;
-    }
+  .ourAlliesHeading {
+    margin: 0 0 49px;
+  }
 
-    .ourAlliesListItem {
-        max-width: 74px;
-        height: 74px;
-    }
+  .ourAlliesListItem {
+    max-width: 74px;
+    height: 74px;
+  }
 }
 
 @include from-breakpoint("x-large") {
-    .ourAlliesListItem {
-        max-width: 97px;
-        height: 97px;
-    }
+  .ourAlliesListItem {
+    max-width: 97px;
+    height: 97px;
+  }
 }
+

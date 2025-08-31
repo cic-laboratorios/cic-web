@@ -1,93 +1,78 @@
-@use '../../abstracts/index.scss' as *;
+@use "../../abstracts" as *;
 
 .footerWrapper {
-    background: colors('footer-background');
-    color: colors('white');
-    padding: 16px 16px 22px;
+  background: colors("footer-background");
+  color: colors("white");
+  padding: 16px 16px 22px;
 }
 
 .footerNavigationWrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .footerNavigationLogoWrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    img {
-        width: 150px;
-    }
+  img { width: 150px; }
 }
 
 .footerNavigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .footerNavigationByLink {
-    .footerNavigationByLinkNavWrapper {
-        display: flex;
-        gap: 20px;
+  .footerNavigationByLinkNavWrapper {
+    display: flex;
+    gap: 20px;
 
-        a:hover {
-            color: colors('third');
-        }
-    }
+    a:hover { color: colors("third"); }
+  }
 }
 
 .footerCopyright {
-    @include generalMaxWidth();
-    @include webFont(13px, 120%, 400);
-
-    border-top: 1px solid colors('footer-line');
+    border-top: 1px solid colors("footer-line");
     text-align: center;
     padding-top: 13px;
     margin-top: 27px;
+    
+    @include generalMaxWidth();
+    @include webFont(13px, 120%, 400);
 }
 
 @include from-breakpoint("large") {
-    .footerWrapper {
-        padding: 24px 32px 18px;
-    }
+  .footerWrapper { padding: 24px 32px 18px; }
 
-    .footerNavigationWrapper {
-        flex-direction: row;
-        max-width: $x-large;
-        margin: 0 auto;
-    }
+  .footerNavigationWrapper {
+    flex-direction: row;
+    max-width: $x-large;
+    margin: 0 auto;
+  }
 
-    .footerNavigation {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-    }
+  .footerNavigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
 
-    .footerNavigationLogoWrapper {
-        img {
-            width: 225px;
-        }
-    }
+  .footerNavigationLogoWrapper img { width: 225px; }
 
-    .footerNavigationByLink {
-        .footerNavigationByLinkNavWrapper {
-            gap: 62px;
+  .footerNavigationByLink .footerNavigationByLinkNavWrapper {
+    gap: 62px;
+    a { font-size: 16px; }
+  }
 
-            a {
-                font-size: 16px;
-            }
-        }
-    }
-
-    .footerCopyright {
-        padding: 16px 0 0;
-        margin-top: 16px;
-        max-width: $x-large;
-        margin: 16px auto 0;
-    }
+  .footerCopyright {
+    padding: 16px 0 0;
+    margin-top: 16px;
+    max-width: $x-large;
+    margin: 16px auto 0;
+  }
 }

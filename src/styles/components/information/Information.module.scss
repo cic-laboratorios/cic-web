@@ -14,22 +14,20 @@
 }
 
 .informationTitle {
-  @include webFont(24px, 123%, 400);
-
   text-align: center;
   color: colors("headings");
   width: 100%;
   max-width: 464px;
   margin: 0;
+  @include webFont(24px, 123%, 400);
 }
 
 .informationCopy {
-  @include webFont(16px, 120%, 400);
-
   color: colors("copy");
   width: 100%;
   max-width: 464px;
   margin: 24px 0 0;
+  @include webFont(16px, 120%, 400);
 }
 
 .informationGeneralButton {
@@ -118,19 +116,17 @@
   }
 
   .informationTitle {
-    @include webFont(28px, 120%, 400);
-
     color: colors("headings");
     width: 100%;
     text-align: left;
+    @include webFont(28px, 120%, 400);
   }
 
   .informationCopy {
-    @include webFont(18px, 22px, 400);
-
     color: colors("copy");
     width: 100%;
     margin: 24px 0 0;
+    @include webFont(18px, 22px, 400);
   }
 
   .informationGeneralButton {
@@ -163,17 +159,15 @@
     }
 
     .informationTitle {
-      @include webFont(56px, 120%, 700);
-
       margin: 0;
+      @include webFont(56px, 120%, 700);
     }
 
     .informationCopy {
-      @include webFont(18px, 120%, 400);
-
       width: 100%;
       max-width: 299px;
       margin: 24px 0 0;
+      @include webFont(18px, 120%, 400);
     }
 
     .informationImage {
@@ -292,3 +286,4 @@
     }
   }
 }
+

@@ -1,21 +1,24 @@
-@function calculateRem($size, $baseSize: 20) {
-  $remSize: $size / $baseSize;
+@use "./variables" as *;
+@use "sass:map";
+@use "sass:math";
 
-  @return #{$remSize}rem;
+@function calculateRem($size, $baseSize: 20) {
+  $remSize: math.div($size, $baseSize);
+  @return $remSize * 1rem;
 }
 
 @function colors($color) {
-  @if not map-has-key($colors, $color) {
+  @if not map.has-key($colors, $color) {
     @warn 'No color found for `#{$color}`.';
+    @return null;
   }
-
-  @return map-get($colors, $color);
+  @return map.get($colors, $color);
 }
 
 @function zindex($layer) {
-  @if not map-has-key($zindex, $layer) {
+  @if not map.has-key($zindex, $layer) {
     @warn 'No z-index found for `#{$layer}`.';
+    @return null;
   }
-
-  @return map-get($zindex, $layer);
+  @return map.get($zindex, $layer);
 }

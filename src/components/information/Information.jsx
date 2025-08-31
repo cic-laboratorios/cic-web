@@ -7,7 +7,10 @@ export default function Information({ informationData }) {
     <div
       className={`
         ${styles.informationWrapper}
-        ${informationData.layout == "reverse" && styles.informationWrapperReverse}
+        ${
+          informationData.layout == "reverse" &&
+          styles.informationWrapperReverse
+        }
         ${informationData.isMainInformation && styles.isMainInformation}
       `}
     >
@@ -15,13 +18,12 @@ export default function Information({ informationData }) {
         <h2 className={styles.informationTitle}>{informationData.title}</h2>
         <p className={styles.informationCopy}>{informationData.copy}</p>
         {informationData.link && (
-          <Link href={informationData.link.href}>
-            <a
-              className={`${styles.informationGeneralButton} generalButton isConsultNowButton`}
-              target={informationData.link.target}
-            >
-              {informationData.link.label}
-            </a>
+          <Link
+            href={informationData.link.href}
+            className={`${styles.informationGeneralButton} generalButton isConsultNowButton`}
+            target={informationData.link.target}
+          >
+            {informationData.link.label}
           </Link>
         )}
       </div>
@@ -43,3 +45,4 @@ export default function Information({ informationData }) {
     </div>
   );
 }
+

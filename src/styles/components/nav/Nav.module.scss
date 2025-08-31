@@ -1,10 +1,10 @@
 @use "../../abstracts/index.scss" as *;
 
 .mainNav {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-duration: .5s;
   position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
 }
 
 .mainNavFixed {
@@ -16,7 +16,7 @@
 }
 
 .mainNavHidden {
-  top: -60px
+  top: -60px;
 }
 
 .header {
@@ -32,13 +32,12 @@
 }
 
 .headerWrapper {
-  @include generalMaxWidth(0 32px);
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 10px;
   padding-bottom: 10px;
+  @include generalMaxWidth(0 32px);
 }
 
 .logo {
@@ -51,6 +50,7 @@
   background: none;
   color: colors("secondary");
   padding: 0;
+
   @include webFont(18px, 22px, 400);
 }
 
@@ -58,7 +58,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(138, 138, 138, 0.2);;
+  background: rgba(138, 138, 138, 0.2);
   left: 0;
   top: 0;
   bottom: 0;
@@ -76,7 +76,7 @@
   box-shadow: -5px -1px 12px rgb(0 0 0 / 10%);
   z-index: zindex("menu");
   padding: 25px 32px;
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
   transform: translateX(100%);
 }
 
@@ -104,7 +104,7 @@
 
 @include from-breakpoint("large") {
   .mainNavHidden {
-    top: -85px
+    top: -85px;
   }
 
   .header {
@@ -156,3 +156,4 @@
     display: none;
   }
 }
+

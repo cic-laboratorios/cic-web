@@ -1,10 +1,10 @@
 @use "../../abstracts/index.scss" as *;
 
 .carouselWrapper {
-  @include generalMaxWidth();
-
   position: relative;
   padding: 32px 32px 56px;
+
+  @include generalMaxWidth();
 }
 
 .carouselContainer {
@@ -15,10 +15,10 @@
 }
 
 .carouselHeading {
-  @include webFont(28px, 110%, 400);
-
   text-align: center;
   margin: 0 0 56px;
+
+  @include webFont(28px, 110%, 400);
 }
 
 .carousel {
@@ -37,13 +37,8 @@
   display: none;
 }
 
-.carouselLeftButton {
-  left: 46px;
-}
-
-.carouselRightButton {
-  right: 46px;
-}
+.carouselLeftButton { left: 46px; }
+.carouselRightButton { right: 46px; }
 
 .dotsWrapper {
   display: flex;
@@ -72,13 +67,12 @@
 
 @include from-breakpoint("large") {
   .carouselWrapper {
-    padding: 50px 24px 56px
+    padding: 50px 24px 56px;
   }
 
   .carouselHeading {
-    @include webFont(40px, 120%, 400);
-
     margin-bottom: 56px;
+    @include webFont(40px, 120%, 400);
   }
 
   .carouselAction {
@@ -102,17 +96,12 @@
     }
   }
 
-  .carouselLeftButton {
-    left: 24px;
-  }
-
-  .carouselRightButton {
-    right: 24px;
-  }
+  .carouselLeftButton { left: 24px; }
+  .carouselRightButton { right: 24px; }
 }
 
 @include from-breakpoint("x-large") {
   .carouselWrapper {
-    padding: 47px 32px 56px
+    padding: 47px 32px 56px;
   }
 }

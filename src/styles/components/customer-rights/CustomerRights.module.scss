@@ -1,14 +1,13 @@
 @use '../../abstracts/index.scss' as *;
 
 .customerRightsWrapper {
-  @include generalMaxWidth();
   margin: 32px auto;
-  
+  @include generalMaxWidth();
 }
 
 .customerRightsHeader {
-  @include webFont(28px, 120%, 300);
   text-align: center;
+  @include webFont(28px, 120%, 300);
 }
 
 .customerRightsList {

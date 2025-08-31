@@ -1,106 +1,103 @@
-@use '../../abstracts/index.scss' as *;
+@use "../../abstracts/index.scss" as *;
 
 .ourLocationsHeading {
-    @include webFont(40px, 120%, 400);
-
-    text-align: center;
-    margin: 0 0 42px;
+  text-align: center;
+  margin: 0 0 42px;
+  @include webFont(40px, 120%, 400);
 }
 
 .ourLocationsListWrapper {
-    display: flex;
-    text-align: center;
-    flex-wrap: wrap;
-    column-gap: 110px;
-    row-gap: 35px;
-    justify-content: space-between;
-    max-width: 763px;
-    margin: 0 auto;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  column-gap: 110px;
+  row-gap: 35px;
+  justify-content: space-between;
+  max-width: 763px;
+  margin: 0 auto;
 }
 
 .ourLocationsListItem {
-    width: 100%;
+  width: 100%;
 }
 
 .ourLocationsListItemImageHeading {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
 }
 
 .ourLocationsListItemHeading {
-    @include webFont(16px, 120%, 700);
-
-    color: colors('headings');
+  color: colors("headings");
+  @include webFont(16px, 120%, 700);
 }
 
 .ourLocationsListItemAddress,
 .ourLocationsListItemCellPhoneNumber,
 .ourLocationsListItemPhoneNumber,
 .ourLocationsListItemCopy {
-    @include webFont(16px, 120%, 400);
-
-    color: colors('copy');
+  color: colors("copy");
+  @include webFont(16px, 120%, 400);
 }
 
 .ourLocationsListItemCellPhoneNumber,
 .ourLocationsListItemPhoneNumber,
 .ourLocationsListItemCopy {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 @include from-breakpoint("large") {
-    .ourLocationsHeading {
-        @include webFont(40px, 120%, 400);
+  .ourLocationsHeading {
+    text-align: center;
+    margin: 0 0 42px;
+    @include webFont(40px, 120%, 400);
+  }
 
-        text-align: center;
-        margin: 0 0 42px;
-    }
+  .ourLocationsListItem {
+    width: 100%;
+  }
 
-    .ourLocationsListItem {
-        width: 100%;
-    }
+  .ourLocationsListItemImageHeading {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
 
-    .ourLocationsListItemImageHeading {
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 8px;
-    }
+  .ourLocationsListWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .ourLocationsListWrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .ourLocationsWrapper {
-        max-width: 465px;
-        margin: 0 auto;
-    }
+  .ourLocationsWrapper {
+    max-width: 465px;
+    margin: 0 auto;
+  }
 }
 
 @include from-breakpoint("x-large") {
-    .ourLocationsListWrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .ourLocationsListWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .ourLocationsWrapper {
-        max-width: unset;
-        margin: 0 auto;
-    }
+  .ourLocationsWrapper {
+    max-width: unset;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .ourLocationsListWrapper {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        max-width: 1143px;
-        column-gap: 32px;
-        row-gap: 56px;
-    }
+  .ourLocationsListWrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1143px;
+    column-gap: 32px;
+    row-gap: 56px;
+  }
 
-    .ourLocationsListItemImageHeading {
-        margin-bottom: 16px;
-    }
+  .ourLocationsListItemImageHeading {
+    margin-bottom: 16px;
+  }
 }
+

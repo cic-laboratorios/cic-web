@@ -73,15 +73,15 @@ export default function Nav({
             {navLinks
               .filter((navItem) => !navItem.onlyForDesktop)
               .map((navItem, index) => (
-                <Link key={index} href={navItem.link}>
-                  <a
-                    className={`${
-                      router.pathname === navItem.link && "menu-active"
-                    }`}
-                    target={navItem.target}
-                  >
-                    {navItem.label}
-                  </a>
+                <Link
+                  key={index}
+                  href={navItem.link}
+                  className={`${
+                    router.pathname === navItem.link && "menu-active"
+                  }`}
+                  target={navItem.target}
+                >
+                  {navItem.label}
                 </Link>
               ))}
           </nav>
@@ -93,15 +93,15 @@ export default function Nav({
         </div>
         <nav className={styles.navbar}>
           {navLinks.map((navItem, index) => (
-            <Link key={index} href={navItem.link}>
-              <a
-                className={`generalButton ${
-                  navItem.isConsultNowButton && "isConsultNowButton"
-                } ${router.pathname === navItem.link && "menu-active"}`}
-                target={navItem.target}
-              >
-                {navItem.label}
-              </a>
+            <Link
+              key={index}
+              href={navItem.link}
+              className={`generalButton ${
+                navItem.isConsultNowButton && "isConsultNowButton"
+              } ${router.pathname === navItem.link && "menu-active"}`}
+              target={navItem.target}
+            >
+              {navItem.label}
             </Link>
           ))}
         </nav>
@@ -109,3 +109,4 @@ export default function Nav({
     </header>
   );
 }
+

@@ -1,63 +1,76 @@
+@use "./variables" as *;
+@use "./functions" as *;
+@use "sass:map";
+@use "sass:list";
+
 @mixin font($size: 14, $line: 18, $spacing: 0.1, $weight: 500) {
   $baseFont: 20;
-  $fontSize: #{$size}px;
-  $lineHeight: #{$line}px;
-  $letterSpacing: #{$spacing}px;
 
-  font-size: $fontSize;
-  font-size: calculateRem($size, $baseFont) !important;
-  line-height: $lineHeight;
-  line-height: calculateRem($line, $baseFont) !important;
-  font-weight: $weight !important;
-  letter-spacing: $letterSpacing !important;
+  // Wrap in &{} so Sass is happy even after nested rules
+  & {
+    font-size: #{$size}px;
+    line-height: #{$line}px;
+
+    font-size: calculateRem($size, $baseFont) !important;
+    line-height: calculateRem($line, $baseFont) !important;
+
+    font-weight: $weight !important;
+    letter-spacing: #{$spacing}px !important;
+  }
 }
 
-@mixin from-breakpoint($bp) {
-  @if ($bp == "x-small") {
+@mixin from-breakpoint($name) {
+  @if ($name == "x-small") {
     @content;
-  }
-  @if ($bp == "ie-only") {
+  } @else if ($name == "ie-only") {
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       @content;
     }
   } @else {
-    @if map-has-key($breakpoints, $bp) {
-      $list: map-get($breakpoints, $bp);
-      $bp: nth($list, 1);
-    }
+    @if map.has-key($breakpoints, $name) {
+      $pair: map.get($breakpoints, $name);
+      $min: list.nth($pair, 1);
 
-    @media screen and (min-width: #{$bp}) {
-      @content;
+      @if $min != null {
+        @media screen and (min-width: #{$min}) { @content; }
+      } @else {
+        @content;
+      }
+    } @else {
+      @error 'Unknown breakpoint `#{$name}` in $breakpoints.';
     }
   }
 }
 
 @mixin square($size: 60) {
-  width: #{$size}px;
-  height: #{$size}px;
+  & {
+    width: #{$size}px;
+    height: #{$size}px;
+  }
 }
 
 @mixin webFont($font-size, $lineHeight, $font-weight: 400) {
-  font-size: $font-size;
-  line-height: $lineHeight;
-  font-weight: $font-weight;
+  & {
+    font-size: $font-size;
+    line-height: $lineHeight;
+    font-weight: $font-weight;
+  }
 }
 
 @mixin carouselActive() {
-  background: colors('third');
-  border: 1px solid colors('third');
+  & {
+    background: colors('third');
+    border: 1px solid colors('third');
+  }
 }
 
 @mixin generalMaxWidth($customPadding: 0 16px) {
-  padding: $customPadding;
-  max-width: $x-large;
-  margin: 0 auto;
-
-  @include from-breakpoint("large") {
-    padding: 0 24px;
+  & {
+    padding: $customPadding;
+    max-width: $x-large;
+    margin: 0 auto;
   }
 
-  @include from-breakpoint("x-large") {
-    padding: 0 32px;
-  }
+  @include from-breakpoint("large")   { padding: 0 24px; }
+  @include from-breakpoint("x-large") { padding: 0 32px; }
 }

@@ -1,14 +1,14 @@
 @use "../../abstracts/index.scss" as *;
 
 .heroWrapper {
-  @include generalMaxWidth();
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 32px;
   padding: 32px 0;
   flex-direction: column;
+
+  @include generalMaxWidth();
 }
 
 .heroCopy {
@@ -22,14 +22,16 @@
 }
 
 .heroImageWrapper {
+  position: relative;
   width: 100%;
+  aspect-ratio: 175 / 111;
+  overflow: hidden;
 }
 
 .consultButton {
   display: block;
   width: fit-content;
-  margin-top: 32px;
-  margin: 0 auto;
+  margin: 32px auto 0;
 }
 
 @include from-breakpoint("large") {
@@ -50,7 +52,7 @@
     }
   }
 
-  .heroImageWrapper{
+  .heroImageWrapper {
     transform: translateX(32px);
   }
 
