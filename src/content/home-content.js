@@ -416,8 +416,8 @@ const ourLocations = [
     width: "24",
     height: "24",
     heading: "La Unión",
-    address: "Cra 12 # 15 - 68",
-    copy: "Centro Médico y Estético Kirel",
+    address: "Calle 13 # 11 - 26",
+    copy: "Local 109 Pasaje Belén",
     cellPhoneNumber: "316 017 6054",
   },
   {
