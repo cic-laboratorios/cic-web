@@ -366,7 +366,7 @@ const ourLocations = [
     width: "24",
     height: "24",
     heading: "Cartago",
-    address: "Calle 8 bis # 4 - 40",
+    address: "Cra 1 #14 - 36",
     copy: "",
     cellPhoneNumber: "316 545 7444",
   },
