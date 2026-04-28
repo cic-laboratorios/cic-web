@@ -492,11 +492,16 @@ const carouselData = {
 const navLinks = [
   {
     link: "/",
-    label: "Inicio",
+    label: "Inicio!!",
   },
   {
     link: "/nuestras-pruebas",
     label: "Nuestras pruebas",
+  },
+    {
+    link: "/estados-financieros",
+    label: "Estados financieros",
+    target: "_blank"
   },
   {
     link: "http://validadorqr.ciclaboratorios.com/",
