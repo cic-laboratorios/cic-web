@@ -492,7 +492,7 @@ const carouselData = {
 const navLinks = [
   {
     link: "/",
-    label: "Inicio!!",
+    label: "Inicio",
   },
   {
     link: "/nuestras-pruebas",
