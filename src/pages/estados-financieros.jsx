@@ -37,12 +37,16 @@ export default function EstadosFinancieros() {
       url: "./pdf/NOTASCIC2024.pdf",
     },
     {
-      name: "ERI CIC 2025",
-      url: "./pdf/ERICIC2025.pdf",
+      name: "ESTADO DE RESULTADOS CIC 2025",
+      url: "./pdf/2025/ESTADO_DE_RESULTADOS.pdf",
     },
     {
-      name: "NOTAS CIC 2025",
-      url: "./pdf/NOTASCIC2025.pdf",
+      name: "ESTADO DE SITUACION FINANCIERA CIC 2025",
+      url: "./pdf/2025/ESTADO_DE_SITUACION_FINANCIERA.pdf",
+    },
+    {
+      name: "NOTAS A LOS ESTADOS FINANCIEROS CIC 2025",
+      url: "./pdf/2025/NOTAS_A_LOS_ESTADOS_FINANCIEROS.pdf",
     },
   ];
 
